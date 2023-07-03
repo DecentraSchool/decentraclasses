@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif, "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    92deg,
+    rgba(190, 235, 255, 0.7) 45%,
+    rgba(255, 235, 204, 0.7) 67%
+  );
+}
+.home-here {
+  background: linear-gradient(
+      92deg,
+      rgba(190, 235, 255, 0.7) 45%,
+      rgba(255, 235, 204, 0.7) 67%
+    ),
+    url("./assets/BACKGROUND.png") no-repeat top;
+  background-size: 100%;
+}
