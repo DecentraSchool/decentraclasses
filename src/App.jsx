@@ -11,7 +11,8 @@ import { ethers } from "ethers";
 import Dash from "./components/Dash/Dash";
 import { getAccount } from "@wagmi/core";
 import Header from "./components/Home/Header";
-
+import StudentDashboard from "./components/StudentDashboard/StudentDashboard";
+import StudentCourses from "./components/StudentDashboard/StudentCourses"
 function App() {
   const chainID = 80001;
   const [account, setAccount] = useState(null);
@@ -65,6 +66,8 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/course" element={<Course />} />
         <Route path="/dash" element={<Dash />} />
+        <Route path="/studentdashboard" element={<StudentDashboard />} />
+        <Route path="/studentcourses" element={<StudentCourses />} />
       </Routes>
       <Footer />
     </>
