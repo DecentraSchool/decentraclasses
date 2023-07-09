@@ -11,20 +11,11 @@ import { RainbowKitProvider, connectorsForWallets, getDefaultWallets } from "@ra
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { InjectedConnector } from "@wagmi/core";
 import "@rainbow-me/rainbowkit/styles.css";
+import { ParentProvider } from "./contexts/ParentContext";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains([polygon, polygonMumbai], [publicProvider()]);
 
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
-// const connectors = connectorsForWallets([
-//   {
-//     groupName: "Recommended",
-//     wallets: [
-//       injectedWallet({ chains }),
-//       metaMaskWallet({ projectId, chains }),
-//       walletConnectWallet({ projectId, chains }),
-//     ],
-//   },
-// ]);
 
 const { connectors } = getDefaultWallets({
   projectId: projectId,
@@ -43,9 +34,11 @@ const wagmiConfig = createConfig({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <WagmiConfig config={wagmiConfig}>
     <RainbowKitProvider chains={chains}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ParentProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ParentProvider>
     </RainbowKitProvider>
   </WagmiConfig>
 );
