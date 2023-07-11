@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-
+import logo from "./logo.svg"
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
@@ -20,10 +20,10 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="container px-10 py-20 pb-8 flex justify-between items-center">
+      <nav className="container px-10 py-10 pb-8 flex justify-between items-center">
         <div>
           <a href="/">
-            <img src="/images/logo1.png" alt="Logo" className=" w-[225px] h-[32px]" />
+            <img src={logo} alt="Logo" className=" w-[225px] h-[32px]" />
           </a>
         </div>
         <ul className="flex gap-12 items-center font-medium">

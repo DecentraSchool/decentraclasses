@@ -12,7 +12,8 @@ import Dash from "./components/Dash/Dash";
 import { getAccount } from "@wagmi/core";
 import Header from "./components/Home/Header";
 import StudentDashboard from "./components/StudentDashboard/StudentDashboard";
-import StudentCourses from "./components/StudentDashboard/StudentCourses"
+import StudentCourses from "./components/StudentDashboard/StudentCourses";
+import CoursePayment from "./components/Courses/CoursePayment";
 function App() {
   const chainID = 80001;
   const [account, setAccount] = useState(null);
@@ -68,6 +69,7 @@ function App() {
         <Route path="/dash" element={<Dash />} />
         <Route path="/studentdashboard" element={<StudentDashboard />} />
         <Route path="/studentcourses" element={<StudentCourses />} />
+        <Route path="/pay" element={<CoursePayment />} />
       </Routes>
       <Footer />
     </>
