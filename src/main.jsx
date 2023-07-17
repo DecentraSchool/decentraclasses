@@ -12,10 +12,14 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { InjectedConnector } from "@wagmi/core";
 import "@rainbow-me/rainbowkit/styles.css";
 import { ParentProvider } from "./contexts/ParentContext";
+import { PolybaseProvider } from "@polybase/react";
+import { Polybase } from "@polybase/client";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains([polygon, polygonMumbai], [publicProvider()]);
 
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
+
+const polybase = new Polybase();
 
 const { connectors } = getDefaultWallets({
   projectId: projectId,
@@ -36,7 +40,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RainbowKitProvider chains={chains}>
       <ParentProvider>
         <BrowserRouter>
-          <App />
+          <PolybaseProvider polybase={polybase}>
+            <App />
+          </PolybaseProvider>
         </BrowserRouter>
       </ParentProvider>
     </RainbowKitProvider>

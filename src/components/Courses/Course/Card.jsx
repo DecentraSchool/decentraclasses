@@ -4,14 +4,16 @@ import { Toaster, toast } from "react-hot-toast";
 import { contractABI, contractAddress } from "../../../contractABI";
 import Confetti from "react-confetti";
 import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
 
 const Card = (props) => {
+  // console.log(JSON.parse(props?.courseInfo?.content));
   const [courseBought, setcourseBought] = useState(false);
   const [userAlreadyBought, setuserAlreadyBought] = useState(false);
+  const { address } = useAccount();
   let provider;
   if (window.ethereum) {
     provider = new ethers.providers.Web3Provider(window.ethereum);
-    // rest of your code
   } else {
     toast.warning("Please install MetaMask!");
   }
@@ -23,9 +25,12 @@ const Card = (props) => {
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
     const account = ethers.utils.getAddress(accounts[0]);
     const course = await contract.getCourseByStudent(ethers.utils.getAddress(accounts[0]));
+
     course[0].forEach((c) => arr.push(c.toString()));
     console.log(props.courseInfo);
-    if (arr.includes(props.courseInfo[4].courseid)) {
+    console.log(arr);
+
+    if (arr.includes(props.courseInfo.id)) {
       setuserAlreadyBought(true);
     } else {
       setuserAlreadyBought(false);
@@ -34,7 +39,7 @@ const Card = (props) => {
 
   const handleBuy = async () => {
     try {
-      let courseId = props.courseInfo[4].courseid;
+      let courseId = props.courseInfo.id;
       toast("Buying...");
 
       const price = props.pricepshare;
@@ -69,7 +74,9 @@ const Card = (props) => {
 
   useEffect(() => {
     getStudentCourses();
-  }, []);
+  }, [props.courseInfo]);
+
+  console.log(address);
 
   return (
     <>
@@ -87,7 +94,7 @@ const Card = (props) => {
           </div>
           {userAlreadyBought ? (
             <button className="bg-green-400">
-              <Link to="/dash">continue to dashboard</Link>{" "}
+              <Link to={`/workplace?userId=${address}&courseId=${props.courseInfo.id}`}>continue to dashboard</Link>{" "}
             </button>
           ) : (
             <button className="bg-yellow-400" onClick={handleBuy}>
