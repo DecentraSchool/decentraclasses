@@ -1,0 +1,26 @@
+{
+    "id": "1111",
+    "courseName": "Full Stack development Course",
+    "author": "DecenteraSchool",
+    "date": "January 15, 2023",
+    "price": "19.9",
+    "duration": "20.5",
+    "nofarticles": "5",
+    "imageurl": "https://cdn.educba.com/academy/wp-content/uploads/2019/11/full-stack-web-developer.png.webp",
+    "shortdesc": "Become a full stack developer and launch your apps quickly",
+    "longdesc": "Learn about React, Angular, Python and more",
+    "content": [
+        {
+            "title": "introduction",
+            "videoUrl": "https://youtu.be/GWUwFDFOipo"
+        },
+        {
+            "title": "Basics",
+            "videoUrl": "https://youtu.be/jj299iVoKwc"
+        },
+        {
+            "title": "Getting started",
+            "videoUrl": "https://youtu.be/IijtdpAtOt0"
+        }
+    ]
+}

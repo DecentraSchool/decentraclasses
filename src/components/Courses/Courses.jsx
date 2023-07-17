@@ -10,62 +10,80 @@ import Confetti from "react-confetti";
 import { getContract, getWalletClient } from "@wagmi/core";
 import { useContractRead, useContractReads } from "wagmi";
 import { LazyLoadComponent, LazyLoadImage } from "react-lazy-load-image-component";
+import { getAllCourses } from "../../utils/PolybaseUtils";
+import Course from "./Course/Course";
 
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
   const [courseData, setcourseData] = useState([]);
   const [loader, setloader] = useState(true);
-  const WagmiContract = {
-    address: contractAddress,
-    abi: contractABI,
-  };
 
-  const {
-    data: totalCourses,
-    isError,
-    isLoading: isTotalLoading,
-  } = useContractRead({
-    ...WagmiContract,
-    functionName: "totalCourses",
-  });
-
-  let arr = [];
-
-  for (let i = 0; i < Number(totalCourses); i++) {
-    arr.push({ ...WagmiContract, functionName: "courses", args: [i] });
-  }
-  // console.log(arr);
-  const {
-    data: courses,
-    isCourseError,
-    isLoading: isCourseLoading,
-    isSuccess,
-  } = useContractReads({
-    contracts: arr,
-    watch: true,
-    cacheTime: 5_000,
-    onSuccess(data) {
-      let dummyCourse = [];
-      data.map(async (c) => {
-        dummyCourse.push(c.result);
-        setcourseData(dummyCourse);
-        await getCourseMata();
-      });
-      setloader(false);
-    },
-  });
-
-  const getCourseMata = async () => {
-    let data = [];
-    courseData.forEach(async (course, index) => {
-      console.log(course[1]);
-      const res = await axios.get(`https://decentraschool.infura-ipfs.io/ipfs/${course[1]}`);
-      console.log(res.data);
-      data[index] = [...course, res.data];
-      console.log(data);
-      setcourseData(data);
+  const getCourseData = async () => {
+    setloader(true);
+    const data = await getAllCourses();
+    let arr = [];
+    data.forEach((d) => {
+      arr.push(d.data);
     });
+    setcourseData(arr);
+    setloader(false);
   };
+
+  useEffect(() => {
+    getCourseData();
+  }, []);
+
+  // const WagmiContract = {
+  //   address: contractAddress,
+  //   abi: contractABI,
+  // };
+
+  // const {
+  //   data: totalCourses,
+  //   isError,
+  //   isLoading: isTotalLoading,
+  // } = useContractRead({
+  //   ...WagmiContract,
+  //   functionName: "totalCourses",
+  // });
+
+  // let arr = [];
+
+  // for (let i = 0; i < Number(totalCourses); i++) {
+  //   arr.push({ ...WagmiContract, functionName: "courses", args: [i] });
+  // }
+  // // console.log(arr);
+  // const {
+  //   data: courses,
+  //   isCourseError,
+  //   isLoading: isCourseLoading,
+  //   isSuccess,
+  // } = useContractReads({
+  //   contracts: arr,
+  //   watch: true,
+  //   cacheTime: 5_000,
+  //   onSuccess(data) {
+  //     let dummyCourse = [];
+  //     data.map(async (c) => {
+  //       dummyCourse.push(c.result);
+  //       setcourseData(dummyCourse);
+  //       await getCourseMata();
+  //     });
+  //     setloader(false);
+  //   },
+  // });
+
+  // const getCourseMata = async () => {
+  //   let data = [];
+  //   courseData.forEach(async (course, index) => {
+  //     console.log(course[1]);
+  //     const res = await axios.get(`https://decentraschool.infura-ipfs.io/ipfs/${course[1]}`);
+  //     console.log(res.data);
+  //     data[index] = [...course, res.data];
+  //     console.log(data);
+  //     setcourseData(data);
+  //   });
+  // };
 
   return (
     <div className="flex  justify-center">
@@ -91,26 +109,15 @@ export default function Courses() {
                           <LazyLoadImage
                             alt=""
                             style={{ height: "220px", width: "100%" }}
-                            src={course[4]?.imageurl}
+                            src={course?.imageurl}
                             className="w-50 h-50"
                           />
-                          {/* <img
-                            alt=""
-                            style={{ height: "220px", width: "100%" }}
-                            src={course[4]?.imageurl}
-                            className="w-50 h-50"
-                          /> */}
                         </div>
                         <div className="flex flex-col text-white gap-4 p-8 bg-black">
-                          <p className="text-xl">{course[4]?.courseName}</p>
-                          <p className="leading-tight">{course[4]?.shortdesc}</p>
+                          <p className="text-xl">{course.courseName}</p>
+                          <p className="leading-tight">{course.shortdesc}</p>
                           <button className="bg-yellow-400 text-black py-2 px-3 font-medium shadow-md">
-                            <Link
-                              to="/course"
-                              state={{ course: course, price: course[2].toString(), total: course[3]?.toString() }}
-                            >
-                              Start Course
-                            </Link>
+                            <Link to={`/course/${course.id}`}>Start Course</Link>
                           </button>
                         </div>
                       </div>

@@ -14,6 +14,9 @@ import Header from "./components/Home/Header";
 import StudentDashboard from "./components/StudentDashboard/StudentDashboard";
 import StudentCourses from "./components/StudentDashboard/StudentCourses";
 import CoursePayment from "./components/Courses/CoursePayment";
+
+import PolybaseHook from "./components/polybase/Polybase";
+import Workplace from "./components/WorkPlace/Workplace";
 function App() {
   const chainID = 80001;
   const [account, setAccount] = useState(null);
@@ -52,24 +55,26 @@ function App() {
   //   }
   // }, []);
 
-  useEffect(() => {
-    const account1 = getAccount();
-    setAccount(account1.address);
-  }, []);
+  // useEffect(() => {
+  //   const account1 = getAccount();
+  //   setAccount(account1.address);
+  // }, []);
 
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/poly" element={<PolybaseHook />} />
         <Route path="/community" element={<Communtiy />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/course" element={<Course />} />
+        <Route path="/course/:id" element={<Course />} />
         <Route path="/dash" element={<Dash />} />
         <Route path="/studentdashboard" element={<StudentDashboard />} />
         <Route path="/studentcourses" element={<StudentCourses />} />
         <Route path="/pay" element={<CoursePayment />} />
+        <Route path="/workplace" element={<Workplace />} />
       </Routes>
       <Footer />
     </>
