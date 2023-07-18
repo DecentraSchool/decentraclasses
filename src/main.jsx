@@ -15,7 +15,35 @@ import { ParentProvider } from "./contexts/ParentContext";
 import { PolybaseProvider } from "@polybase/react";
 import { Polybase } from "@polybase/client";
 
-const { chains, publicClient, webSocketPublicClient } = configureChains([polygon, polygonMumbai], [publicProvider()]);
+export const Mantle = {
+  id: 5001,
+  name: "Mantle",
+  network: "Mantle",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Mantle",
+    symbol: "MNT",
+  },
+  rpcUrls: {
+    public: { http: ["https://rpc.testnet.mantle.xyz/"] },
+    default: { http: ["https://rpc.testnet.mantle.xyz/"] },
+  },
+  blockExplorers: {
+    etherscan: { name: "Mantle", url: "https://explorer.testnet.mantle.xyz/" },
+    default: { name: "Mantle", url: "https://explorer.testnet.mantle.xyz/" },
+  },
+  contracts: {
+    multicall3: {
+      address: "0xc1dC2d65A2243c22344E725677A3E3BEBD26E604",
+      blockCreated: 11_907_934,
+    },
+  },
+};
+
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [polygon, polygonMumbai, Mantle],
+  [publicProvider()]
+);
 
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 

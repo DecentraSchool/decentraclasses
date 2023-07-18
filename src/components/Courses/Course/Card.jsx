@@ -54,7 +54,7 @@ const Card = (props) => {
       const contractWithSigner = contract.connect(signer);
 
       let transaction = await contractWithSigner.buyCourse(courseId, 1, {
-        value: price,
+        value: 100,
       });
       await transaction.wait();
 
