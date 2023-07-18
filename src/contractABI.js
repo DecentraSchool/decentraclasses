@@ -1,5 +1,6 @@
 // export const contractAddress = "0xf0d331e074545Fb5421DDfE72667abf8Bf5DEee2";
-export const contractAddress = "0x255E1ECf087b2f722a8E92349c82c5036C0F9020";
+// export const contractAddress = "0x255E1ECf087b2f722a8E92349c82c5036C0F9020";
+export const contractAddress = "0xb346c69e07ed0fcdac7a394AFB31303af9B01E75"; //mantle address
 
 export const contractABI = [
   {
