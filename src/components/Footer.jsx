@@ -4,7 +4,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
-    <footer className=" bg-white pb-2">
+    <footer style={{ bottom: "0" }} className=" bg-white pb-2">
       <div className="px-10 py-20 flex flex-col gap-16">
         <div className="flex justify-between">
           <div className=" flex flex-col gap-1">
