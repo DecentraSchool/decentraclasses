@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Courses from "./components/Courses/Courses";
 import Course from "./components/Courses/Course/Course";
 import Communtiy from "./components/Community/Communtiy";
-import Career from "./components/Career/Career";
+import { Career } from "./components/Career/Career";
 import Footer from "./components/Footer";
 import { ethers } from "ethers";
 import Dash from "./components/Dash/Dash";
@@ -18,6 +18,7 @@ import CoursePayment from "./components/Courses/CoursePayment";
 import PolybaseHook from "./components/polybase/Polybase";
 import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
+import { CommunitySPage } from "./components/Community/Community";
 function App() {
   const chainID = 80001;
   const [account, setAccount] = useState(null);
@@ -67,7 +68,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/poly" element={<PolybaseHook />} />
-        <Route path="/community" element={<Communtiy />} />
+        {/* <Route path="/community" element={<Communtiy />} /> */}
+        <Route path="/community" element={<CommunitySPage />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/course/:id" element={<Course />} />
