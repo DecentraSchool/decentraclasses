@@ -18,6 +18,7 @@ import CoursePayment from "./components/Courses/CoursePayment";
 import PolybaseHook from "./components/polybase/Polybase";
 import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
+import Mentorship from "./components/Courses/Mentorship";
 
 function App() {
   const chainID = 80001;
@@ -79,6 +80,7 @@ function App() {
         <Route path="/pay" element={<CoursePayment />} />
         <Route path="/workplace" element={<Workplace />} />
         <Route path="/light" element={<LightHouseUtils />} />
+        <Route path="/Mentor" element={<Mentorship />} />
       </Routes>
       <Footer />
     </>
