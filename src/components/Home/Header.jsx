@@ -1,20 +1,20 @@
-import React from 'react';
-import { ethers } from 'ethers';
-import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import logo from './logo.svg';
+import React from "react";
+import { ethers } from "ethers";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import logo from "./logo.svg";
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
 
   const scrollToCourses = () => {
-    coursesRef.current.scrollIntoView({ behavior: 'smooth' });
+    coursesRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const connectHandler = async () => {
     const accounts = await window.ethereum.request({
-      method: 'eth_requestAccounts',
+      method: "eth_requestAccounts",
     });
     const account = ethers.utils.getAddress(accounts[0]);
     setAccount(account);
@@ -46,6 +46,9 @@ export default function Header() {
               <Link to="/community" className="mx-4 hover:text-blue-700">
                 Community
               </Link>
+              <Link to="/mentor" className="mx-4 hover:text-blue-700">
+                Mentorship
+              </Link>
               <Link to="/careers" className="mx-4 hover:text-blue-700">
                 Career
               </Link>
@@ -56,11 +59,7 @@ export default function Header() {
             </div>
             <div className="md:hidden flex items-center">
               <button className="focus:outline-none" onClick={toggleNavbar}>
-                <svg
-                  className="h-6 w-6 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
+                <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   {isOpen ? (
                     <path
                       fillRule="evenodd"
@@ -79,34 +78,19 @@ export default function Header() {
         </div>
         {isOpen && (
           <div className="md:hidden mt-2 py-2">
-            <Link
-              to="/"
-              className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white"
-            >
+            <Link to="/" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Home
             </Link>
-            <Link
-              to="/courses"
-              className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white"
-            >
+            <Link to="/courses" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Courses
             </Link>
-            <Link
-              to="/community"
-              className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white"
-            >
+            <Link to="/community" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Community
             </Link>
-            <Link
-              to="/careers"
-              className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white"
-            >
+            <Link to="/careers" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Career
             </Link>
-            <a
-              href="#"
-              className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white"
-            >
+            <a href="#" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               About us
             </a>
             <div className="flex items-center justify-center py-4">
