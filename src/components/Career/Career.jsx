@@ -10,7 +10,7 @@ export const Career = () => {
           <div className="hero-tab">
             <div className="overlap-group-2">
               <div
-                style={{ fontWeight: "bold", fontSize: "40px", fontFamily: "monospace" }}
+                style={{ fontWeight: "bold", fontSize: "50px", fontFamily: "monospace" }}
                 className="discover-what-s"
               >
                 Discover what&#39;s possible

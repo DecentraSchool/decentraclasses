@@ -17,10 +17,10 @@
   .careers .div {
     background-image: url(https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/blurbg.png);
     background-size: 100% 100%;
-    height: 4101px;
+    height: 100%;
     left: -431px;
     position: relative;
-    top: -89px;
+    /* top: -89px; */
     width: 2376px;
   }
   
@@ -28,7 +28,7 @@
     height: 449px;
     left: 619px;
     position: absolute;
-    top: 252px;
+    top: 150px;
     width: 1069px;
   }
   

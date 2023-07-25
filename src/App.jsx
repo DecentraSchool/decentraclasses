@@ -18,7 +18,7 @@ import CoursePayment from "./components/Courses/CoursePayment";
 import PolybaseHook from "./components/polybase/Polybase";
 import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
-import { CommunitySPage } from "./components/Community/Community";
+
 function App() {
   const chainID = 80001;
   const [account, setAccount] = useState(null);
@@ -69,7 +69,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/poly" element={<PolybaseHook />} />
         {/* <Route path="/community" element={<Communtiy />} /> */}
-        <Route path="/community" element={<CommunitySPage />} />
+        <Route path="/community" element={<Communtiy />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/course/:id" element={<Course />} />
