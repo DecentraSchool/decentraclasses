@@ -1,122 +1,209 @@
-import React from 'react'
-import Header from '../Header'
+import React from "react";
+// import { NavBar } from "../../components/NavBar";
+import "./style.css";
 
-export default function Career() {
-    return (
-        <div className='flex  justify-center'>
-            <div className='max-w-[1440px]'>
-               
-                <main>
-                    <div className='px-10 flex flex-col gap-24 pb-20'>
-                        {/* <div className='bg-sky-900  rounded-3xl flex px-12 py-10 gap-12 items-center justify-center'>
-                        <div className=' w-3/5 flex gap-4 flex-col text-white  '>
-                            <h1 className='font-bold text-3xl'>Discover what's possible</h1>
-                            <p>Let your heart take you to wherever you want to be. God gave you this gift of imagination. Use it. You can spend all day playing with mountains. And I know you're saying, 'Oh Bob, you've done it this time.' And you may be right. But we're not there yet</p>
-                        </div>
-                        <div className='w-2/5'>
-                            <img src="/images/discover.png" alt="" className='w-full rounded-3xl'/>
-                        </div>
-                    </div> */}
-                        <div className='flex flex-col items-center text-center gap-8 py-16 pb-4 '>
-                            <h1 className='text-[3rem] font-bold leading-tight'>We need to bring more devs into the <br></br>world of Web3</h1>
-                            <p className='text-gray-600 text-lg'>We are building a world-class learning operating system will help devs enter web3</p>
-                            <button className='bg-yellow-400 p-4 rounded-md font-medium shadow-md max-w-fit'>DecentraSchool Carrers</button>
-                        </div>
-                        <div className='flex flex-col items-center py-10 px-5 pt-4 '>
-                            <div className='text-center p-2 pb-8'>
-                                <h1 className='font-extrabold text-[3rem]'>Join DecentraSchool</h1>
-                                <p className='text-gray-600 text-xl'>Develop a decentralized internet🌐</p>
-                            </div>
-                            <div className=' py-5 grid grid-cols-3 grid-flow-row'>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-r-0 border-b-0 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-r-0 border-b-0 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-b-0 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-r-0 border-l-0 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                                <div className='bg-white p-8 flex flex-col gap-3 border-2 border-gray-400 border-dotted'>
-                                    <p className='text-2xl'>
-                                        <span>🧱</span> <span>Build dope shit!</span>
-                                    </p>
-                                    <p className='text-lg text-gray-500'>We care about what you have built, not your degrees or FAANG experience.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='bg-sky-900 px-12 py-8 rounded-3xl flex flex-col gap-10'>
-                            <div className='flex flex-col gap-4'>
-                                <div className='flex justify-between items-center pr-10'>
-                                    <h2 className='text-yellow-400 font-bold '>Growth and Marketing</h2>
-                                    <p className='font-bold bg-yellow-400 py-2 px-5 rounded-3xl'>1 open Role</p>
-                                </div>
-
-                                <div className='bg-blue-400 text-white px-8 py-10 flex gap-10 justify-between rounded-3xl'>
-                                    <div className='flex flex-col w-1/2 gap-4'>
-                                        <h2 className='font-bold'>Development and strategy planner execution</h2>
-                                        <p >Mensch004 lmklnæ for Developer Community Soeciöli" to idertfy 8. rrner v,'ith deve•oper
-                                            across Indi & to brirg dees into the wet] ecosystem are 30M</p>
-                                    </div>
-                                    <div className='flex flex-col gap-2'>
-                                        <h2 className='font-bold'>Remote</h2>
-                                        <p>Full Time</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='flex flex-col gap-4'>
-                                <div className='flex justify-between items-center pr-10'>
-                                    <h2 className='text-yellow-400 font-bold '>Growth and Marketing</h2>
-                                    <p className='font-bold bg-yellow-400 py-2 px-5 rounded-3xl'>2 open Role</p>
-                                </div>
-                                <div className='bg-blue-400 text-white px-8 py-10 flex gap-10 justify-between rounded-3xl'>
-                                    <div className='flex flex-col w-1/2 gap-4'>
-                                        <h2 className='font-bold'>Development and strategy planner execution</h2>
-                                        <p >Mensch004 lmklnæ for Developer Community Soeciöli" to idertfy 8. rrner v,'ith deve•oper
-                                            across Indi & to brirg dees into the wet] ecosystem are 30M</p>
-                                    </div>
-                                    <div className='flex flex-col gap-2'>
-                                        <h2 className='font-bold'>Remote</h2>
-                                        <p>Full Time</p>
-                                    </div>
-                                </div>
-                                <div className='bg-blue-400 text-white px-8 py-10 flex gap-10 justify-between rounded-3xl'>
-                                    <div className='flex flex-col w-1/2 gap-4'>
-                                        <h2 className='font-bold'>Development and strategy planner execution</h2>
-                                        <p >Mensch004 lmklnæ for Developer Community Soeciöli" to idertfy 8. rrner v,'ith deve•oper
-                                            across Indi & to brirg dees into the wet] ecosystem are 30M</p>
-                                    </div>
-                                    <div className='flex flex-col gap-2'>
-                                        <h2 className='font-bold'>Remote</h2>
-                                        <p>Full Time</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+export const Career = () => {
+  return (
+    <div className="careers">
+      <div className="overlap-wrapper">
+        <div className="div">
+          <div className="hero-tab">
+            <div className="overlap-group-2">
+              <div
+                style={{ fontWeight: "bold", fontSize: "50px", fontFamily: "monospace" }}
+                className="discover-what-s"
+              >
+                Discover what&#39;s possible
+              </div>
+              <p className="let-your-heart-take">
+                Let your heart take you to wherever you want to be. God gave you this gift of imagination. Use it. You
+                can spend all day playing with mountains. And I know you&#39;re saying, &#39;Oh Bob, you&#39;ve done it
+                this time.&#39; And you may be right. But we&#39;re not there yet
+              </p>
+              <img
+                className="explore-from"
+                alt="Explore from"
+                src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/explore-from-scrabble-blocks@2x.png"
+              />
             </div>
+          </div>
+          <div className="jobs">
+            <div className="group">
+              <div className="overlap-2">
+                <div className="text-wrapper">Growth and marketing</div>
+                <div className="overlap-3">
+                  <div className="overlap-group-wrapper">
+                    <div className="overlap-group-3">
+                      <div className="rectangle" />
+                      <div className="text-wrapper-2">1 open Role</div>
+                    </div>
+                  </div>
+                  <div className="div-wrapper">
+                    <div className="overlap-4">
+                      <div className="overlap-group-4">
+                        <div className="group-2">
+                          <img
+                            className="line"
+                            alt="Line"
+                            src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-1-2.svg"
+                          />
+                          <img
+                            className="img"
+                            alt="Line"
+                            src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-2-2.svg"
+                          />
+                        </div>
+                        <div className="flexcontainer">
+                          <div className="text">
+                            <span className="span">
+                              Remote
+                              <br />
+                            </span>
+                          </div>
+                          <div className="span-wrapper">
+                            <span className="text-wrapper-3">Full Time</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="overlap-5">
+                        <p className="p">Development and strategy planner execution</p>
+                        <p className="lmkln-for">
+                          Mensch004 lmklnæ for Developer Community Soeciöli&#34; to idertfy 8. rrner v,&#39;ith
+                          deve•oper across Indi &amp; to brirg dees into the wet] ecosystem are 30M
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="group-3">
+              <div className="text-wrapper-4">Growth and marketing</div>
+              <div className="group-4">
+                <div className="overlap-group-5">
+                  <div className="rectangle-2" />
+                  <div className="text-wrapper-5">2 open Role</div>
+                </div>
+              </div>
+              <div className="group-5">
+                <div className="overlap-4">
+                  <div className="overlap-group-4">
+                    <div className="group-2">
+                      <img
+                        className="line"
+                        alt="Line"
+                        src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-1-1.svg"
+                      />
+                      <img
+                        className="img"
+                        alt="Line"
+                        src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-2-1.svg"
+                      />
+                    </div>
+                    <div className="flexcontainer">
+                      <div className="text">
+                        <span className="span">
+                          Remote
+                          <br />
+                        </span>
+                      </div>
+                      <div className="span-wrapper">
+                        <span className="text-wrapper-3">Full Time</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="overlap-6">
+                    <p className="text-wrapper-6">Development and strategy planner execution</p>
+                    <p className="mensch-lmkln-for">
+                      Mensch004 lmklnæ for Developer Community Soeciöli&#34; to idertfy 8. rrner v,&#39;ith deve•oper
+                      across Indi &amp; to brirg dees into the wet] ecosystem are 30M
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group-6">
+                <div className="overlap-4">
+                  <div className="overlap-group-4">
+                    <div className="group-2">
+                      <img
+                        className="line"
+                        alt="Line"
+                        src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-1.svg"
+                      />
+                      <img
+                        className="img"
+                        alt="Line"
+                        src="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/line-2.svg"
+                      />
+                    </div>
+                    <div className="flexcontainer">
+                      <div className="text">
+                        <span className="span">
+                          Remote
+                          <br />
+                        </span>
+                      </div>
+                      <div className="span-wrapper">
+                        <span className="text-wrapper-3">Full Time</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="overlap-7">
+                    <p className="text-wrapper-7">Development and strategy planner execution</p>
+                    <p className="lmkln-for-2">
+                      Mensch004 lmklnæ for Developer Community Soeciöli&#34; to idertfy 8. rrner v,&#39;ith deve•oper
+                      across Indi &amp; to brirg dees into the wet] ecosystem are 30M
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1
+            style={{ alignContent: "center", fontWeight: "bold", fontSize: "30px", fontFamily: "monospace" }}
+            className="h-1"
+          >
+            Join DecentraSchool
+          </h1>
+          <p style={{ fontWeight: "bold", fontSize: "30px", fontFamily: "monospace" }} className="develope-a">
+            Develope a decentralised&nbsp;&nbsp;internet 🕸️
+          </p>
+          <div className="buttom">
+            <div className="overlap-8">
+              <div style={{ marginTop: "12px" }} className="text-wrapper-8">
+                View Jobs
+              </div>
+            </div>
+          </div>
+          {/* <NavBar
+            asset="https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/asset-3-2-1.svg"
+            className="nav-bar-instance"
+          /> */}
+          <p style={{ fontWeight: "bold", fontSize: "25px", fontFamily: "monospace" }} className="text-wrapper-9">
+            Are you ready to kickstart your Web 3 career? Browse exciting job openings and apply now!
+          </p>
+          <div style={{ fontWeight: "bold", fontSize: "30px", fontFamily: "monospace" }} className="text-wrapper-10">
+            Got Questions?
+          </div>
+          <div className="group-7">
+            <p style={{ fontSize: "25px" }} className="text-wrapper-11">
+              Web 3 is the next generation internet, focusing on decentralization, privacy, and user empowerment. It’s
+              powered by blockchain technology, creating a more open and transparent internet ecosystem.
+            </p>
+            <p className="text-wrapper-12">
+              Web 3 companies are shaping the future of the digital world. Working in this domain will provide you with
+              growth opportunities, cutting-edge skill development, and a chance to make an impact on a global scale.
+            </p>
+            <p className="click-on-the-view">
+              Click on the &#39;View Jobs&#39; button and browse through the job listings. Follow the application
+              instructions provided by each company and submit your application directly.
+            </p>
+            <div className="text-wrapper-13">What is Web 3?</div>
+            <p className="text-wrapper-14">Why choose Web 3 jobs?</p>
+            <div className="text-wrapper-15">How do I apply?</div>
+          </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
