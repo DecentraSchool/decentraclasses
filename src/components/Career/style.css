@@ -1,3 +1,20 @@
+.hero-rectangle{
+  background-color: #d9d9d9;
+}
+
+.hero-heading{
+  color: #2D3E50; 
+  font-size: 48px; 
+  font-weight: 700; 
+  word-wrap: break-word
+}
+
+.jobs-button{
+  background-color: #f9a825;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
 .careers {
     background-color: transparent;
     display: flex;
