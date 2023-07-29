@@ -32,7 +32,7 @@ export default function Courses() {
           </div> */}
           <div>
             <Courses1 />
-            <button type="button" className="bg-[#F9A825] min-w-fit px-8 py-2    rounded-full ">
+            <button type="button" className="bg-[#F9A825] hover:bg-[#f5b44b] min-w-fit px-8 py-2    rounded-full ">
               Explore Courses
             </button>
           </div>
