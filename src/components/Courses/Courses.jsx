@@ -116,7 +116,7 @@ export default function Courses() {
                         <div className="flex flex-col text-white gap-4 p-8 bg-black">
                           <p className="text-xl">{course.courseName}</p>
                           <p className="leading-tight">{course.shortdesc}</p>
-                          <button className="bg-yellow-400 text-black py-2 px-3 font-medium shadow-md">
+                          <button className="bg-yellow-400 hover:bg-yellow-300 text-black py-2 px-3 font-medium shadow-md">
                             <Link to={`/course/${course.id}`}>Start Course</Link>
                           </button>
                         </div>

@@ -15,6 +15,10 @@
   font-weight: bold;
 }
 
+.jobs-button:hover{
+  background-color: #f5b44b;
+}
+
 .careers {
     background-color: transparent;
     display: flex;
