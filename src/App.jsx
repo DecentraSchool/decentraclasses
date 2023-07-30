@@ -18,7 +18,7 @@ import CoursePayment from "./components/Courses/CoursePayment";
 import PolybaseHook from "./components/polybase/Polybase";
 import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
-import Mentorship from "./components/Courses/Mentorship";
+import Mentorship from "./components/Mentor/Mentorship";
 
 function App() {
   const chainID = 80001;
