@@ -101,11 +101,11 @@ export default function Courses() {
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">
+                <h1 className="text-[2.5rem] font-bold" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
                   A broad selection of courses
                 </h1>
-                <p className="text-xl ">
-                  Intresting videos with all the information you need to get
+                <p className="text-xl " style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
+                  Interesting videos with all the information you need to get
                   started in the world of web3 and blockchain
                 </p>
               </div>
@@ -149,18 +149,17 @@ export default function Courses() {
               </div>
               <p>pagination</p>
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">
+                <h1 className="text-[2.5rem] font-bold" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
                   A broad to sucessful courses
                 </h1>
-                <p className="text-xl ">
+                <p className="text-xl" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
                   maintain your daily streak and get rewards and compete with
                   all your friends
                 </p>
               </div>
 
               <div
-                className="task-container"
-                style={{ display: 'flex', justifyContent: 'center', gap: "10px" }}
+                className="task-container flex flex-col gap-10 items-center md:flex-row md:justify-center md:gap-10"
               >
                 <div
                   className="task p-4 rounded-lg shadow-lg flex flex-col"
@@ -209,11 +208,46 @@ export default function Courses() {
                   </div>
                 </div>
               </div>
-              <div className="enroll-btn-container" style={{display: "flex", justifyContent: "center", width: "100%"}}>
-              <button className="bg-[#f9a825] hover:bg-[#f5b44b]" style={{ width: "300px", borderRadius: "40px", marginTop: "30px"}}>Enroll Now</button>
 
+              {/* <div className="task-container flex flex-col items-center md:flex-row md:justify-center md:gap-10">
+                <div className="task p-4 rounded-lg shadow-lg flex flex-col bg-gray-300 w-300 h-300">
+                  <img src={calendar} alt="" />
+                  <div className="flex flex-col justify-center items-center">
+                    <p className="font-bold">Maintain Daily Streaks</p>
+                    <p className="mt-3 mb-3 text-center break-words">
+                      get ahead of your friends by maintaining daily streak
+                    </p>
+                  </div>
+                </div>
+                <div className="task p-4 rounded-lg shadow-lg flex flex-col bg-gray-300 w-300 h-300">
+                  <img src={gift} alt="" />
+                  <div className="flex flex-col justify-center items-center">
+                    <p className="font-bold">Get Rewards</p>
+                    <p className="mt-3 text-center break-words">
+                      get rewards by maintaining the daily streak
+                    </p>
+                  </div>
+                </div>
+              </div> */}
+              <div
+                className="enroll-btn-container"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  width: '100%',
+                }}
+              >
+                <button
+                  className="bg-[#f9a825] hover:bg-[#f5b44b]"
+                  style={{
+                    width: '300px',
+                    borderRadius: '40px',
+                    marginTop: '30px',
+                  }}
+                >
+                  Enroll Now
+                </button>
               </div>
-            
             </div>
           </section>
         </main>
