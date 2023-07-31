@@ -5,7 +5,7 @@ import "./style.css";
 import { motion } from "framer-motion";
 import mentor_profile from "../../assets/mentor.gif";
 
-export const MentorCard = () => {
+export const MentorCard = ({ portfolio, name, title, session_name, date, info, img }) => {
   const [showModal, setShowModal] = useState(false);
   const [rsvpd, setrsvpd] = useState(false);
 
@@ -30,13 +30,7 @@ export const MentorCard = () => {
                   src={mentor_profile}
                 />
 
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                  Meet Atharva Akshat, your Python specialist! With over half a year of hands-on experience mastering
-                  Python's power, I bring a wealth of knowledge to our team. My expertise goes beyond development – they
-                  are also a seasoned instructor, making complex concepts easy to grasp for learners of all levels.
-                  Embrace the Python journey with me, and together, let's unlock the full potential of this incredible
-                  programming language!
-                </h3>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">{info}</h3>
                 <button
                   onClick={() => setShowModal(false)}
                   type="button"
@@ -66,13 +60,25 @@ export const MentorCard = () => {
         }}
       />
 
-      <div className="w-96 max-w-sm bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <div className="flex flex-col items-center pb-10">
-          <img className="w-34 mt-3 h-34 mb-1 rounded-full shadow-lg" src={instructor1} alt="Instructor" />
-          <h5 className="mb-1 text-xl font-medium text-gray-900">Atharva Akshat</h5>
-          <span className="text-sm text-gray-500 dark:text-gray-400">Python specialist</span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">AMA session</span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">05 August 2023 - 3pm IST</span>
+          <img
+            style={{ width: "250px", height: "250px" }}
+            className="w-34 mt-3 h-34 mb-1 rounded-full shadow-lg"
+            src={img}
+            alt="Instructor"
+          />
+          <h5 className="mb-1 text-xl font-medium text-gray-900">{name}</h5>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{title}</span>
+          <a
+            href={`https://${portfolio}`}
+            target="_blank"
+            className="text-sm text-gray-500 underline dark:text-gray-400"
+          >
+            {portfolio}
+          </a>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{session_name}</span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{date}</span>
           <div className="flex mt-4 space-x-3 md:mt-6">
             <a
               onClick={() => setShowModal(true)}

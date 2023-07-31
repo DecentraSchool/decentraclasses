@@ -13,7 +13,7 @@ export default function Why() {
         </p>
         <div className="flex flex-wrap flex-row gap-5 justify-evenly ">
           <div className="flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mLearn.png" alt="" />
               <h3 className="font-bold">Learn and Earn</h3>
             </div>
@@ -25,7 +25,7 @@ export default function Why() {
             </p>
           </div>
           <div className=" flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mEarn.png" alt="" />
               <h3>Community and Networking</h3>
             </div>
@@ -36,7 +36,7 @@ export default function Why() {
             </p>
           </div>
           <div className=" flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mExcel.png" alt="" />
               <h3>Interactive Learning Experience</h3>
             </div>

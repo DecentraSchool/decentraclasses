@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import logo from "./logo.svg";
+import "./Explore.css";
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
@@ -27,7 +28,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="header">
       <nav className="p-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
