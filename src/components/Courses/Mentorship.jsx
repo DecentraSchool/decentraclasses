@@ -93,14 +93,14 @@ export default function Mentorship() {
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">Connect to your Mentors through Huddle01🚀</h1>
-                <p className="text-xl ">
+                <h1 className="text-[2.5rem] font-bold" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>Connect to your Mentors through Huddle01🚀</h1>
+                <p className="text-xl " style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
                   Lookout for group sessions with your favourite mentors - just rsvp and we would send you the meet link{" "}
                 </p>
               </div>
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="p-8 grid justify-center grid-cols-2 grid-flow-row gap-16 py-16 ">
-                <div className="h-96 flex flex-col justify-start w-96">
+              <div className="p-8 grid justify-center grid-cols-1 md:grid-cols-2 grid-flow-row gap-16 py-16 ">
+                <div className="h-96 flex flex-col  justify-start w-96 mx-auto md:mx-0 mt-10">
                   <div className="w-30 h-60">
                     <LazyLoadImage
                       alt=""
@@ -118,7 +118,7 @@ export default function Mentorship() {
                     </button>
                   </div>
                 </div>
-                <div className="h-96 flex flex-col justify-start w-96">
+                <div className="h-96 flex flex-col justify-start w-96 mx-auto md:mx-0 mt-10">
                   <div className="w-30 h-60">
                     <LazyLoadImage
                       alt=""
