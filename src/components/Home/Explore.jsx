@@ -1,11 +1,12 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import "./Explore.css";
 export default function Explore() {
   return (
     <div className="flex gap-16 px-10 justify-between">
       <div className="w-3/5 flex flex-col justify-around items-start">
         <div>
-          <h1 className="font-extrabold text-[43px] break-keep leading-tight">
+          <h1 className="linear-wipe text font-extrabold text-[43px] break-keep leading-tight">
             "Unlock Your Potential with Earn Excel: The Premier Web 3.0 Online Learning Platform"
           </h1>
           <p className="break-keep">
@@ -18,8 +19,8 @@ export default function Explore() {
           Explore Courses
         </button>
       </div>
-      <div className="w-3/4">
-        <img src="/images/exploreC.png" alt="" className="w-full" />
+      <div className="w-3/4 vert-move">
+        <img src="/images/exploreC.png" alt="" className="w-full vert-move" />
       </div>
     </div>
   );
