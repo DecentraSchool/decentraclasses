@@ -105,7 +105,7 @@ export default function Courses() {
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="p-8 grid justify-center grid-cols-2 grid-flow-row gap-16 py-16 ">
+              {/* <div className="p-8 grid justify-center grid-cols-2 grid-flow-row gap-16 py-16 ">
                 {loader == false &&
                   courseData.map((course) => {
                     return (
@@ -128,8 +128,11 @@ export default function Courses() {
                       </div>
                     );
                   })}
-              </div>
+              </div> */}
+
+
               <hr />
+              <br />
               <div className="container m-auto grid lg:grid-cols-3 gap-8">
                 <CourseCard />
                 <CourseCard />
@@ -143,28 +146,35 @@ export default function Courses() {
               </div>
               <p>pagination</p>
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">A broad to sucessful courses</h1>
-                <p className="text-xl ">maintain your daily streak and get rewards and compete with all your friends</p>
+                <h1 className="text-[2.5rem] font-bold" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
+                  A broad to sucessful courses
+                </h1>
+                <p className="text-xl" style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
+                  maintain your daily streak and get rewards and compete with
+                  all your friends
+                </p>
               </div>
 
-              <div className="task-container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+              <div
+                className="task-container flex flex-col gap-10 items-center md:flex-row md:justify-center md:gap-10"
+              >
                 <div
                   className="task p-4 rounded-lg shadow-lg flex flex-col"
                   style={{
-                    backgroundColor: "#D9D9D9",
-                    width: "300px",
-                    height: "300px",
+                    backgroundColor: '#D9D9D9',
+                    width: '300px',
+                    height: '300px',
                   }}
                 >
                   <img src={calendar} alt="" />
                   <div className="flex flex-col justify-center items-center">
-                    <p style={{ fontWeight: "700" }}>Maintain Daily Streaks</p>
+                    <p style={{ fontWeight: '700' }}>Maintain Daily Streaks</p>
                     <p
                       className="mt-3 mb-3"
                       style={{
-                        textAlign: "center",
-                        whiteSpace: "pre-wrap",
-                        wordBreak: "break-word",
+                        textAlign: 'center',
+                        whiteSpace: 'pre-wrap',
+                        wordBreak: 'break-word',
                       }}
                     >
                       get ahead of your friends by maintaining daily streak
@@ -174,27 +184,27 @@ export default function Courses() {
                 <div
                   className="task p-4 rounded-lg shadow-lg flex flex-col"
                   style={{
-                    backgroundColor: "#D9D9D9",
-                    width: "300px",
-                    height: "300px",
+                    backgroundColor: '#D9D9D9',
+                    width: '300px',
+                    height: '300px',
                   }}
                 >
                   <img src={gift} alt="" />
                   <div className="flex flex-col justify-center items-center">
-                    <p style={{ fontWeight: "700" }}>Get Rewards</p>
+                    <p style={{ fontWeight: '700' }}>Get Rewards</p>
                     <p
                       className="mt-3"
                       style={{
-                        textAlign: "center",
-                        whiteSpace: "pre-wrap",
-                        wordBreak: "break-word",
+                        textAlign: 'center',
+                        whiteSpace: 'pre-wrap',
+                        wordBreak: 'break-word',
                       }}
                     >
                       get rewards by maintaining the daily streak
                     </p>
                   </div>
                 </div>
-              </div>
+              </div>              
               <div
                 className="enroll-btn-container"
                 style={{ display: "flex", justifyContent: "center", width: "100%" }}
