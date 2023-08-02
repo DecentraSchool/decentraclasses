@@ -17,7 +17,12 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
   return (
     <div className="card-container">
       {showModal && (
-        <div id="popup-modal" tabindex="-1" style={{ width: "600px", height: "100%", position: "absolute" }} class=" ">
+        <div
+          id="popup-modal"
+          tabindex="-1"
+          style={{ height: "100%", zIndex: "1000", position: "absolute" }}
+          class="md:w-[600px] w-400px z-1000"
+        >
           <div class="relative w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
               <div
@@ -26,11 +31,11 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
               >
                 <img
                   style={{ width: "150px", height: "150px", alignContent: "center", left: "50%" }}
-                  className="items-center ml-32 content-center"
+                  className="items-center md:ml-32 ml-20 content-center"
                   src={mentor_profile}
                 />
 
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">{info}</h3>
+                <h3 class="mb-5 md:text-lg font-normal text-gray-500 dark:text-gray-400">{info}</h3>
                 <button
                   onClick={() => setShowModal(false)}
                   type="button"
@@ -44,24 +49,8 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
         </div>
       )}
 
-      <motion.div
-        className="box"
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 180, 180, 0],
-          borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-        }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-          times: [0, 0.2, 0.5, 0.8, 1],
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-      />
-
-      <div className="w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div className="flex flex-col items-center pb-10">
+      <div className="w-[350px] md:w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="flex flex-col   items-center pb-10">
           <img
             style={{ width: "250px", height: "250px" }}
             className="w-34 mt-3 h-34 mb-1 rounded-full shadow-lg"

@@ -1,32 +1,34 @@
-import React from 'react';
-import sample from '../../assets/coursesample.png';
-import star from '../../assets/stars.svg';
-import style from './style.css';
+import React from "react";
+import sample from "../../assets/coursesample.png";
+import star from "../../assets/stars.svg";
+import { Link } from "react-router-dom";
+// import style from './style.css' ;
 
-const CourseCard = () => {
+const CourseCard = ({ img, title, desc, course }) => {
   return (
-    <div className="main-container p-4 rounded-lg shadow-lg flex flex-col">
+    <div className="main-container p-4 rounded-lg shadow-lg flex flex-col  ">
       <div className="img-container">
         <div className="course-image-container">
-          <img src={sample} className="course-image object-cover h-50" />
+          <img src={img} className="course-image object-cover md:h-60 w-full h-96" />
         </div>
       </div>
       <div>
-          <h1 style={{fontSize: "24px", textAlign: "center", whiteSpace: "pre-wrap", wordBreak: "break-word"}}>Solidy for beginners 2023</h1>
-          <p style={{textAlign: "left"}}>Jonas Patil</p>
+        <h1 style={{ fontSize: "24px", textAlign: "center", whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
+          {title}
+        </h1>
+        <p style={{ textAlign: "left" }}>{desc}</p>
       </div>
       <div className="star-rating flex justify-center gap-3">
-      <span className="text-orange">4.7</span>
+        <span className="text-orange">4.7</span>
         <img src={star} alt="rating" />
-        <span >(4,859)</span>
+        <span>(4,859)</span>
       </div>
 
       <div className="mt-5 pricing flex justify-center ">
-        <h2 className="price">
-        Rs. 999 /-
-        </h2>
+        <button className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+          <Link to={`/course/${course?.id}`}>Start Course</Link>
+        </button>
       </div>
-      
     </div>
   );
 };
