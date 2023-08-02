@@ -105,42 +105,38 @@ export default function Courses() {
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="p-8 grid justify-center grid-cols-2 grid-flow-row gap-16 py-16 ">
+              <div className="w-full container m-auto grid lg:grid-cols-3 gap-8 align-middle content-center justify-center">
                 {loader == false &&
                   courseData.map((course) => {
                     return (
-                      <div className="h-96 flex flex-col justify-start w-96">
-                        <div className="w-50 h-50">
-                          <LazyLoadImage
-                            alt=""
-                            style={{ height: "220px", width: "100%" }}
-                            src={course?.imageurl}
-                            className="w-50 h-50"
-                          />
-                        </div>
-                        <div className="flex flex-col text-white gap-4 p-8 bg-black">
-                          <p className="text-xl">{course.courseName}</p>
-                          <p className="leading-tight">{course.shortdesc}</p>
-                          <button className="bg-yellow-400 hover:bg-yellow-300 text-black py-2 px-3 font-medium shadow-md">
-                            <Link to={`/course/${course.id}`}>Start Course</Link>
-                          </button>
-                        </div>
-                      </div>
+                      <CourseCard
+                        img={course?.imageurl}
+                        title={course?.courseName}
+                        desc={course.shortdesc}
+                        course={course}
+                      />
+                      // <div className="h-96 flex flex-col justify-start w-96">
+                      //   <div className="w-50 h-50">
+                      //     <LazyLoadImage
+                      //       alt=""
+                      //       style={{ height: "220px", width: "100%" }}
+                      //       src={course?.imageurl}
+                      //       className="w-50 h-50"
+                      //     />
+                      //   </div>
+                      //   <div className="flex flex-col text-white gap-4 p-8 bg-black">
+                      //     <p className="text-xl">{course.courseName}</p>
+                      //     <p className="leading-tight">{course.shortdesc}</p>
+                      //     <button className="bg-yellow-400 hover:bg-yellow-300 text-black py-2 px-3 font-medium shadow-md">
+                      //       <Link to={`/course/${course.id}`}>Start Course</Link>
+                      //     </button>
+                      //   </div>
+                      // </div>
                     );
                   })}
               </div>
               <hr />
-              <div className="container m-auto grid lg:grid-cols-3 gap-8">
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-              </div>
+
               <p>pagination</p>
               <div className="flex flex-col text-center p-8">
                 <h1 className="text-[2.5rem] font-bold">A broad to sucessful courses</h1>

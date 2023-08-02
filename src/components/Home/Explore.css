@@ -20,7 +20,20 @@ img.vert-move {
 
     cursor: pointer;
 }
-
+.mentor-p{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    white-space: wrap;
+    -webkit-hyphens: none;
+    -moz-hyphens:    none;
+    -ms-hyphens:     none;
+    hyphens:         none;
+    word-break:keep-all;
+}
 .collab>img{
     scale: 1.2;
     transition: all 0.5s ease-in-out;

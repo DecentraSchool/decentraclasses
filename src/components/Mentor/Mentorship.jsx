@@ -25,7 +25,7 @@ export default function Mentorship() {
   return (
     <div className="w-full flex-col h-full flex  items-center align-middle">
       <img src={meeting1} style={{ position: "absolute", left: "0", backgroundBlendMode: "lighten", opacity: "0.5" }} />
-      <p style={{ fontSize: "25px", zIndex: "50" }} className="text-xl font-mono mt-12">
+      <p style={{ fontSize: "25px", zIndex: "50" }} className="text-xl font-mono mt-12 p-5 mx-3 mentor-p">
         Meet your Instructors/Mentors and join group sessions powered by{" "}
         <a href="https://huddle01.com/" target="_blank" style={{ textDecoration: "underline" }}>
           Huddle01 🚀
