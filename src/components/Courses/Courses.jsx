@@ -90,7 +90,7 @@ export default function Courses() {
   // };
 
   return (
-    <div className="flex  justify-center">
+    <div className="flex justify-center overflow-x-hidden">
       <Toaster position="top-center" reverseOrder={false} />
       <div className="max-w-[1440px]">
         {/* <Header /> */}
@@ -98,14 +98,14 @@ export default function Courses() {
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">A broad selection of courses</h1>
-                <p className="text-xl ">
+                <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad selection of courses</h1>
+                <p className="hidden md:text-xl md:block">
                   Intresting videos with all the information you need to get started in the world of web3 and blockchain
                 </p>
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="w-full container m-auto grid lg:grid-cols-3 gap-8 align-middle content-center justify-center">
+              <div className="w-[100vw] mb-10 md:w-full md:container m-auto grid lg:grid-cols-3 gap-8 align-middle md:content-center justify-center">
                 {loader == false &&
                   courseData.map((course) => {
                     return (
@@ -135,45 +135,30 @@ export default function Courses() {
                     );
                   })}
               </div>
-              <hr />
+              {/* <hr /> */}
 
-              <p>pagination</p>
+              {/* <p>pagination</p> */}
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[2.5rem] font-bold">A broad to sucessful courses</h1>
-                <p className="text-xl ">maintain your daily streak and get rewards and compete with all your friends</p>
+                <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad to sucessful courses</h1>
+                <p className="hidden md:text-xl md:block">maintain your daily streak and get rewards and compete with all your friends</p>
               </div>
 
-              <div className="task-container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+              <div className="ml-10 md:task-container md:flex md:justify-center md:gap-10">
                 <div
-                  className="task p-4 rounded-lg shadow-lg flex flex-col"
-                  style={{
-                    backgroundColor: "#D9D9D9",
-                    width: "300px",
-                    height: "300px",
-                  }}
+                  className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px] mb-10"
                 >
                   <img src={calendar} alt="" />
-                  <div className="flex flex-col justify-center items-center">
-                    <p style={{ fontWeight: "700" }}>Maintain Daily Streaks</p>
+                  <div className="flex flex-col justify-center items-center ">
+                    <p className="font-bold">Maintain Daily Streaks</p>
                     <p
-                      className="mt-3 mb-3"
-                      style={{
-                        textAlign: "center",
-                        whiteSpace: "pre-wrap",
-                        wordBreak: "break-word",
-                      }}
+                      className="mt-3 mb-3 text-center whitespace-pre-wrap break-words"
                     >
                       get ahead of your friends by maintaining daily streak
                     </p>
                   </div>
                 </div>
                 <div
-                  className="task p-4 rounded-lg shadow-lg flex flex-col"
-                  style={{
-                    backgroundColor: "#D9D9D9",
-                    width: "300px",
-                    height: "300px",
-                  }}
+                  className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px]"
                 >
                   <img src={gift} alt="" />
                   <div className="flex flex-col justify-center items-center">

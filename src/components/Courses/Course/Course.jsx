@@ -22,8 +22,8 @@ const Course = ({}) => {
   return (
     <>
       <main>
-        <section className="pb-20 flex mt-10  mx-10 gap-8 justify-between">
-          <div className="flex flex-col w-full">
+        <section className="pb-20 md:flex mt-10  mx-10 gap-8 justify-between overflow-x-hidden">
+          <div className="md:flex md:flex-col md:w-full">
             {/* Title Card  */}
             <div className="h-[35%] bg-cyan-900 p-5 rounded-lg text-white">
               <p className="text-blue-400 mb-5">Backend</p>
