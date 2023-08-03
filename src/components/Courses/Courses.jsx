@@ -109,12 +109,17 @@ export default function Courses() {
                 {loader == false &&
                   courseData.map((course) => {
                     return (
+                      <div className="flex justify-center w-full items-center">
+
                       <CourseCard
                         img={course?.imageurl}
                         title={course?.courseName}
                         desc={course.shortdesc}
                         course={course}
                       />
+                      </div>
+        
+          
                       // <div className="h-96 flex flex-col justify-start w-96">
                       //   <div className="w-50 h-50">
                       //     <LazyLoadImage
