@@ -104,11 +104,11 @@ const Card = (props) => {
 
           <ul>
             <li>
-              <span style={{ fontSize: "35px" }}>Price per share :{props.pricepshare}</span>
+              <span className="text-[20px] md:text-xl">Price per share : {props.pricepshare}</span>
             </li>
 
             <li>
-              <span>Total shares :{props.totalshare}</span>
+              <span>Total shares : {props.totalshare}</span>
             </li>
             <li>📽️ {props.dur} hours of video</li>
             <li>📃 {props.anum} articles</li>

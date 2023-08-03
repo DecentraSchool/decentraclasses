@@ -27,20 +27,20 @@ const Course = ({}) => {
             {/* Title Card  */}
             <div className="h-[35%] bg-cyan-900 p-5 rounded-lg text-white">
               <p className="text-blue-400 mb-5">Backend</p>
-              <h1 className="text-[2em] font-bold mb-5">Code a BRC-20 token in Clarity on Stacks Blockchain</h1>
+              <h1 className="text-[1.25em] md:text-[2em] font-bold mb-5">Code a BRC-20 token in Clarity on Stacks Blockchain</h1>
               <p className="mb-5">Created By stephan patil</p>
               <p className="mb-5">4 ⭐⭐⭐⭐ (40)</p>
               <p className="mb-5">Last Updated 6/2023 English,Hindi,Spanish[Auto]</p>
             </div>
-            <div className="mt-10 ml-20">
+            <div className="mt-10 md:ml-20">
               <h1 className="text-[2em] font-bold mb-5">What you'll learn</h1>
-              <div className="w-[80%]">
+              <div className="md:w-[80%]">
                 <p className="mb-5 font-semibold">🎯Create boilerplate starter projects with React, Redux, Express, and Mongo</p>
                 <p className="mb-5 font-semibold">🎯Understand common web technologies and design patterns to connect them together</p>
                 <p className="mb-5 font-semibold">🎯Master deployment techniques between the production and development environments </p>
               </div>
             </div>
-            <div className="mt-10 ml-20 mb-20">
+            <div className="mt-10 md:ml-20 mb-20">
               <h1 className="text-[2em] font-bold mb-5">Course Content</h1>
               <p className="mb-5">
                 <span>14 sections </span> • <span>221 lectures</span> • <span>25h 53m total length</span>
@@ -103,22 +103,22 @@ const Course = ({}) => {
            </div>
                 </div>
             </div>
-            <div className="mt-20 ml-20 mb-20">
+            <div className="mt-20 md:ml-20 mb-20">
               <h1 className="text-[2em] font-bold mb-5">Requirements</h1>
               <p className="mb-5 font-semibold">🎯 Basic understanding of Javascript, React, and Redux</p>
               <p className="mb-5 font-semibold">🎯 A Mac, Windows, or Linux computer</p>
             </div>
-            <div className="ml-20 mb-20 w-[70%]">
+            <div className="md:ml-20 mb-20 md:w-[70%]">
               <h1 className="text-[2em] font-bold mb-5">Description</h1>
               <p className="mb-5">Note: This course assumes you've got the basics of React and Redux down. Check out my course 'Modern React with Redux', its the perfect preparation!Go beyond the basics of React and Redux! This course will teach you to combine the ultra-popular React, Redux, Express, and MongoDB technologies to build a fullstack web application. Advanced Deployment? You will learn it. Billing/Payments? Included. Handling Email? Of course!</p>
           <p className="mb-5 font-semibold">     ------------------------------</p> 
            <p className="mb-5"  > What Will You Build?</p>  
             <p className="mb-5">All of my courses are 'learn-by-doing': no boring endless lectures with Powerpoints, only live, interactive coding examples. In this course we'll build one massive web application that profiles the advanced features of React, Redux, Express, and Mongo. By putting each concept into a real app, you'll get a better idea of when to use each unique and powerful feature.</p>
             </div>
-            <div className="ml-20 mb-20">
-              <h1 className="text-[2em] font-bold mb-5">Students also bought</h1>
-              <div className="flex space-x-10 w-[85%] p-3 mb-10 bg-zinc-300 bg-blend-difference shadow-2xl">
-                <img src={courseThumb} alt="" />
+            <div className="md:ml-20 mb-20">
+              <h1 className="md:text-[2em] font-bold mb-5">Students also bought</h1>
+              <div className="md:flex md:space-x-10 md:w-[85%] p-3 mb-10 bg-zinc-300 bg-blend-difference shadow-2xl">
+                <img src={courseThumb} alt="" className="hidden md:block" />
                 <div>
                   <h1 className="text-[1em] font-bold mb-5"> MERN Stack Course - MongoDB, Express,React and NodeJS</h1>
                   <p>⭐⭐⭐⭐ (40)</p>
@@ -128,8 +128,8 @@ const Course = ({}) => {
                   <p>100</p>
                 </div>
               </div>
-              <div className="flex space-x-10 w-[85%] p-3 mb-10 bg-zinc-300 bg-blend-difference shadow-2xl">
-                <img src={courseThumb} alt="" />
+              <div className="md:flex md:space-x-10 md:w-[85%] p-3 mb-10 bg-zinc-300 bg-blend-difference shadow-2xl">
+                <img src={courseThumb} alt="" className="hidden md:block" />
                 <div>
                   <h1 className="text-[1em] font-bold mb-5"> MERN Stack Course - MongoDB, Express,React and NodeJS</h1>
                   <p>⭐⭐⭐⭐ (40)</p>
@@ -139,10 +139,11 @@ const Course = ({}) => {
                   <p>100</p>
                 </div>
               </div>
+        
 
               
             </div>
-            <div className="ml-20 mb-20">
+            <div className="md:ml-20 mb-20">
               <h1 className="text-[2em] font-bold mb-5">Instructor</h1>
               <div className="flex space-x-4">
                 <img src={instructor} alt="" />
