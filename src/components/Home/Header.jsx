@@ -78,7 +78,7 @@ export default function Header() {
           </div>
         </div>
         {isOpen && (
-          <div className="md:hidden mt-2 py-2">
+          <div className="mobile-nav z-20 relative md:hidden mt-2 py-2">
             <Link to="/" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Home
             </Link>

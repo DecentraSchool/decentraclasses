@@ -47,3 +47,8 @@ img.vert-move {
  height: 100px;
     background: linear-gradient(#62ccfa 0%,#b0e2f8 60%, #C4EDFF  100%) 0% 0% no-repeat padding-box padding-box transparent;
 }
+
+.mobile-nav {
+    width: 100%;
+    background: linear-gradient(#62ccfa 0%,#b0e2f8 60%, #C4EDFF  100%) 0% 0% no-repeat padding-box padding-box transparent;
+}
