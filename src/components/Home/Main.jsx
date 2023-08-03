@@ -8,12 +8,12 @@ import Collab from "./Collab";
 
 export default function Main() {
   return (
-    <main>
+    <main className=" w-[100vw] md:w-[100%] overflow-x-hidden">
       <Explore />
       <Why />
-      <div className="flex justify-center align-middle" style={{ width: "100%" }}>
+      {/* <div className="flex justify-center align-middle" style={{ width: "100%" }}>
         <Collab />
-      </div>
+      </div> */}
       <About />
       <Start />
       <Courses />
