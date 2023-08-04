@@ -15,7 +15,7 @@ const Card = (props) => {
   if (window.ethereum) {
     provider = new ethers.providers.Web3Provider(window.ethereum);
   } else {
-    toast.warning("Please install MetaMask!");
+    toast("Please install MetaMask!");
   }
 
   const contract = new ethers.Contract(contractAddress, contractABI, provider);
