@@ -3,7 +3,7 @@ import React from "react";
 export default function Why() {
   return (
     <div>
-      <div className="p-32 px-10 flex flex-col gap-16 my-10">
+      <div className=" px-10 flex flex-col gap-16 my-10">
         <h1 className="font-extrabold text-2xl md:text-3xl ">Why DecentraSchool ?</h1>
         <p className="text-l md:text-xl">
           Decentraschool, we're passionate about revolutionizing education through decentralized technology. Choose us
