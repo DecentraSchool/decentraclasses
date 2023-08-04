@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Explore.css";
+import Hero from "./Hero.svg"
 export default function Explore() {
   return (
-    <div className="md:flex gap-16 px-10 justify-between overflow-x-hidden">
+    <div className="md:flex md:gap-20 md:px-10 md:justify-between overflow-x-hidden">
       <div className=" md:w-3/5 md:flex md:flex-col md:justify-around md:items-start">
         <div>
           <h1 className="text-[1.5em] my-10 linear-wipe text font-extrabold md:text-[43px] break-keep md:leading-tight">
@@ -19,8 +20,8 @@ export default function Explore() {
           Explore Courses
         </button>
       </div>
-      <div className="hidden md:w-3/4 md:vert-move md:block">
-        <img src="/images/exploreC.png" alt="" className="w-full vert-move" />
+      <div className="hidden md:w-3/4 md:vert-move md:block md:mt-20 md:justify-center">
+        <img src={Hero} alt="" className="w-[60%] vert-move ml-[30%]" />
       </div>
     </div>
   );
