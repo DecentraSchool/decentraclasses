@@ -4,8 +4,9 @@ import "./style.css";
 // import mentor_profile from "../../assets/mentor-profile.png";
 import { motion } from "framer-motion";
 import mentor_profile from "../../assets/mentor.gif";
+import { fadeAnimateVariants } from "../animate/animate";
 
-export const MentorCard = ({ portfolio, name, title, session_name, date, info, img }) => {
+export const MentorCard = ({ portfolio, name, title, session_name, date, info, img ,value }) => {
   const [showModal, setShowModal] = useState(false);
   const [rsvpd, setrsvpd] = useState(false);
 
@@ -15,7 +16,9 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
   // }, [rsvpd]);
 
   return (
-    <div className="card-container">
+    <motion.div className="card-container" variants={fadeAnimateVariants} initial="initial" whileInView="animate"  viewport={{
+      once: true,
+    }} custom={value}>
       {showModal && (
         <div
           id="popup-modal"
@@ -102,6 +105,6 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

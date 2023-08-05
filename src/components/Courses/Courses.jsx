@@ -13,9 +13,11 @@ import { LazyLoadComponent, LazyLoadImage } from "react-lazy-load-image-componen
 import { getAllCourses } from "../../utils/PolybaseUtils";
 import Course from "./Course/Course";
 import CourseCard from "../CourseCard/CourseCard";
-
+import { motion } from "framer-motion";
+import { slideAnimateVariants } from "../animate/animate";
 import calendar from "../../assets/calendar.png";
 import gift from "../../assets/gift.png";
+
 
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
@@ -98,10 +100,14 @@ export default function Courses() {
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
               <div className="flex flex-col text-center p-8">
-                <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad selection of courses</h1>
-                <p className="hidden md:text-xl md:block">
+                <motion.h1 className="text-[1.5rem] md:text-[2.5rem] font-bold" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
+                  once: true,
+                }} custom={1}>A broad selection of courses</motion.h1>
+                <motion.p className="hidden md:text-xl md:block" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
+                  once: true,
+                }} custom={3}>
                   Intresting videos with all the information you need to get started in the world of web3 and blockchain
-                </p>
+                </motion.p>
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
@@ -109,7 +115,7 @@ export default function Courses() {
                 {loader == false &&
                   courseData.map((course) => {
                     return (
-                      <div className="flex gap-8 justify-center w-full align-middle items-center">
+                      <div className="flex gap-8 justify-center w-full align-middle items-center" >
                         <CourseCard
                           img={course?.imageurl}
                           title={course?.courseName}
@@ -123,11 +129,15 @@ export default function Courses() {
               {/* <hr /> */}
 
               {/* <p>pagination</p> */}
-              <div className="flex flex-col text-center p-8">
-                <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad to sucessful courses</h1>
-                <p className="hidden md:text-xl md:block">
+              <div className="flex flex-col text-center p-8" >
+                <motion.h1 className="text-[1.5rem] md:text-[2.5rem] font-bold" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
+                  once: true,
+                }} custom={5}>A broad to sucessful courses</motion.h1>
+                <motion.p className="hidden md:text-xl md:block" variants={slideAnimateVariants} initial="initial" whileInView="animate"  viewport={{
+                  once: true,
+                }} custom={8}>
                   maintain your daily streak and get rewards and compete with all your friends
-                </p>
+                </motion.p>
               </div>
 
               <div className="ml-10 md:task-container md:flex md:justify-center md:gap-10">
@@ -157,9 +167,12 @@ export default function Courses() {
                   </div>
                 </div>
               </div>
-              <div
+              <motion.div
                 className="enroll-btn-container"
                 style={{ display: "flex", justifyContent: "center", width: "100%" }}
+                variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
+                  once: true,
+                }}
               >
                 <button
                   className="bg-[#f9a825] hover:bg-[#f5b44b]"
@@ -167,7 +180,7 @@ export default function Courses() {
                 >
                   Enroll Now
                 </button>
-              </div>
+              </motion.div>
             </div>
           </section>
         </main>
