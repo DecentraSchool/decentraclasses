@@ -105,38 +105,18 @@ export default function Courses() {
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="w-[100vw] mb-10 md:w-full md:container m-auto grid lg:grid-cols-3 gap-8 align-middle md:content-center justify-center">
+              <div className="w-[100vw] mb-10 md:w-full md:container m-auto gap-8 align-middle md:content-center justify-center">
                 {loader == false &&
                   courseData.map((course) => {
                     return (
-                      <div className="flex justify-center w-full items-center">
-
-                      <CourseCard
-                        img={course?.imageurl}
-                        title={course?.courseName}
-                        desc={course.shortdesc}
-                        course={course}
-                      />
+                      <div className="flex gap-8 justify-center w-full align-middle items-center">
+                        <CourseCard
+                          img={course?.imageurl}
+                          title={course?.courseName}
+                          desc={course.shortdesc}
+                          course={course}
+                        />
                       </div>
-        
-          
-                      // <div className="h-96 flex flex-col justify-start w-96">
-                      //   <div className="w-50 h-50">
-                      //     <LazyLoadImage
-                      //       alt=""
-                      //       style={{ height: "220px", width: "100%" }}
-                      //       src={course?.imageurl}
-                      //       className="w-50 h-50"
-                      //     />
-                      //   </div>
-                      //   <div className="flex flex-col text-white gap-4 p-8 bg-black">
-                      //     <p className="text-xl">{course.courseName}</p>
-                      //     <p className="leading-tight">{course.shortdesc}</p>
-                      //     <button className="bg-yellow-400 hover:bg-yellow-300 text-black py-2 px-3 font-medium shadow-md">
-                      //       <Link to={`/course/${course.id}`}>Start Course</Link>
-                      //     </button>
-                      //   </div>
-                      // </div>
                     );
                   })}
               </div>
@@ -145,26 +125,22 @@ export default function Courses() {
               {/* <p>pagination</p> */}
               <div className="flex flex-col text-center p-8">
                 <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad to sucessful courses</h1>
-                <p className="hidden md:text-xl md:block">maintain your daily streak and get rewards and compete with all your friends</p>
+                <p className="hidden md:text-xl md:block">
+                  maintain your daily streak and get rewards and compete with all your friends
+                </p>
               </div>
 
               <div className="ml-10 md:task-container md:flex md:justify-center md:gap-10">
-                <div
-                  className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px] mb-10"
-                >
+                <div className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px] mb-10">
                   <img src={calendar} alt="" />
                   <div className="flex flex-col justify-center items-center ">
                     <p className="font-bold">Maintain Daily Streaks</p>
-                    <p
-                      className="mt-3 mb-3 text-center whitespace-pre-wrap break-words"
-                    >
+                    <p className="mt-3 mb-3 text-center whitespace-pre-wrap break-words">
                       get ahead of your friends by maintaining daily streak
                     </p>
                   </div>
                 </div>
-                <div
-                  className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px]"
-                >
+                <div className="task p-4 rounded-lg shadow-lg flex flex-col bg-[#D9D9D9] w-[300px] h-[300px]">
                   <img src={gift} alt="" />
                   <div className="flex flex-col justify-center items-center">
                     <p style={{ fontWeight: "700" }}>Get Rewards</p>

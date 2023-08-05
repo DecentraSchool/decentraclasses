@@ -3,4 +3,32 @@
 @tailwind utilities;
 
 
+*{
+    word-break: keep-all;
+}
 
+h1{
+    word-break: keep-all;
+}
+h2{
+    word-break: keep-all;
+}
+h3{
+    word-break: keep-all;
+}
+h4{
+    word-break: keep-all;
+}
+h5{
+    word-break: keep-all;
+}
+h6{
+    word-break: keep-all;
+}
+p{
+    word-break: keep-all;
+}
+
+span{
+    word-break: keep-all;
+}

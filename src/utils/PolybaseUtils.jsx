@@ -16,11 +16,11 @@ export const db = new Polybase({
 //   isError,
 //   isLoading,
 //   isSuccess,
-//   signMessage: addNewCourse,
+//   signMessage,
 // } = useSignMessage({
 //   message: "Decentraschool",
 //   onSuccess(data) {
-//     addCourse(data);
+//     addInstructor(data);
 //   },
 // });
 
@@ -34,37 +34,13 @@ export const getCoursebyId = async (id) => {
   return record;
 };
 
+export const getInstructorById = async (id) => {
+  const record = db.collection("Instructor").record(id).get();
+  return record;
+};
+
 export const getPublicKey = async (sig) => {
   const publicKey65Bytes = ethPersonalSignRecoverPublicKey(sig, "Decentraschool");
   const publicKey64Bytes = "0x" + publicKey65Bytes.slice(4);
   return publicKey64Bytes;
-};
-
-const addCourse = async (sig) => {
-  try {
-    db.signer(async (data) => {
-      return {
-        h: "eth-personal-sign",
-        sig: sig,
-      };
-    });
-    const publicKey = await getPublicKey(sig);
-    const res = await db.collection("Course").create([
-      "1010",
-      "Full Stack development Course",
-      "DecenteraSchool",
-      "January 15, 2023",
-      "10",
-      "20.5",
-      "5",
-      "https://cdn.educba.com/academy/wp-content/uploads/2019/11/full-stack-web-developer.png.webp",
-      "Become a full stack developer and launch your apps quickly",
-      "Learn about React, Angular, Python and more",
-      // This is referencing the User collection
-    ]);
-
-    console.log(res);
-  } catch (error) {
-    console.log(error);
-  }
 };
