@@ -5,15 +5,20 @@ import { Link } from "react-router-dom";
 // import style from './style.css' ;
 
 const CourseCard = ({ img, title, desc, course }) => {
+  console.log(course);
   return (
-    <div className="main-container p-4 rounded-lg shadow-lg flex flex-col  ">
+    <div className="main-container p-4 rounded-lg  flex shadow-xl flex-col  ">
+      <span className="text-blue-700">{course.category}</span>
       <div className="img-container">
         <div className="course-image-container">
-          <img src={img} className="course-image object-cover md:h-60 w-full h-96" />
+          <img src={img} className="object-contain course-image  md:h-60 w-full h-96" />
         </div>
       </div>
       <div>
-        <h1 style={{ fontSize: "24px", textAlign: "center", whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
+        <h1
+          className="mt-4"
+          style={{ fontSize: "24px", textAlign: "center", whiteSpace: "pre-wrap", wordBreak: "break-word" }}
+        >
           {title}
         </h1>
         <p style={{ textAlign: "left" }}>{desc}</p>
@@ -21,7 +26,7 @@ const CourseCard = ({ img, title, desc, course }) => {
       <div className="star-rating flex justify-center gap-3">
         <span className="text-orange">4.7</span>
         <img src={star} alt="rating" />
-        <span>(4,859)</span>
+        {/* <span>(4,859)</span> */}
       </div>
 
       <div className="mt-5 pricing flex justify-center ">

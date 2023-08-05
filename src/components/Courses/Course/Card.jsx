@@ -81,7 +81,7 @@ const Card = (props) => {
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <section className={`card-body ${props.newClass}`}>
+      <section className={`card-body ${props.newClass} h-fit shadow-xl`}>
         <div className="card-skeleton">
           {courseBought && (
             <div>
@@ -90,7 +90,7 @@ const Card = (props) => {
           )}
 
           <div>
-            <img style={{ width: "300px", height: "200px" }} src={props.image} alt="" />
+            <img style={{ width: "100%", height: "300px", objectFit: "contain" }} src={props.image} alt="" />
           </div>
           {userAlreadyBought ? (
             <button className="bg-green-400">
@@ -98,11 +98,11 @@ const Card = (props) => {
             </button>
           ) : (
             <button className="bg-yellow-400" onClick={handleBuy}>
-              Buy a share
+              Buy this course
             </button>
           )}
 
-          <ul>
+          {/* <ul>
             <li>
               <span className="text-[20px] md:text-xl">Price per share : {props.pricepshare}</span>
             </li>
@@ -114,7 +114,7 @@ const Card = (props) => {
             <li>📃 {props.anum} articles</li>
             <li>📝 English/Hindi</li>
             <li>📱 Access on mobile</li>
-          </ul>
+          </ul> */}
         </div>
       </section>
     </>

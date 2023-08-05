@@ -69,7 +69,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/poly" element={<PolybaseHook />} />
-        {/* <Route path="/community" element={<Communtiy />} /> */}
         <Route path="/community" element={<Communtiy />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/courses" element={<Courses />} />
