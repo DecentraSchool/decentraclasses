@@ -5,6 +5,7 @@ import { ethPersonalSignRecoverPublicKey } from "@polybase/eth";
 import { ethPersonalSign } from "@polybase/eth";
 import { ethers } from "ethers";
 import { signMessage } from "@wagmi/core";
+import { toast } from "react-hot-toast";
 
 export const db = new Polybase({
   defaultNamespace:
@@ -37,6 +38,28 @@ export const getCoursebyId = async (id) => {
 export const getInstructorById = async (id) => {
   const record = db.collection("Instructor").record(id).get();
   return record;
+};
+
+
+
+export const buyCourse = async (sig, courseId, address) => {
+  try {
+    db.signer(async (data) => {
+      return {
+        h: "eth-personal-sign",
+        sig: sig,
+      };
+    });
+    // const publicKey = await getPublicKey(sig);
+    const res = await db.collection("Course").record(courseId).call("addUserToCourse", [address]);
+    console.log(res);
+    toast.success("Course Successfully Brought");
+    return true;
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong! Please try again");
+    return false;
+  }
 };
 
 export const getPublicKey = async (sig) => {
