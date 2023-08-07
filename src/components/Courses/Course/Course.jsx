@@ -8,6 +8,11 @@ import { getCoursebyId, getInstructorById } from "../../../utils/PolybaseUtils";
 import courseThumb from "../course-thumb.png";
 import instructor from "../instructor.png";
 import InstructorCard from "./InstructorCard.jsx";
+import arrowDown from "../../Courseplace/down-arrow.svg";
+import like from "../../../assets/like.svg";
+import dislike from "../../../assets/dislike.svg";
+import reviewDp from "../../../assets/review-dp.svg";
+
 const Course = ({}) => {
   const [courseInfo, setcourseInfo] = useState({});
   const [instructorInfo, setinstructorInfo] = useState({});
@@ -34,9 +39,9 @@ const Course = ({}) => {
               <h1 className="text-[1.25em] md:text-[2em] font-bold mb-5">{courseInfo?.courseName} 🚀</h1>
               <p className="mb-5">
                 Created By{" "}
-                <span className="text-2xl bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded-xl">
+                <p className="text-xl rounded-xl text-yellow-300">
                   {instructorInfo?.name}
-                </span>{" "}
+                </p>{" "}
               </p>
               <p className="mb-5">4 ⭐⭐⭐⭐ </p>
               <p className="mb-5">Last Updated {courseInfo.date} </p>
@@ -60,7 +65,8 @@ const Course = ({}) => {
                 <div className="px-5 py-5 w-[100%]">
                   <details className="group">
                     <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
-                      <div className="flex justify-between p-3">
+                    <div className="flex justify-between p-3">
+                        <span><img src={arrowDown} alt="" width={30} /></span>
                         <span className="text-[1.25em]">Course Overview - Start Here</span>
                         <span className="text-[1.25em]">6 lectures | 23 min</span>
                       </div>
@@ -92,6 +98,7 @@ const Course = ({}) => {
                   <details className="group">
                     <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
                       <div className="flex justify-between p-3">
+                        <span><img src={arrowDown} alt="" width={30} /></span>
                         <span className="text-[1.25em]">Course Overview - Start Here</span>
                         <span className="text-[1.25em]">6 lectures | 23 min</span>
                       </div>
@@ -165,6 +172,42 @@ const Course = ({}) => {
               </div>
             </div>
             <InstructorCard instructorInfo={instructorInfo} />
+                <div className="flex">
+            <div className="ml-20">
+              <div className="flex space-x-5">
+                <img src={reviewDp} alt="" />
+                <div className="flex-col align-middle">
+              <h1 className="text-2xl font-bold mt-5">Review 1</h1>
+              <p className="mb-5">⭐⭐⭐⭐ (1 month ago)</p>
+              </div>
+              </div>
+              
+              <p className="mb-5">Its very nice tutorial.If it has included DB data access that would be great for basic learings to advanced as title stating.</p>
+              <div className="flex space-x-5">
+                <span>Helpful?</span>
+                <span className="flex w-[5%] justify-evenly"><img src={like} alt="" />1</span>
+                <span className="flex w-[5%] justify-evenly"><img src={dislike} alt="" />0</span>
+
+              </div>
+            </div>
+            <div className="ml-20">
+              <div className="flex space-x-5">
+                <img src={reviewDp} alt="" />
+                <div className="flex-col align-middle">
+              <h1 className="text-2xl font-bold mt-5">Review 1</h1>
+              <p className="mb-5">⭐⭐⭐⭐ (1 month ago)</p>
+              </div>
+              </div>
+              
+              <p className="mb-5">Its very nice tutorial.If it has included DB data access that would be great for basic learings to advanced as title stating.</p>
+              <div className="flex space-x-5">
+                <span>Helpful?</span>
+                <span className="flex w-[5%] justify-evenly"><img src={like} alt="" />1</span>
+                <span className="flex w-[5%] justify-evenly"><img src={dislike} alt="" />0</span>
+
+              </div>
+            </div>
+            </div>
           </div>
 
           <Card
@@ -176,6 +219,7 @@ const Course = ({}) => {
             anum={courseInfo?.nofarticles}
             newClass="side3 lg:w-[30%] w-full"
           />
+
         </section>
       </main>
     </>

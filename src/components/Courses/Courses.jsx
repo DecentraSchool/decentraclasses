@@ -126,7 +126,7 @@ export default function Courses() {
               <div className="flex flex-col text-center p-8">
                 <h1 className="text-[1.5rem] md:text-[2.5rem] font-bold">A broad to sucessful courses</h1>
                 <p className="hidden md:text-xl md:block">
-                  maintain your daily streak and get rewards and compete with all your friends
+                  Maintain your daily streak and get rewards and compete with all your friends
                 </p>
               </div>
 

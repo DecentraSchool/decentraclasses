@@ -85,19 +85,32 @@ export default function Communtiy() {
       </div>
       {/* Sixth section */}
       <div className="flex md:flex-row flex-col justify-center md:mt-20">
+      <div className="w-[20%]">
+            <img src={bronze} alt="" />
+          </div>
         <div className="md:w-[44%] md:mx-0 mx-8 mt-20">
-          <h1 className="text-[2em] font-bold mb-5">Intermediate and Advanced: Skyrocket Your Career</h1>
+          <h1 className="text-[2em] font-bold mb-5">Intermediate : Skyrocket Your Career</h1>
           <p className="font-semibold">
             Already familiar with coding? Get ready to fast-track your knowledge with our immersive intermediate and
             advanced stages! Dive deep into cutting-edge Web 3 concepts and refine your skills, with expert guidance
             every step of the way.
           </p>
-          <div className="content-center w-full flex justify-center">
-            <img src={bronze} alt="" />
-          </div>
+          
         </div>
       </div>
       {/* Seventh Section  */}
+      <div className="flex md:flex-row flex-col align-middle justify-center md:mt-20">
+        <div className="md:w-[40%] mx-5 mt-20">
+          <h1 className="text-[2em] font-bold mb-5">Advanced: Exceed Your Potential</h1>
+          <p className="font-semibold">
+            Good at coding? Great! Our advanced stage includes sspecial resources and interactive lessons designed to get you going on your fabulous journey of mastering Web 3 technology.
+          </p>
+        </div>
+        <div className="content-center flex justify-center">
+          <img src={silver} alt="" />
+        </div>
+      </div>
+      {/* Eighth Section  */}
       <div className="md:w-[50%] md:mx-[25%] md:mt-20 mt-5  mx-8 mb-20">
         <h1 className="text-[2em] font-bold mb-5 text-center">Join Today!</h1>
         <p className="font-semibold mb-10 text-center">
