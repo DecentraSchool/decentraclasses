@@ -1,0 +1,8 @@
+.opening-button{
+    background-color: #f9a825;
+    border-radius: 40px;
+    transition: 0.5s;
+  }
+.opening-button:hover{
+  background-color: #f5b44b;
+}

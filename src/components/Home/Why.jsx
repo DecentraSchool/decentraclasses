@@ -3,9 +3,9 @@ import React from "react";
 export default function Why() {
   return (
     <div>
-      <div className="p-32 px-10 flex flex-col gap-16">
-        <h1 className="font-extrabold text-3xl ">Why DecentraSchool ?</h1>
-        <p className="">
+      <div className=" px-10 flex flex-col gap-16 my-10">
+        <h1 className="font-extrabold text-2xl md:text-3xl ">Why DecentraSchool ?</h1>
+        <p className="text-l md:text-xl">
           Decentraschool, we're passionate about revolutionizing education through decentralized technology. Choose us
           for a transformative learning experience, where knowledge and rewards go hand in hand, empowering you to
           thrive in the digital age. Join us today and embark on a journey of lifelong learning and endless
@@ -13,7 +13,7 @@ export default function Why() {
         </p>
         <div className="flex flex-wrap flex-row gap-5 justify-evenly ">
           <div className="flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mLearn.png" alt="" />
               <h3 className="font-bold">Learn and Earn</h3>
             </div>
@@ -25,7 +25,7 @@ export default function Why() {
             </p>
           </div>
           <div className=" flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mEarn.png" alt="" />
               <h3>Community and Networking</h3>
             </div>
@@ -36,7 +36,7 @@ export default function Why() {
             </p>
           </div>
           <div className=" flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
-            <div className="flex gap-3 items-center w-max ">
+            <div className="flex gap-3 items-center  ">
               <img src="/images/mExcel.png" alt="" />
               <h3>Interactive Learning Experience</h3>
             </div>

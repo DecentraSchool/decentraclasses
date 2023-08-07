@@ -1,0 +1,658 @@
+.hero-rectangle{
+  background-color: #d9d9d9;
+}
+
+.hero-heading{
+  color: #2D3E50; 
+  font-size: 48px; 
+  font-weight: 700; 
+  word-wrap: break-word
+}
+
+.jobs-button{
+  background-color: #f9a825;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+.jobs-button:hover{
+  background-color: #f5b44b;
+}
+
+.careers {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .careers .overlap-wrapper {
+    background-color: transparent;
+    border: 1px none;
+    height: 3459px;
+
+    width: 1440px;
+  }
+  
+  .careers .div {
+    background-image: url(https://generation-sessions.s3.amazonaws.com/2bb37f5cb66f51fbabc51797452dfcf7/img/blurbg.png);
+    background-size: 100% 100%;
+    height: 100%;
+    left: -431px;
+    position: relative;
+    /* top: -89px; */
+    width: 2376px;
+  }
+  
+  .careers .hero-tab {
+    height: 449px;
+    left: 619px;
+    position: absolute;
+    top: 150px;
+    width: 1069px;
+  }
+  
+  .careers .overlap-group-2 {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 449px;
+    position: relative;
+    width: 1065px;
+  }
+  
+  .careers .discover-what-s {
+    color: var(--variable-collection-dark-text);
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    left: 56px;
+    letter-spacing: var(--heading-letter-spacing);
+    line-height: var(--heading-line-height);
+    position: absolute;
+    top: 46px;
+    width: 471px;
+  }
+  
+  .careers .let-your-heart-take {
+    color: var(--variable-collection-dark-text);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 54px;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 198px;
+    width: 490px;
+  }
+  
+  .careers .explore-from {
+    height: 358px;
+    left: 619px;
+    object-fit: cover;
+    position: absolute;
+    top: 46px;
+    width: 423px;
+  }
+  
+  .careers .jobs {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background-color: #d9d9d9;
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 797px;
+    left: 619px;
+    position: absolute;
+    top: 1258px;
+    width: 1065px;
+  }
+  
+  .careers .group {
+    height: 262px;
+    left: 22px;
+    position: absolute;
+    top: 29px;
+    width: 1010px;
+  }
+  
+  .careers .overlap-2 {
+    height: 262px;
+    position: relative;
+    width: 1014px;
+  }
+  
+  .careers .text-wrapper {
+    color: #1e1e1e;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 0;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 15px;
+    width: 322px;
+  }
+  
+  .careers .overlap-3 {
+    height: 262px;
+    left: 7px;
+    position: absolute;
+    top: 0;
+    width: 1007px;
+  }
+  
+  .careers .overlap-group-wrapper {
+    height: 76px;
+    left: 793px;
+    position: absolute;
+    top: 0;
+    width: 172px;
+  }
+  
+  .careers .overlap-group-3 {
+    height: 76px;
+    position: relative;
+    width: 170px;
+  }
+  
+  .careers .rectangle {
+    background-color: #f9a825;
+    border-radius: 30px;
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 170px;
+  }
+  
+  .careers .text-wrapper-2 {
+    color: #000000;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 22px;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 7px;
+    width: 148px;
+  }
+  
+  .careers .div-wrapper {
+    height: 198px;
+    left: 0;
+    position: absolute;
+    top: 64px;
+    width: 1007px;
+  }
+  
+  .careers .overlap-4 {
+    background-color: #4aa1c7;
+    border-radius: 10px;
+    height: 198px;
+    position: relative;
+    width: 1001px;
+  }
+  
+  .careers .overlap-group-4 {
+    height: 70px;
+    left: 832px;
+    position: absolute;
+    top: 69px;
+    width: 126px;
+  }
+  
+  .careers .group-2 {
+    height: 16px;
+    left: 108px;
+    position: absolute;
+    top: 22px;
+    transform: rotate(-90deg);
+    width: 48px;
+  }
+  
+  .careers .line {
+    height: 24px;
+    left: 28px;
+    position: absolute;
+    top: -4px;
+    transform: rotate(90deg);
+    width: 16px;
+  }
+  
+  .careers .img {
+    height: 24px;
+    left: 4px;
+    position: absolute;
+    top: -4px;
+    transform: rotate(90deg);
+    width: 16px;
+  }
+  
+  .careers .flexcontainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 69px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 126px;
+  }
+  
+  .careers .text {
+    align-self: stretch;
+    color: #ffffff;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .careers .span {
+    font-weight: 700;
+    letter-spacing: -0.4px;
+  }
+  
+  .careers .span-wrapper {
+    align-self: stretch;
+    color: #ffffff;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+  }
+  
+  .careers .text-wrapper-3 {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+  }
+  
+  .careers .overlap-5 {
+    height: 130px;
+    left: 20px;
+    position: absolute;
+    top: 31px;
+    width: 627px;
+  }
+  
+  .careers .p {
+    color: #ffffff;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 0;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 0;
+    width: 627px;
+  }
+  
+  .careers .lmkln-for {
+    color: #ffffff;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 1px;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 48px;
+    width: 557px;
+  }
+  
+  .careers .group-3 {
+    height: 479px;
+    left: 25px;
+    position: absolute;
+    top: 311px;
+    width: 1010px;
+  }
+  
+  .careers .text-wrapper-4 {
+    color: #1e1e1e;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 0;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 15px;
+    width: 283px;
+  }
+  
+  .careers .group-4 {
+    height: 45px;
+    left: 787px;
+    position: absolute;
+    top: 0;
+    width: 223px;
+  }
+  
+  .careers .overlap-group-5 {
+    height: 45px;
+    position: relative;
+    width: 221px;
+  }
+  
+  .careers .rectangle-2 {
+    background-color: #f9a825;
+    border-radius: 30px;
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 172px;
+  }
+  
+  .careers .text-wrapper-5 {
+    color: #000000;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 23px;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 11px;
+    width: 199px;
+  }
+  
+  .careers .group-5 {
+    height: 198px;
+    left: 7px;
+    position: absolute;
+    top: 64px;
+    width: 1007px;
+  }
+  
+  .careers .overlap-6 {
+    height: 138px;
+    left: 21px;
+    position: absolute;
+    top: 23px;
+    width: 596px;
+  }
+  
+  .careers .text-wrapper-6 {
+    color: #ffffff;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 0;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 0;
+    width: 596px;
+  }
+  
+  .careers .mensch-lmkln-for {
+    color: #ffffff;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 0;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 56px;
+    width: 557px;
+  }
+  
+  .careers .group-6 {
+    height: 198px;
+    left: 7px;
+    position: absolute;
+    top: 281px;
+    width: 1007px;
+  }
+  
+  .careers .overlap-7 {
+    height: 133px;
+    left: 21px;
+    position: absolute;
+    top: 28px;
+    width: 637px;
+  }
+  
+  .careers .text-wrapper-7 {
+    color: #ffffff;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 0;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 0;
+    width: 637px;
+  }
+  
+  .careers .lmkln-for-2 {
+    color: #ffffff;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    left: 0;
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: absolute;
+    top: 51px;
+    width: 557px;
+  }
+  
+  .careers .h-1 {
+    color: #1e1e1e;
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    left: 909px;
+    letter-spacing: var(--heading-letter-spacing);
+    line-height: var(--heading-line-height);
+    position: absolute;
+    top: 1079px;
+  }
+  
+  .careers .develope-a {
+    color: #000000;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    left: 630px;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    text-align: center;
+    top: 1149px;
+    width: 1080px;
+  }
+  
+  .careers .buttom {
+    height: 58px;
+    left: 1038px;
+    position: absolute;
+    top: 936px;
+    width: 175px;
+  }
+  
+  .careers .overlap-8 {
+    background-color: #f9a825;
+    border-radius: 40px;
+    height: 58px;
+    position: relative;
+    width: 173px;
+  }
+  
+  .careers .text-wrapper-8 {
+    color: #000000;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    height: 45px;
+    left: 26px;
+    letter-spacing: -0.4px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    width: 121px;
+  }
+  
+  .careers .nav-bar-instance {
+    left: 673px !important;
+    position: absolute !important;
+    top: 105px !important;
+  }
+  
+  .careers .text-wrapper-9 {
+    color: #000000;
+    font-family: var(--sub-heading-bold-font-family);
+    font-size: var(--sub-heading-bold-font-size);
+    font-style: var(--sub-heading-bold-font-style);
+    font-weight: var(--sub-heading-bold-font-weight);
+    left: 621px;
+    letter-spacing: var(--sub-heading-bold-letter-spacing);
+    line-height: var(--sub-heading-bold-line-height);
+    position: absolute;
+    text-align: center;
+    top: 771px;
+    width: 1063px;
+  }
+  
+  .careers .text-wrapper-10 {
+    color: #000000;
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    left: 964px;
+    letter-spacing: var(--heading-letter-spacing);
+    line-height: var(--heading-line-height);
+    position: absolute;
+    text-align: center;
+    top: 2121px;
+  }
+  
+  .careers .group-7 {
+    height: 339px;
+    left: 658px;
+    position: absolute;
+    top: 2226px;
+    width: 994px;
+  }
+  
+  .careers .text-wrapper-11 {
+    color: #000000;
+    font-family: "Futura-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    position: absolute;
+    top: 53px;
+    width: 261px;
+  }
+  
+  .careers .text-wrapper-12 {
+    color: #000000;
+    font-family: "Futura-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 343px;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 53px;
+    width: 292px;
+  }
+  
+  .careers .click-on-the-view {
+    color: #000000;
+    font-family: "Futura-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 698px;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    position: absolute;
+    text-align: right;
+    top: 53px;
+    width: 284px;
+  }
+  
+  .careers .text-wrapper-13 {
+    color: #000000;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 25px;
+    letter-spacing: -0.64px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .careers .text-wrapper-14 {
+    color: #000000;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 300px;
+    letter-spacing: -0.64px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .careers .text-wrapper-15 {
+    color: #000000;
+    font-family: "Futura-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 711px;
+    letter-spacing: -0.64px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+  }
+  

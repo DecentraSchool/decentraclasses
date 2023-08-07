@@ -4,16 +4,18 @@ import { Toaster, toast } from "react-hot-toast";
 import { contractABI, contractAddress } from "../../../contractABI";
 import Confetti from "react-confetti";
 import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
 
 const Card = (props) => {
+  // console.log(JSON.parse(props?.courseInfo?.content));
   const [courseBought, setcourseBought] = useState(false);
   const [userAlreadyBought, setuserAlreadyBought] = useState(false);
+  const { address } = useAccount();
   let provider;
   if (window.ethereum) {
     provider = new ethers.providers.Web3Provider(window.ethereum);
-    // rest of your code
   } else {
-    toast.warning("Please install MetaMask!");
+    toast("Please install MetaMask!");
   }
 
   const contract = new ethers.Contract(contractAddress, contractABI, provider);
@@ -23,9 +25,12 @@ const Card = (props) => {
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
     const account = ethers.utils.getAddress(accounts[0]);
     const course = await contract.getCourseByStudent(ethers.utils.getAddress(accounts[0]));
+
     course[0].forEach((c) => arr.push(c.toString()));
     console.log(props.courseInfo);
-    if (arr.includes(props.courseInfo[4].courseid)) {
+    console.log(arr);
+
+    if (arr.includes(props.courseInfo.id)) {
       setuserAlreadyBought(true);
     } else {
       setuserAlreadyBought(false);
@@ -34,7 +39,7 @@ const Card = (props) => {
 
   const handleBuy = async () => {
     try {
-      let courseId = props.courseInfo[4].courseid;
+      let courseId = props.courseInfo.id;
       toast("Buying...");
 
       const price = props.pricepshare;
@@ -49,7 +54,7 @@ const Card = (props) => {
       const contractWithSigner = contract.connect(signer);
 
       let transaction = await contractWithSigner.buyCourse(courseId, 1, {
-        value: price,
+        value: 100,
       });
       await transaction.wait();
 
@@ -69,12 +74,14 @@ const Card = (props) => {
 
   useEffect(() => {
     getStudentCourses();
-  }, []);
+  }, [props.courseInfo]);
+
+  console.log(address);
 
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <section className={`card-body ${props.newClass}`}>
+      <section className={`card-body ${props.newClass} h-fit shadow-xl`}>
         <div className="card-skeleton">
           {courseBought && (
             <div>
@@ -83,31 +90,31 @@ const Card = (props) => {
           )}
 
           <div>
-            <img style={{ width: "300px", height: "200px" }} src={props.image} alt="" />
+            <img style={{ width: "100%", height: "300px", objectFit: "contain" }} src={props.image} alt="" />
           </div>
           {userAlreadyBought ? (
             <button className="bg-green-400">
-              <Link to="/dash">continue to dashboard</Link>{" "}
+              <Link to={`/workplace?userId=${address}&courseId=${props.courseInfo.id}`}>continue to dashboard</Link>{" "}
             </button>
           ) : (
             <button className="bg-yellow-400" onClick={handleBuy}>
-              Buy a share
+              Buy this course
             </button>
           )}
 
-          <ul>
+          {/* <ul>
             <li>
-              <span style={{ fontSize: "35px" }}>Price per share :{props.pricepshare}</span>
+              <span className="text-[20px] md:text-xl">Price per share : {props.pricepshare}</span>
             </li>
 
             <li>
-              <span>Total shares :{props.totalshare}</span>
+              <span>Total shares : {props.totalshare}</span>
             </li>
             <li>📽️ {props.dur} hours of video</li>
             <li>📃 {props.anum} articles</li>
             <li>📝 English/Hindi</li>
             <li>📱 Access on mobile</li>
-          </ul>
+          </ul> */}
         </div>
       </section>
     </>

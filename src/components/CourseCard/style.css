@@ -1,0 +1,18 @@
+.course-image-container{
+    width: 200px;
+}
+
+.course-image{
+    border-radius: 10px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+
+.price{
+    color: #03A9F4;
+    font-size: 24px;
+    font-weight: 700;
+}

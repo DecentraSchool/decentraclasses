@@ -1,18 +1,22 @@
-import React from 'react'
-import About from './About';
-import Courses from './Courses';
-import Explore from './Explore';
-import Start from './Start';
-import Why from './Why';
+import React from "react";
+import About from "./About";
+import Courses from "./Courses";
+import Explore from "./Explore";
+import Start from "./Start";
+import Why from "./Why";
+import Collab from "./Collab";
 
 export default function Main() {
-    return (
-        <main >
-            <Explore />
-            <Why />
-            <About />
-            <Start />
-            <Courses />
-        </main>
-    )
+  return (
+    <main className=" w-[100vw] md:w-[100%] overflow-x-hidden">
+      <Explore />
+      <Why />
+      {/* <div className="flex justify-center align-middle" style={{ width: "100%" }}>
+        <Collab />
+      </div> */}
+      <About />
+      <Start />
+      <Courses />
+    </main>
+  );
 }
