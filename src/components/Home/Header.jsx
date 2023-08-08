@@ -32,9 +32,9 @@ export default function Header() {
       <nav className="p-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
+            <div className="flex items-center w-[260px]">
               <a href="/">
-                <img src={logo} alt="Logo" className=" w-[225px] h-[32px]" />
+                <img src={logo} alt="Logo" className="w-full" />
               </a>
             </div>
             <div className="hidden md:flex items-center">
@@ -87,6 +87,9 @@ export default function Header() {
             </Link>
             <Link to="/community" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Community
+            </Link>
+            <Link to="/mentor" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
+              Mentorships
             </Link>
             <Link to="/careers" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
               Career
