@@ -8,7 +8,7 @@ import Collab from "./Collab";
 
 export default function Main() {
   return (
-    <main className=" w-[100vw] md:w-[100%] overflow-x-hidden">
+    <main className=" w-[99vw] md:w-[99%] overflow-x-hidden">
       <Explore />
       <Why />
       {/* <div className="flex justify-center align-middle" style={{ width: "100%" }}>
