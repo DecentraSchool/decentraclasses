@@ -39,7 +39,9 @@ const PolybaseHook = () => {
       // updateCourseId(data);
       // addInstructor(data);
       // deleteCourse(data);
-      addContentToCourse(data);
+      // addContentToCourse(data);
+      addWhatyllearn(data);
+      // addRequirements(data);
     },
   });
 
@@ -53,6 +55,59 @@ const PolybaseHook = () => {
       });
       const publicKey = await getPublicKey(sig);
       const res = await db.collection("Course").record("2222").call("del");
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addWhatyllearn = async (sig) => {
+    try {
+      db.signer(async (data) => {
+        return {
+          h: "eth-personal-sign",
+          sig: sig,
+        };
+      });
+      const publicKey = await getPublicKey(sig);
+      const res = await db
+        .collection("Course")
+        .record("1111")
+        .call("setWhatyllearn", [
+          [
+            "You learn basics of figma with professional tips",
+            "Understanding how to create user interface and user experience",
+            "Understanding how to create prototypes and wire frame",
+            "Learn about ui ux principles",
+          ],
+        ]);
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addRequirements = async (sig) => {
+    try {
+      db.signer(async (data) => {
+        return {
+          h: "eth-personal-sign",
+          sig: sig,
+        };
+      });
+      const publicKey = await getPublicKey(sig);
+      const res = await db
+        .collection("Course")
+        .record("1111")
+        .call("setRequirements", [
+          [
+            "Basics knowledge about ui ux design.",
+            "One laptop or PC with medium processor.",
+            "Nice Internet connection or wifi connection",
+          ],
+        ]);
 
       console.log(res);
     } catch (error) {
