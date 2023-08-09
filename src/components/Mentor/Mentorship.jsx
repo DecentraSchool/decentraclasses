@@ -18,9 +18,11 @@ import instructor1 from "../../assets/instructor1.jpg";
 import instructor2 from "../../assets/instructor2.jpg";
 import { motion } from "framer-motion";
 import { slideAnimateVariants } from "../animate/animate";
+
 import inst3 from "../../assets/inst3.png";
 import inst4 from "../../assets/inst4.png";
 import inst5 from "../../assets/inst5.jpg";
+
 
 export default function Mentorship() {
   const [noOfCourses, setnoOfCourses] = useState(0);
@@ -30,6 +32,7 @@ export default function Mentorship() {
   return (
     <div className="w-full flex-col h-full flex  items-center align-middle">
       <img src={meeting1} style={{ position: "absolute", left: "0", backgroundBlendMode: "lighten", opacity: "0.5" }} />
+
       <motion.p
         style={{ fontSize: "25px", zIndex: "50" }}
         className="text-xl font-mono mt-12 p-5 mx-3 mentor-p"
@@ -41,6 +44,7 @@ export default function Mentorship() {
         }}
         custom={1}
       >
+
         Meet your Instructors/Mentors and join group sessions powered by{" "}
         <a href="https://huddle01.com/" target="_blank" style={{ textDecoration: "underline" }}>
           Huddle01 🚀
@@ -65,7 +69,9 @@ export default function Mentorship() {
           }
           portfolio={"/"}
           img={instructor1}
-          value={3}
+
+     value = {3}
+
         />
         <MentorCard
           title={"Web/App Developer"}
