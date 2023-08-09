@@ -12,9 +12,9 @@ const InstructorCard = ({ instructorInfo }) => {
           alt=""
         />
         <div className="align-middle gap-5 justify-between flex flex-col h-fit mt-7">
-          <span className="text-2xl bg-gradient-to-r text-white from-purple-400 to-pink-600 p-2 rounded-xl">
+          <h1 className="text-2xl font-bold">
             {instructorInfo?.name}
-          </span>{" "}
+          </h1>{" "}
           <p>{instructorInfo?.desig}</p>
           <p>No of Courses: 1</p>
         </div>

@@ -1,17 +1,20 @@
 import React from "react";
-
+import WhyLand from "./landing-why.png";
 export default function Why() {
   return (
-    <div>
-      <div className=" px-10 flex flex-col gap-16 my-10">
-        <h1 className="font-extrabold text-2xl md:text-3xl ">Why DecentraSchool ?</h1>
-        <p className="text-l md:text-xl">
-          Decentraschool, we're passionate about revolutionizing education through decentralized technology. Choose us
-          for a transformative learning experience, where knowledge and rewards go hand in hand, empowering you to
+    <div className="w-[99%]">
+      <div className=" flex flex-col gap-16 mt-10 md:mt-[12em]">
+        <h1 className="font-extrabold text-2xl md:text-3xl mx-3">Why Decentraclasses ?</h1>
+        <p className="text-l md:text-xl mx-3">
+          At Decentraclasses, we're passionate about revolutionizing education through decentralized technology. Choose
+          us for a transformative learning experience, where knowledge and rewards go hand in hand, empowering you to
           thrive in the digital age. Join us today and embark on a journey of lifelong learning and endless
           possibilities.
         </p>
-        <div className="flex flex-wrap flex-row gap-5 justify-evenly ">
+        <div className="flex justify-center">
+          <img src={WhyLand} alt="" />
+        </div>
+        {/* <div className="flex flex-wrap flex-row gap-5 justify-evenly ">
           <div className="flex flex-col gap-5 items-center text-center p-5  bg-blue-300">
             <div className="flex gap-3 items-center  ">
               <img src="/images/mLearn.png" alt="" />
@@ -47,7 +50,7 @@ export default function Why() {
               goodbye to passive learning and embrace a dynamic educational journey.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

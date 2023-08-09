@@ -14,7 +14,9 @@ export default function Footer() {
                 <img src={footerLogo} alt="" />
               </div>
               <p>
+
                 India First Learn to Earn (L2E) Platform with Staking, innovative courses, and enjoy the perks of lifelong learning.
+
               </p>
             </div>
             <div className="text-[#777777]">
@@ -53,7 +55,6 @@ export default function Footer() {
             <div className="flex flex-col items-start gap-[18px]">
               <p className="truncate text-[18px] font-semibold">CONTACT US</p>
               <ul className="flex flex-col items-start gap-[8px]">
-
                 <li className="text-[#1d4ed8] hover:text-black cursor-pointer flex gap-1 items-baseline">
                   <FontAwesomeIcon icon={faEnvelope} className="fa-xs" />
                   <p>decentraclasses@gmail.com</p>
@@ -65,8 +66,10 @@ export default function Footer() {
                 <li className="font-semibold text-[16px]">Stay in touch with us</li>
                 <li className="max-w-[34ch]">Leave us your email to get the latest news and updates</li>
                 <li className="flex w-full">
+
                   <input placeholder="Your Email" className="flex-grow bg-transparent outline-none border-[1px] border-solid border-black border-r-0 text-[12px] px-[12px] tracking-wide" />
                   <button className="border-[1px] border-solid border-l-transparent px-[12px] py-[9px] text-[13px] bg-transparent font-semibold text-[#1d4ed8] border-black hover:text-white hover:bg-black transition-all duration-300 truncate">Subscribe</button>
+
                 </li>
               </ul>
             </div>
@@ -77,22 +80,30 @@ export default function Footer() {
           <p className="truncate text-[18px] font-semibold">Connect with us</p>
           <ul className="flex gap-[20px] text-[24px]">
             <li className="text-[#1d4ed8] hover:text-black">
+
               <a href="https://www.facebook.com/decentraclasses/" rel="noreferrer" target="_blank" >
+
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
             </li>
             <li className="text-[#1d4ed8] hover:text-black">
+
               <a href="https://twitter.com/decentraclasses" rel="noreferrer" target="_blank" >
+
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
             </li>
             <li className="text-[#1d4ed8] hover:text-black">
+
               <a href="https://www.linkedin.com/company/decentraclasses/" rel="noreferrer" target="_blank" >
+
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
             <li className="text-[#1d4ed8] hover:text-black">
+
               <a href="https://www.instagram.com/decentraclasses/" rel="noreferrer" target="_blank" >
+
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </li>

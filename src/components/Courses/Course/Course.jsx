@@ -8,13 +8,20 @@ import { getCoursebyId, getInstructorById } from "../../../utils/PolybaseUtils";
 import courseThumb from "../course-thumb.png";
 import instructor from "../instructor.png";
 import InstructorCard from "./InstructorCard.jsx";
+import arrowDown from "../../Courseplace/down-arrow.svg";
+import like from "../../../assets/like.svg";
+import dislike from "../../../assets/dislike.svg";
+import reviewDp from "../../../assets/review-dp.svg";
+
 const Course = ({}) => {
   const [courseInfo, setcourseInfo] = useState({});
   const [instructorInfo, setinstructorInfo] = useState({});
+  const [contentInfo, setcontentInfo] = useState([]);
   const { id } = useParams();
   const getCourseData = async () => {
     const data = await getCoursebyId(id);
     setcourseInfo(data.data);
+    setcontentInfo(JSON.parse(data.data.courseContent));
     const instructor = await getInstructorById(data.data.instructor.id);
     setinstructorInfo(instructor.data);
   };
@@ -33,10 +40,7 @@ const Course = ({}) => {
               <p className="text-blue-400 mb-5">{courseInfo?.category}</p>
               <h1 className="text-[1.25em] md:text-[2em] font-bold mb-5">{courseInfo?.courseName} 🚀</h1>
               <p className="mb-5">
-                Created By{" "}
-                <span className="text-2xl bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded-xl">
-                  {instructorInfo?.name}
-                </span>{" "}
+                Created By <p className="text-xl rounded-xl text-yellow-300">{instructorInfo?.name}</p>{" "}
               </p>
               <p className="mb-5">4 ⭐⭐⭐⭐ </p>
               <p className="mb-5">Last Updated {courseInfo.date} </p>
@@ -49,78 +53,7 @@ const Course = ({}) => {
                 ))}
               </div>
             </div>
-            <div className="mt-10 md:ml-20 mb-20">
-              <h1 className="text-[2em] font-bold mb-5">Course Content</h1>
-              <p className="mb-5">
-                <span>{courseInfo.nofarticles} sections </span> • <span>Comprehensive lectures</span> •{" "}
-                <span>{courseInfo?.duration} hrs total length</span>
-              </p>
-              <div className="w-[80%] h-[100%] bg-cyan-900 rounded-lg">
-                {/* Accordion */}
-                <div className="px-5 py-5 w-[100%]">
-                  <details className="group">
-                    <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
-                      <div className="flex justify-between p-3">
-                        <span className="text-[1.25em]">Course Overview - Start Here</span>
-                        <span className="text-[1.25em]">6 lectures | 23 min</span>
-                      </div>
-                      <span className="transition group-open:rotate-180"></span>
-                    </summary>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Course Resources</span>
-                      <span>0:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Join Our Community!</span>
-                      <span>0:07</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>App Overview</span>
-                      <span>4:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>User Flow Walk Through</span>
-                      <span>2:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Mockups</span>
-                      <span>1:25</span>
-                    </button>
-                  </details>
-                </div>
-                <div className="px-5 w-[100%]">
-                  <details className="group">
-                    <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
-                      <div className="flex justify-between p-3">
-                        <span className="text-[1.25em]">Course Overview - Start Here</span>
-                        <span className="text-[1.25em]">6 lectures | 23 min</span>
-                      </div>
-                      <span className="transition group-open:rotate-180"></span>
-                    </summary>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Course Resources</span>
-                      <span>0:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Join Our Community!</span>
-                      <span>0:07</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>App Overview</span>
-                      <span>4:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>User Flow Walk Through</span>
-                      <span>2:25</span>
-                    </button>
-                    <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
-                      <span>Mockups</span>
-                      <span>1:25</span>
-                    </button>
-                  </details>
-                </div>
-              </div>
-            </div>
+
             <div className="mt-20 md:ml-20 mb-20">
               <h1 className="text-[2em] font-bold mb-5">Requirements</h1>
               {courseInfo?.requirements?.map((e) => (
@@ -165,6 +98,54 @@ const Course = ({}) => {
               </div>
             </div>
             <InstructorCard instructorInfo={instructorInfo} />
+            <div className="flex">
+              <div className="ml-20">
+                <div className="flex space-x-5">
+                  <img src={reviewDp} alt="" />
+                  <div className="flex-col align-middle">
+                    <h1 className="text-2xl font-bold mt-5">Review 1</h1>
+                    <p className="mb-5">⭐⭐⭐⭐ (1 month ago)</p>
+                  </div>
+                </div>
+
+                <p className="mb-5">
+                  Its very nice tutorial.If it has included DB data access that would be great for basic learings to
+                  advanced as title stating.
+                </p>
+                <div className="flex space-x-5">
+                  <span>Helpful?</span>
+                  <span className="flex w-[5%] justify-evenly">
+                    <img src={like} alt="" />1
+                  </span>
+                  <span className="flex w-[5%] justify-evenly">
+                    <img src={dislike} alt="" />0
+                  </span>
+                </div>
+              </div>
+              <div className="ml-20">
+                <div className="flex space-x-5">
+                  <img src={reviewDp} alt="" />
+                  <div className="flex-col align-middle">
+                    <h1 className="text-2xl font-bold mt-5">Review 1</h1>
+                    <p className="mb-5">⭐⭐⭐⭐ (1 month ago)</p>
+                  </div>
+                </div>
+
+                <p className="mb-5">
+                  Its very nice tutorial.If it has included DB data access that would be great for basic learings to
+                  advanced as title stating.
+                </p>
+                <div className="flex space-x-5">
+                  <span>Helpful?</span>
+                  <span className="flex w-[5%] justify-evenly">
+                    <img src={like} alt="" />1
+                  </span>
+                  <span className="flex w-[5%] justify-evenly">
+                    <img src={dislike} alt="" />0
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <Card
@@ -183,3 +164,84 @@ const Course = ({}) => {
 };
 
 export default Course;
+
+// <div className="mt-10 md:ml-20 mb-20">
+// <h1 className="text-[2em] font-bold mb-5">Course Content</h1>
+// <p className="mb-5">
+//   <span>{courseInfo.nofarticles} sections </span> • <span>Comprehensive lectures</span> •{" "}
+//   <span>{courseInfo?.duration} hrs total length</span>
+// </p>
+
+// <div className="w-[80%] h-[100%] bg-cyan-900 rounded-lg">
+//   {/* Accordion */}
+
+//   <div className="px-5 py-5 w-[100%]">
+//     <details className="group">
+//       <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
+//         <div className="flex justify-between p-3">
+//           <span>
+//             <img src={arrowDown} alt="" width={30} />
+//           </span>
+//           <span className="text-[1.25em]">Course Overview - Start Here</span>
+//           <span className="text-[1.25em]">6 lectures | 23 min</span>
+//         </div>
+//         <span className="transition group-open:rotate-180"></span>
+//       </summary>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Course Resources</span>
+//         <span>0:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Join Our Community!</span>
+//         <span>0:07</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>App Overview</span>
+//         <span>4:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>User Flow Walk Through</span>
+//         <span>2:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Mockups</span>
+//         <span>1:25</span>
+//       </button>
+//     </details>
+//   </div>
+//   <div className="px-5 w-[100%]">
+//     <details className="group">
+//       <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
+//         <div className="flex justify-between p-3">
+//           <span>
+//             <img src={arrowDown} alt="" width={30} />
+//           </span>
+//           <span className="text-[1.25em]">Course Overview - Start Here</span>
+//           <span className="text-[1.25em]">6 lectures | 23 min</span>
+//         </div>
+//         <span className="transition group-open:rotate-180"></span>
+//       </summary>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Course Resources</span>
+//         <span>0:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Join Our Community!</span>
+//         <span>0:07</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>App Overview</span>
+//         <span>4:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>User Flow Walk Through</span>
+//         <span>2:25</span>
+//       </button>
+//       <button className="flex justify-between w-[100%] p-3 px-5 bg-white text-black rounded-none">
+//         <span>Mockups</span>
+//         <span>1:25</span>
+//       </button>
+//     </details>
+//   </div>
+// </div>
+// </div>

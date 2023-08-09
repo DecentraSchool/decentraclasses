@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 import mentor_profile from "../../assets/mentor.gif";
 import { fadeAnimateVariants } from "../animate/animate";
 
+
 export const MentorCard = ({ portfolio, name, title, session_name, date, info, img ,value }) => {
+
   const [showModal, setShowModal] = useState(false);
   const [rsvpd, setrsvpd] = useState(false);
 
@@ -16,15 +18,17 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
   // }, [rsvpd]);
 
   return (
+
     <motion.div className="card-container" variants={fadeAnimateVariants} initial="initial" whileInView="animate"  viewport={{
       once: true,
     }} custom={value}>
+
       {showModal && (
         <div
           id="popup-modal"
-          tabindex="-1"
+          tabindex=""
           style={{ height: "100%", zIndex: "1000", position: "absolute" }}
-          class="md:w-[600px] w-400px z-1000"
+          class="w-[350px] md:w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-50"
         >
           <div class="relative w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -52,8 +56,17 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
         </div>
       )}
 
-      <div className="w-[350px] md:w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div className="flex flex-col   items-center pb-10">
+      <motion.div
+        variants={fadeAnimateVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        custom={value}
+        className="w-[350px] md:w-96  bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div className="flex flex-col items-center pb-10">
           <img
             style={{ width: "250px", height: "250px" }}
             className="w-34 mt-3 h-34 mb-1 rounded-full shadow-lg"
@@ -104,7 +117,9 @@ export const MentorCard = ({ portfolio, name, title, session_name, date, info, i
             )}
           </div>
         </div>
+
       </div>
     </motion.div>
+
   );
 };
