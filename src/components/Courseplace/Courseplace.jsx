@@ -39,21 +39,9 @@ const Courseplace = () => {
           </ul>
           <hr />
           <h1 className="font-bold text-2xl mt-5 mb-5">About this course</h1>
-          <p className="mb-5">
-            Build a Full Stack Amazon Clone with Admin Panel using Flutter, Nodejs, Express & MongoDB
-          </p>
+          <p className="mb-5">{courseInfo?.courseName}</p>
           <h1 className="font-bold text-2xl mt-5 mb-5">Description</h1>
-          <p className="mb-5">
-            This is Flutter E-Commerce App with a Backend. This Shopping App uses Javascript, Node, Express, MongoDB,
-            and Mongoose and is designed for beginners. This 12-hour course also covers Migration to Flutter 3 and a
-            preview of the app with Material 3! This Flutter project covers the complete UI of Amazon including features
-            like auth with email/password, cart, searching products, fetching them based on category, rating them,
-            fetching deal of the day, checking out using GPay/Apple Pay, viewing the orders, the details of the order
-            along with their status which can be changed from the admin panel, view total sales and graph of sales based
-            on category.In this course, you'll learn to build the UI of Amazon from scratch, create REST APIs using
-            Node, store data in MongoDB using Mongoose, use REST APIs with Flutter & Dart using Models, use the Flutter
-            State Management tool as Provider and create a cross-platform app that works on Android and iOS.
-          </p>
+          <p className="mb-5">{courseInfo?.longdesc}</p>
         </div>
       </div>
       <div className="w-[40%] h-full overflow-scroll ml-10 mt-10">

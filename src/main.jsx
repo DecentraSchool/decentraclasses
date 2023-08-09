@@ -44,7 +44,7 @@ export const Mantle = {
 //   [polygon, polygonMumbai, Mantle],
 //   [publicProvider()]
 // );
-const { chains, publicClient, webSocketPublicClient } = configureChains([polygonMumbai], [publicProvider()]);
+const { chains, publicClient, webSocketPublicClient } = configureChains([mainnet], [publicProvider()]);
 
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 

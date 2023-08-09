@@ -112,7 +112,7 @@ const Card = (props) => {
 
   useEffect(() => {
     getUserStatus();
-  }, [props.courseInfo.usersBrought, address,loader]);
+  }, [props.courseInfo.usersBrought, address, loader]);
 
   console.log(address);
 
