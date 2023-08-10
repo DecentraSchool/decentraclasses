@@ -5,6 +5,13 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { publicProvider } from "wagmi/providers/public";
+import {
+  injectedWallet,
+  rainbowWallet,
+  walletConnectWallet,
+  talismanWallet,
+  metaMaskWallet,
+} from "@rainbow-me/rainbowkit/wallets";
 import { WagmiConfig, configureChains, createConfig, createStorage } from "wagmi";
 import { mainnet, optimism, zora, polygon, polygonMumbai } from "wagmi/chains";
 import { RainbowKitProvider, connectorsForWallets, getDefaultWallets } from "@rainbow-me/rainbowkit";
@@ -50,11 +57,24 @@ const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 
 const polybase = new Polybase();
 
-const { connectors } = getDefaultWallets({
-  projectId: projectId,
-  appName: "decentraschool",
-  chains,
-});
+// const { connectors } = getDefaultWallets({
+//   projectId: projectId,
+//   appName: "decentraschool",
+//   chains,
+// });
+
+const connectors = connectorsForWallets([
+  {
+    groupName: "Recommended",
+    wallets: [
+      injectedWallet({ chains }),
+      rainbowWallet({ projectId, chains }),
+      walletConnectWallet({ projectId, chains }),
+      talismanWallet({ chains }),
+      metaMaskWallet({ chains, projectId }),
+    ],
+  },
+]);
 const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
