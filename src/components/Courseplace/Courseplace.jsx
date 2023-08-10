@@ -44,12 +44,12 @@ const Courseplace = () => {
           <p className="mb-5">{courseInfo?.longdesc}</p>
         </div>
       </div>
-      <div className="w-[40%] h-full overflow-scroll ml-10 mt-10">
-        <div className="w-[80%] bg-white h-[100vh]">
+      <div className="w-[40%] h-full overflow-x-hidden ml-10 mt-10">
+        <div className="w-[80%] bg-white h-[100vh] overflow-x-hidden overflow-scroll ">
           <h1 className="font-bold text-2xl p-5">Course Content</h1>
           {contentInfo?.section?.map((s, index) => (
             <details key={s} className="group">
-              <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg ">
+              <summary className="font-medium cursor-pointer list-none bg-white text-black rounded-t-lg focus:bg-slate-400">
                 <div className="p-5">
                   <div className="flex justify-between">
                     <div className="text-[1.25em] mb-2">
