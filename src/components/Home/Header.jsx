@@ -66,7 +66,7 @@ export default function Header() {
               </li>
               <ConnectButton />
             </ul>
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
                 <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   {isOpen ? (
