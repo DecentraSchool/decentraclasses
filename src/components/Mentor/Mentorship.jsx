@@ -22,7 +22,8 @@ import { slideAnimateVariants } from "../animate/animate";
 import inst3 from "../../assets/inst3.png";
 import inst4 from "../../assets/inst4.png";
 import inst5 from "../../assets/inst5.jpg";
-
+import inst6 from "../../assets/inst6.jpg";
+import inst7 from "../../assets/inst7.jpg";
 
 export default function Mentorship() {
   const [noOfCourses, setnoOfCourses] = useState(0);
@@ -118,6 +119,30 @@ export default function Mentorship() {
           portfolio={"/"}
           info={
             "Hey, I am Preet Patel. I am UI/UX designer. UI/UX designer is a budding creative force in the dynamic realm of user interface and user experience design. Armed with a fresh perspective and a natural affinity for technology, this young designer possesses a unique ability to bridge the gap between contemporary design trends and the preferences of their generation."
+          }
+          value={5}
+        />
+        <MentorCard
+          title={"Blockchain Enthusiast, Entrepreneur & Author"}
+          name={"Alofe Oluwafemi"}
+          img={inst6}
+          session_name={"Learn Ethereum Programming"}
+          date={"20 August 2023 - 2 PM IST"}
+          portfolio={"/"}
+          info={
+            "Oluwafemi is the Founder and Chief Technology Officer of a Fintech Startup-Corprenuer. A Financial lifestyle app for millennials that allows you to save, invest, and grow your business securely. With over 20 000 users who enjoy 18% - 24% interest on their savings and investment, it also provides business owners efficient and practical tools to help manage and reach more customers seamlessly."
+          }
+          value={5}
+        />
+        <MentorCard
+          title={"Software Engineer"}
+          name={"Faraz Rawala"}
+          img={inst7}
+          session_name={"ChatGPT masterclass"}
+          date={"21 August 2023 - 1pm IST"}
+          portfolio={"/"}
+          info={
+            "Hi there! My name is Faraz Rawala, and I am a 32-year-old software engineer with seven years of experience in the field. Throughout my career, I have gained valuable knowledge and experience in the digital market and have successfully applied it to my work. Now, I am excited to share my expertise with others and help them get started in this dynamic and exciting field. Join me as we explore the world of internet marketing and discover all that it has to offer."
           }
           value={5}
         />
