@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const CourseCard = ({ img, title, desc, course }) => {
   console.log(course);
   return (
-    <div className="main-container p-4 rounded-lg  flex shadow-xl flex-col  ">
+    <div className="main-container md:w-full lg:w-[700px] p-4 rounded-lg  flex justify-between shadow-xl flex-col  ">
       <span className="text-blue-700">{course.category}</span>
       <div className="img-container">
         <div className="course-image-container">

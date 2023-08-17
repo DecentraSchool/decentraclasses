@@ -20,15 +20,18 @@ const Course = ({}) => {
   const { id } = useParams();
   const getCourseData = async () => {
     const data = await getCoursebyId(id);
-    setcourseInfo(data.data);
-    setcontentInfo(JSON.parse(data.data.courseContent));
-    const instructor = await getInstructorById(data.data.instructor.id);
+    setcourseInfo(data.data ? data.data : {});
+    setcontentInfo(data.data.courseContent ? JSON.parse(data.data.courseContent) : {});
+    const instructor = await getInstructorById(data?.data?.instructor?.id);
+    console.log(instructor?.data);
     setinstructorInfo(instructor.data);
+    // console.log(instructorInfo);
   };
 
   useEffect(() => {
     getCourseData();
   }, []);
+  // console.log(instructorInfo);
 
   return (
     <>
@@ -72,7 +75,30 @@ const Course = ({}) => {
                 get a better idea of when to use each unique and powerful feature.
               </p> */}
             </div>
-            <div className="md:ml-20 mb-20">
+
+            <InstructorCard instructorInfo={instructorInfo} />
+          </div>
+
+          <Card
+            courseInfo={courseInfo}
+            image={courseInfo?.imageurl}
+            pricepshare={courseInfo?.price}
+            totalshare={courseInfo?.price}
+            dur={courseInfo?.duration}
+            anum={courseInfo?.nofarticles}
+            newClass="side3 lg:w-[30%] w-full"
+          />
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default Course;
+
+//* ALSO BOUGHT SECTION
+{
+  /* <div className="md:ml-20 mb-20">
               <h1 className="md:text-[2em] font-bold mb-5">Students also bought</h1>
               <div className="md:flex md:space-x-10 md:w-[85%] p-3 mb-10 bg-zinc-300 bg-blend-difference shadow-2xl">
                 <img src={courseThumb} alt="" className="hidden md:block" />
@@ -96,9 +122,12 @@ const Course = ({}) => {
                   <p>100</p>
                 </div>
               </div>
-            </div>
-            <InstructorCard instructorInfo={instructorInfo} />
-            <div className="flex">
+            </div> */
+}
+
+// * REVIEW SECTION
+{
+  /* <div className="flex">
               <div className="ml-20">
                 <div className="flex space-x-5">
                   <img src={reviewDp} alt="" />
@@ -145,25 +174,8 @@ const Course = ({}) => {
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <Card
-            courseInfo={courseInfo}
-            image={courseInfo?.imageurl}
-            pricepshare={courseInfo?.price}
-            totalshare={courseInfo?.price}
-            dur={courseInfo?.duration}
-            anum={courseInfo?.nofarticles}
-            newClass="side3 lg:w-[30%] w-full"
-          />
-        </section>
-      </main>
-    </>
-  );
-};
-
-export default Course;
+            </div> */
+}
 
 // <div className="mt-10 md:ml-20 mb-20">
 // <h1 className="text-[2em] font-bold mb-5">Course Content</h1>

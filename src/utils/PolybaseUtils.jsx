@@ -40,8 +40,6 @@ export const getInstructorById = async (id) => {
   return record;
 };
 
-
-
 export const buyCourse = async (sig, courseId, address) => {
   try {
     db.signer(async (data) => {
