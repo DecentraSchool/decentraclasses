@@ -18,7 +18,6 @@ import { slideAnimateVariants } from "../animate/animate";
 import calendar from "../../assets/calendar.png";
 import gift from "../../assets/gift.png";
 
-
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
   const [courseData, setcourseData] = useState([]);
@@ -92,50 +91,82 @@ export default function Courses() {
   // };
 
   return (
-    <div className="flex justify-center overflow-x-hidden">
+    <div className="flex justify-center ">
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="max-w-[1440px]">
+      <div className="w-full">
         {/* <Header /> */}
         <main>
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
               <div className="flex flex-col text-center p-8">
-                <motion.h1 className="text-[1.5rem] md:text-[2.5rem] font-bold" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
-                  once: true,
-                }} custom={1}>A broad selection of courses</motion.h1>
-                <motion.p className="hidden md:text-xl md:block" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
-                  once: true,
-                }} custom={3}>
+                <motion.h1
+                  className="text-[1.5rem] md:text-[2.5rem] font-bold"
+                  variants={slideAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={1}
+                >
+                  A broad selection of courses
+                </motion.h1>
+                <motion.p
+                  className="hidden md:text-xl md:block"
+                  variants={slideAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={3}
+                >
                   Intresting videos with all the information you need to get started in the world of web3 and blockchain
                 </motion.p>
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="w-[100vw] mb-10 md:w-full md:container m-auto gap-8 align-middle md:content-center justify-center">
+              <div className="flex flex-wrap mb-10 md:container m-auto gap-8 align-middle md:content-center justify-center">
                 {loader == false &&
                   courseData.map((course) => {
                     return (
-                      <div className="flex gap-8 justify-center w-full align-middle items-center" >
+                      // <div className="flex mb-5 gap-10 justify-center flex-row align-middle items-center flex-wrap">
                         <CourseCard
                           img={course?.imageurl}
                           title={course?.courseName}
                           desc={course.shortdesc}
                           course={course}
                         />
-                      </div>
+                      // </div>
                     );
                   })}
               </div>
               {/* <hr /> */}
 
               {/* <p>pagination</p> */}
-              <div className="flex flex-col text-center p-8" >
-                <motion.h1 className="text-[1.5rem] md:text-[2.5rem] font-bold" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
-                  once: true,
-                }} custom={5}>A broad to sucessful courses</motion.h1>
-                <motion.p className="hidden md:text-xl md:block" variants={slideAnimateVariants} initial="initial" whileInView="animate"  viewport={{
-                  once: true,
-                }} custom={8}>
+              <div className="flex flex-col text-center p-8">
+                <motion.h1
+                  className="text-[1.5rem] md:text-[2.5rem] font-bold"
+                  variants={slideAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={5}
+                >
+                  A broad to sucessful courses
+                </motion.h1>
+                <motion.p
+                  className="hidden md:text-xl md:block"
+                  variants={slideAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={8}
+                >
                   maintain your daily streak and get rewards and compete with all your friends
                 </motion.p>
               </div>
@@ -170,7 +201,10 @@ export default function Courses() {
               <motion.div
                 className="enroll-btn-container"
                 style={{ display: "flex", justifyContent: "center", width: "100%" }}
-                variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
+                variants={slideAnimateVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
                   once: true,
                 }}
               >

@@ -35,12 +35,12 @@ const PolybaseHook = () => {
     message: "gm wagmi frens",
     onSuccess(data) {
       // console.log(data);
-      // addCourse(data);
+      addCourse(data);
       // updateCourseId(data);
       // addInstructor(data);
       // deleteCourse(data);
       // addContentToCourse(data);
-      addWhatyllearn(data);
+      // addWhatyllearn(data);
       // addRequirements(data);
     },
   });
@@ -321,11 +321,11 @@ const PolybaseHook = () => {
       const res = await db
         .collection("Instructor")
         .create([
-          "1010",
-          "Preet Patel",
-          "Hey, I am Preet Patel. I am UI/UX designer. UI/UX designer is a budding creative force in the dynamic realm of user interface and user experience design. Armed with a fresh perspective and a natural affinity for technology, this young designer possesses a unique ability to bridge the gap between contemporary design trends and the preferences of their generation. With an innate understanding of digital interactions and a passion for crafting seamless user experiences, the teenage UI/UX designer fearlessly explores innovative design concepts, unafraid to challenge conventions and reimagine the ways users engage with technology. Their enthusiasm, combined with a willingness to learn and adapt, propels them to make meaningful contributions to the world of design, promising a future where user-centric digital interfaces thrive under their skillful guidance.",
-          " UI/UX designer",
-          "https://gateway.lighthouse.storage/ipfs/QmVms5GiVjJ14o3tYwEXrWnuvCzx5QqwkbJaU82WyojexT",
+          "2222",
+          "Faraz Rawala",
+          "Hi there! My name is Faraz Rawala, and I am a 32-year-old software engineer with seven years of experience in the field. Throughout my career, I have gained valuable knowledge and experience in the digital market and have successfully applied it to my work. Now, I am excited to share my expertise with others and help them get started in this dynamic and exciting field. Join me as we explore the world of internet marketing and discover all that it has to offer.",
+          "Software Engineer",
+          "https://gateway.lighthouse.storage/ipfs/QmeWvVmMTzkUEzD7ggoiCs8MfXaYpoiGvaLC8ZjLgqnV7t",
         ]);
 
       console.log(res);
@@ -355,22 +355,23 @@ const PolybaseHook = () => {
     const res = await db
       .collection("Course")
       .create([
-        "1111",
-        "Mastering UI/UX Design with Figma: For beginners ",
-        "DESIGN",
-        db.collection("Instructor").record("1010"),
-        "August 5, 2023",
-        "20.5",
-        "12",
-        "https://gateway.lighthouse.storage/ipfs/QmToDciCFsxxcsrr5qJnszYVH1VWLCF5NSeeJsxZ9Xw3N2",
-        "Master UI/UX with this amazing course with hands on expirence on figma",
-        "All of my courses are 'learn-by-doing': no boring endless lectures with Powerpoints, only live, interactive coding examples. In this course we'll build one massive web application that profiles the advanced features of React, Redux, Express, and Mongo. By putting each concept into a real app, you'll get a better idea of when to use each unique and powerful feature.",
+        "2222",
+        "Learn Chat GPT from scratch, for free!",
+        "AI",
+        db.collection("Instructor").record("2222"),
+        "August 17, 2023",
+        "2",
+        "50",
+        "https://gateway.lighthouse.storage/ipfs/QmYEtdL8uirHd2L5V3NbehnD52uv5Bq9WTd8fW4NG2C94U",
+        "Learn ChatGPT with experienced experts, from basic to advanced level, for free!",
+        "ChatGPT is essential to learn for everyone because it is a powerful language model that can generate human-like text and hold natural language conversations with users. Here are a few reasons why ChatGPT is an important tool to learn: \n\n Improved communication: ChatGPT can help individuals communicate more effectively and efficiently. It can generate text that is grammatically correct and contextually relevant, making it an excellent tool for business, education, and personal use.\n\nEnhanced creativity: ChatGPT can also be used to inspire creativity in writing and storytelling. Its ability to generate text on a wide range of topics and in various styles can help individuals explore new ideas and create compelling narratives.\n\nAssistance in research and analysis: ChatGPT can assist in research and analysis by generating summaries, abstracts, and reports. It can also help in data analysis by summarizing large amounts of information in a concise and coherent manner.\n\nAccessibility: ChatGPT can make information more accessible by translating text into multiple languages, generating audio descriptions of visual content, and answering questions in real-time. This can be particularly helpful for individuals with disabilities or those who speak different languages.",
         [
-          "Create boilerplate starter projects with React, Redux, Express, and Mongo",
-          "Understand common web technologies and design patterns to connect them together",
-          "Master deployment techniques between the production and development environments.",
+          "Master the many flavors of artificial intelligence",
+          "Help you spend less time on weekly administrative duties.",
+          "Think on how using Chat GPT might change your grading practices.",
+          "Hone your skills as a writer and watch your career grow",
         ],
-        ["Basic understanding of Javascript, React, and Redux", "A Mac, Windows, or Linux computer"],
+        ["No prerequisites"],
       ]);
 
     console.log(res);

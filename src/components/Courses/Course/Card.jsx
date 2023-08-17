@@ -94,7 +94,7 @@ const Card = (props) => {
     try {
       setloader(true);
       const res = await signMessage();
-      console.log(res);
+      // console.log(res);
       // setcourseBought(true);
     } catch (error) {
       setcourseBought(false);
@@ -102,7 +102,7 @@ const Card = (props) => {
     }
   };
 
-  console.log(props.courseInfo);
+  // console.log(props.courseInfo);/
 
   if (courseBought) {
     setInterval(() => {
@@ -114,7 +114,7 @@ const Card = (props) => {
     getUserStatus();
   }, [props.courseInfo.usersBrought, address, loader]);
 
-  console.log(address);
+  // console.log(address);
 
   return (
     <>
