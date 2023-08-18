@@ -15,12 +15,12 @@ export default function Footer() {
               </div>
               <p>
 
-                India First Learn to Earn (L2E) Platform with Staking, innovative courses, and enjoy the perks of lifelong learning.
+                India's First Learn to Earn (L2E) Platform with Staking, innovative courses, and perks of lifelong learning.
 
               </p>
             </div>
             <div className="text-[#777777]">
-              <p>© 2020 DecentraSchool.in All Rights Reserved.</p>
+              <p>© 2023 Decentraclasses . All Rights Reserved.</p>
             </div>
           </div>
           <div className="flex xl:gap-[100px] lg:gap-[50px] gap-[30px] sm:flex-row flex-col lg:w-min w-full  justify-between">
