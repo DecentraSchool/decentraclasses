@@ -20,6 +20,7 @@ import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
 import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   const chainID = 80001;
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
