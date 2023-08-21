@@ -21,6 +21,8 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { ParentProvider } from "./contexts/ParentContext";
 import { PolybaseProvider } from "@polybase/react";
 import { Polybase } from "@polybase/client";
+import ScrollToTop from "./ScrollToTop";
+
 
 export const Mantle = {
   id: 5001,
@@ -90,6 +92,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ParentProvider>
         <BrowserRouter>
           <PolybaseProvider polybase={polybase}>
+          <ScrollToTop />
             <App />
           </PolybaseProvider>
         </BrowserRouter>
