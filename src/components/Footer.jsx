@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import footerLogo from "../assets/footerLogo.svg";
+
 export default function Footer() {
   return (
     <footer style={{ bottom: "0" }} className=" bg-white pb-2 text-[14px]">

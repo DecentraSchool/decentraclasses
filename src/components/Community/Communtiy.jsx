@@ -9,6 +9,7 @@ import silver from "./silver.png";
 import bronze from "./bronze.png";
 import { fadeAnimateVariants, scaleAnimateVariants, slideAnimateVariants } from "../animate/animate";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Communtiy() {
   return (
@@ -51,7 +52,7 @@ export default function Communtiy() {
         <motion.div className="md:w-[30%]  mx-2 md:mx-5 bg-slate-300 p-5 rounded-lg mb-3" variants={fadeAnimateVariants} initial="initial" whileInView="animate" viewport={{
           once: true,
         }} custom={1}>
-          <h1 className="text-[2em] font-bold mb-3 text-sky-500">3000+</h1>
+          <h1 className="text-[2em] font-bold mb-3 text-sky-500">100+</h1>
           <h1 className="text-[1.25em] font-semibold mb-3">Mind-blowing Web 3 Tales</h1>
           <p>We only invite the finest minds. This ensures our community makes you hooked and stay in.</p>
         </motion.div>
@@ -83,7 +84,7 @@ export default function Communtiy() {
         <motion.div className="md:w-[30%] mx-5 md:mx-0 mt-5 bg-slate-300 p-5 rounded-lg mb-3" variants={fadeAnimateVariants} initial="initial" whileInView="animate" viewport={{
           once: true,
         }} custom={4}>
-          <h1 className="text-[2em] font-bold mb-3 text-sky-500">10000+</h1>
+          <h1 className="text-[2em] font-bold mb-3 text-sky-500">100+</h1>
           <h1 className="text-[1.25em] font-semibold mb-3">Mind-blowing Web 3 Tales</h1>
           <p>We only invite the finest minds. This ensures our community makes you hooked and stay in.</p>
         </motion.div>
@@ -116,11 +117,11 @@ export default function Communtiy() {
             every step of the way.
           </p>
 
-          <motion.div className="content-center w-full flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
+          {/* <motion.div className="content-center w-full flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
             once: true,
           }} custom={1}>
             <img src={bronze} alt="" />
-          </motion.div>
+          </motion.div> */}
 
         </div>
       </div>
@@ -147,10 +148,13 @@ export default function Communtiy() {
           className="text-center gap-4
          flex flex-col justify-center align-middle w-full "
         >
-          <button className="p-3 rounded-full font-bold bg-yellow-400">Let’s get started</button>
-          <button className="p-3 rounded-full font-bold border-yellow-400 border-2 text-yellow-400">
+          <Link to="/">
+          <button className="p-3 rounded-full font-bold bg-yellow-400 w-full">Let’s get started</button>
+          </Link>
+          <Link to="/mentor">
+          <button className="p-3 rounded-full font-bold border-yellow-400 border-2 text-yellow-400 w-full">
             Meet Our Experts
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>
