@@ -7,6 +7,7 @@ import { ethPersonalSign } from "@polybase/eth";
 import { ethers } from "ethers";
 import { signMessage } from "@wagmi/core";
 import { GPTcontent } from "../../constants/chatGPTcontent";
+import { solidityCourseContent } from "../../constants/solidityCourseContent";
 
 const db = new Polybase({
   defaultNamespace:
@@ -127,8 +128,8 @@ const PolybaseHook = () => {
       const publicKey = await getPublicKey(sig);
       const res = await db
         .collection("Course")
-        .record("2222")
-        .call("addCourseContent", [JSON.stringify(GPTcontent)]);
+        .record("0000")
+        .call("addCourseContent", [JSON.stringify(solidityCourseContent)]);
 
       console.log(res);
     } catch (error) {
