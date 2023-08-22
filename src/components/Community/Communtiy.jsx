@@ -26,9 +26,10 @@ export default function Communtiy() {
             The Collective is a home for high-growth professionals developing web3 strategy, building communities, and
             launching NFT initiatives for their brand or enterprise. Learn and move faster as a community.
           </motion.p>
+          <a href="https://t.me/decentraclasses" target="_blank" rel="noreferrer">
           <motion.button className="p-3 rounded-full font-bold bg-yellow-400" variants={slideAnimateVariants} initial="initial" whileInView="animate" viewport={{
             once: true,
-          }} custom={5}>Become Member</motion.button>
+          }} custom={5}>Join the community</motion.button></a>
         </div>
         <motion.div className="md:w-[30%] m-5" variants={fadeAnimateVariants} initial="initial" whileInView="animate" viewport={{
           once: true,
@@ -98,18 +99,20 @@ export default function Communtiy() {
             to get you started on your fabulous journey of mastering Web 3 technology.
           </p>
         </div>
-        <motion.div className="content-center flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
+        <motion.div className="hidden md:content-center md:flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
           once: true,
         }} custom={1}>
           <img src={silver} alt="" />
         </motion.div>
       </div>
       {/* Sixth section */}
-      <div className="flex md:flex-row flex-col justify-center md:mt-20">
-      <div className="w-[20%]">
-            <img src={bronze} alt="" />
-          </div>
-        <div className="md:w-[44%] md:mx-0 mx-8 mt-20">
+      <div className="md:flex md:flex-row flex-col justify-center md:mt-20">
+      <motion.div className="hidden  md:content-center md:flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
+          once: true,
+        }} custom={1}>
+          <img src={bronze} alt="" />
+        </motion.div>
+        <div className="md:w-[44%] md:mx-0 mx-4 mt-20">
           <h1 className="text-[2em] font-bold mb-5">Intermediate : Skyrocket Your Career</h1>
           <p className="font-semibold">
             Already familiar with coding? Get ready to fast-track your knowledge with our immersive intermediate and
@@ -133,9 +136,11 @@ export default function Communtiy() {
             Good at coding? Great! Our advanced stage includes sspecial resources and interactive lessons designed to get you going on your fabulous journey of mastering Web 3 technology.
           </p>
         </div>
-        <div className="content-center flex justify-center">
+        <motion.div className="hidden md:content-center md:flex justify-center" variants={scaleAnimateVariants} initial="initial" whileInView="animate" viewport={{
+          once: true,
+        }} custom={1}>
           <img src={silver} alt="" />
-        </div>
+        </motion.div>
       </div>
       {/* Eighth Section  */}
       <div className="md:w-[50%] md:mx-[25%] md:mt-20 mt-5  mx-8 mb-20">
