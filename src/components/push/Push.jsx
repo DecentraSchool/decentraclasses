@@ -6,7 +6,8 @@ import * as ethers from "ethers";
 
 const Push = () => {
   // const PK = process.env.push_channel_private_key; // channel private key
-  const PK = "process.env.push_channel_private_key"; // channel private key
+  const PK = import.meta.env.VITE_push_channel_private_key;
+  console.log(PK); // channel private key
   const Pkey = `0x${PK}`;
   const _signer = new ethers.Wallet(Pkey);
   console.log(PK);
@@ -29,6 +30,7 @@ const Push = () => {
         channel: "eip155:5:0x53EC7AaB4dbEC2b0912577E549758615A08cb172", // your channel address
         env: "staging",
       });
+      console.log(apiResponse);
     } catch (err) {
       console.error("Error: ", err);
     }
