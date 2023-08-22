@@ -11,12 +11,12 @@ const CourseCard = ({ img, title, desc, course }) => {
       <span className="text-blue-700">{course.category}</span>
       <div className="img-container">
         <div className="course-image-container">
-          <img src={img} className="object-contain course-image  md:h-60 w-full h-96" />
+          <img src={img} className="object-contain course-image  md:h-60 w-full h-60" />
         </div>
       </div>
       <div>
         <h1
-          className="mt-4"
+          className="md:mt-4"
           style={{ fontSize: "24px", textAlign: "center", whiteSpace: "pre-wrap", wordBreak: "break-word" }}
         >
           {title}
@@ -24,7 +24,7 @@ const CourseCard = ({ img, title, desc, course }) => {
         <p style={{ textAlign: "left" }}>{desc}</p>
       </div>
       <div className="star-rating flex justify-center gap-3">
-        <span className="text-orange">4.7</span>
+        <span className="text-orange mt-2">4.7</span>
         <img src={star} alt="rating" />
         {/* <span>(4,859)</span> */}
       </div>
