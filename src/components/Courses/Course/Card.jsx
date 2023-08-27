@@ -1,18 +1,15 @@
 import { ethers } from "ethers";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { contractABI, contractAddress } from "../../../contractABI";
 import Confetti from "react-confetti";
 import { Link } from "react-router-dom";
 import { useAccount, useSignMessage } from "wagmi";
 import { buyCourse } from "../../../utils/PolybaseUtils";
-import { ParentContext } from "../../../contexts/ParentContext";
 
 const Card = (props) => {
   // console.log(JSON.parse(props?.courseInfo?.content));
-  // const [courseBought, setcourseBought] = useState(false);
-  const { courseBought, setcourseBought } = useContext(ParentContext);
-
+  const [courseBought, setcourseBought] = useState(false);
   const [userAlreadyBought, setuserAlreadyBought] = useState(false);
   const { address, isConnected } = useAccount();
   const [loader, setloader] = useState(false);
@@ -80,11 +77,8 @@ const Card = (props) => {
   } = useSignMessage({
     message: "gm wagmi frens",
     onSuccess(data) {
-      const res = buyCourse(data, props.courseInfo.id, address, setcourseBought);
+      buyCourse(data, props.courseInfo.id, address);
       setloader(false);
-      if (res) {
-        setcourseBought(true);
-      }
     },
   });
 
@@ -118,7 +112,7 @@ const Card = (props) => {
 
   useEffect(() => {
     getUserStatus();
-  }, [props.courseInfo.usersBrought, address, loader, courseBought]);
+  }, [props.courseInfo.usersBrought, address, loader]);
 
   // console.log(address);
 

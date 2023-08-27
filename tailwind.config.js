@@ -51,16 +51,6 @@ module.exports = {
       "2xs": "11px",
       "xs": "12px",
       "5xl": "24px"
-    },
-    "animation": {
-      "run": 'run 10s 0s linear infinite',
-    },
-    "keyframes": {
-      "run": {
-        from: {
-          transform: 'translateX(10%)'
-        }
-      }
     }
   },
 }

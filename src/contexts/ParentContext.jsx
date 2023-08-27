@@ -1,8 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 export const ParentContext = createContext();
 
 export const ParentProvider = ({ children }) => {
-  const [courseBought, setcourseBought] = useState(false);
-  return <ParentContext.Provider value={{ courseBought, setcourseBought }}>{children}</ParentContext.Provider>;
+  return <ParentContext.Provider value={{ state: "raghav" }}>{children}</ParentContext.Provider>;
 };
