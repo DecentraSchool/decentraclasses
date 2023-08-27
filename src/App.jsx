@@ -20,6 +20,8 @@ import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
 import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
+import ScrollToTop from "./utils/ScrollToTop";
+import Push from "./components/push/Push";
 
 function App() {
   const chainID = 80001;
@@ -66,6 +68,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -82,6 +85,7 @@ function App() {
         <Route path="/light" element={<LightHouseUtils />} />
         <Route path="/Mentor" element={<Mentorship />} />
         <Route path="/workplace" element={<Courseplace />} />
+        <Route path="/push" element={<Push />} />
       </Routes>
       <Footer />
     </>
