@@ -5,7 +5,6 @@ import Explore from "./Explore";
 import Start from "./Start";
 import Why from "./Why";
 import Collab from "./Collab";
-import Supporters from "./Supporters";
 
 export default function Main() {
   return (
@@ -18,7 +17,6 @@ export default function Main() {
       <About />
       <Start />
       <Courses />
-      <Supporters />
     </main>
   );
 }
