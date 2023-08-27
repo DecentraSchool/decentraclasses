@@ -40,7 +40,7 @@ export const getInstructorById = async (id) => {
   return record;
 };
 
-export const buyCourse = async (sig, courseId, address) => {
+export const buyCourse = async (sig, courseId, address, setcourseBought) => {
   try {
     db.signer(async (data) => {
       return {
@@ -52,10 +52,12 @@ export const buyCourse = async (sig, courseId, address) => {
     const res = await db.collection("Course").record(courseId).call("addUserToCourse", [address]);
     console.log(res);
     toast.success("Course Successfully Brought");
+    setcourseBought(true);
     return true;
   } catch (error) {
     console.log(error);
     toast.error("Something went wrong! Please try again");
+    setcourseBought(false);
     return false;
   }
 };

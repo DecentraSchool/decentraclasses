@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import Card from "./Card";
@@ -12,11 +12,13 @@ import arrowDown from "../../Courseplace/down-arrow.svg";
 import like from "../../../assets/like.svg";
 import dislike from "../../../assets/dislike.svg";
 import reviewDp from "../../../assets/review-dp.svg";
+import { ParentContext } from "../../../contexts/ParentContext";
 
 const Course = ({}) => {
   const [courseInfo, setcourseInfo] = useState({});
   const [instructorInfo, setinstructorInfo] = useState({});
   const [contentInfo, setcontentInfo] = useState([]);
+  const { courseBought, setcourseBought } = useContext(ParentContext);
   const { id } = useParams();
   const getCourseData = async () => {
     const data = await getCoursebyId(id);
@@ -30,7 +32,7 @@ const Course = ({}) => {
 
   useEffect(() => {
     getCourseData();
-  }, []);
+  }, [courseBought]);
   // console.log(instructorInfo);
 
   return (
@@ -81,6 +83,8 @@ const Course = ({}) => {
 
           <Card
             courseInfo={courseInfo}
+            courseBought={courseBought}
+            setcourseBought={setcourseBought}
             image={courseInfo?.imageurl}
             pricepshare={courseInfo?.price}
             totalshare={courseInfo?.price}

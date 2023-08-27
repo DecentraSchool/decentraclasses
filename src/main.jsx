@@ -13,7 +13,7 @@ import {
   metaMaskWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 import { WagmiConfig, configureChains, createConfig, createStorage } from "wagmi";
-import { mainnet, optimism, zora, polygon, polygonMumbai } from "wagmi/chains";
+import { mainnet, optimism, zora, polygon, polygonMumbai,goerli } from "wagmi/chains";
 import { RainbowKitProvider, connectorsForWallets, getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { InjectedConnector } from "@wagmi/core";
@@ -53,7 +53,10 @@ export const Mantle = {
 //   [polygon, polygonMumbai, Mantle],
 //   [publicProvider()]
 // );
-const { chains, publicClient, webSocketPublicClient } = configureChains([mainnet], [publicProvider()]);
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [mainnet, goerli, polygonMumbai, polygon],
+  [publicProvider()]
+);
 
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 
