@@ -6,7 +6,6 @@ import Start from "./Start";
 import Why from "./Why";
 import Collab from "./Collab";
 import Supporters from "./Supporters";
-import Truster from "./Truster";
 
 export default function Main() {
   return (
@@ -19,7 +18,6 @@ export default function Main() {
       <About />
       <Start />
       <Courses />
-      
       <Supporters />
     </main>
   );
