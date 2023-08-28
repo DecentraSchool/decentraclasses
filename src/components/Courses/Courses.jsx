@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 import { slideAnimateVariants } from "../animate/animate";
 import calendar from "../../assets/calendar.png";
 import gift from "../../assets/gift.png";
-
+import bbt from "../../assets/bbt.jpg"
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
   const [courseData, setcourseData] = useState([]);
@@ -140,8 +140,20 @@ export default function Courses() {
                       // </div>
                     );
                   })}
+                  <CourseCard
+                          img={bbt}
+                          title="Basics of blockchain"
+                          desc="Explore the foundational concepts of blockchain technology in this comprehensive introductory course. "
+                          course="course"
+                        />
               </div>
               {/* <hr /> */}
+
+              {/* manual card  */}
+              
+
+
+              
 
               {/* <p>pagination</p> */}
               <div className="flex flex-col text-center p-8">
