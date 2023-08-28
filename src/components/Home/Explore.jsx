@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Explore.css";
-import Hero from "./Hero.svg";
+import DCls from "../../assets/Decentraclasses.webp";
 import { Link } from "react-router-dom";
 
 export default function Explore() {
@@ -25,7 +25,7 @@ export default function Explore() {
       </Link>
     </div>
     <div className="mt-10 md:w-3/4 md:vert-move md:block md:mt-20 md:justify-center">
-      <img src={Hero} alt="" className="w-[60%] vert-move ml-[30%]" />
+      <img src={DCls} alt="" className="w-[60%] vert-move ml-[30%]" />
     </div>
   </div>
   );
