@@ -5,27 +5,26 @@ import * as ethers from "ethers";
 // sendNotification();
 
 const Push = () => {
-  // const PK = process.env.push_channel_private_key; // channel private key
   const PK = import.meta.env.VITE_push_channel_private_key;
-  console.log(PK); // channel private key
+  console.log(PK);
   const Pkey = `0x${PK}`;
   const _signer = new ethers.Wallet(Pkey);
   console.log(PK);
-  const sendNotification = async () => {
+  const sendNotification = async ({ title, body, img }) => {
     try {
       const apiResponse = await PushAPI.payloads.sendNotification({
         signer: _signer,
         type: 1, // broadcast
         identityType: 2, // direct payload
         notification: {
-          title: `[SDK-TEST] notification TITLE:`,
-          body: `[sdk-test] notification BODY`,
+          title: `New Notification from Decentraclasses 🧑‍🏫`,
+          body: ``,
         },
         payload: {
-          title: `[sdk-test] payload title`,
-          body: `sample msg body`,
+          title: `${title}`,
+          body: `${body}`,
           cta: "",
-          img: "",
+          img: img,
         },
         channel: "eip155:5:0x53EC7AaB4dbEC2b0912577E549758615A08cb172", // your channel address
         env: "staging",
@@ -37,7 +36,17 @@ const Push = () => {
   };
   return (
     <div>
-      <button onClick={sendNotification}>Click to send notification</button>
+      <button
+        onClick={() =>
+          sendNotification({
+            title: "Hurrah🎉 new accomplishment",
+            body: "You have successfully brought 'Learn Ethereum Programming: The Solidity Mastery Course',\n What are you waiting for lets learn!!!",
+            img: "https://gateway.lighthouse.storage/ipfs/QmNruXKmgvEDPqkRuHaFGWK5czerHQJKZKk5XJZXnTcKXS",
+          })
+        }
+      >
+        Click to send notification
+      </button>
     </div>
   );
 };

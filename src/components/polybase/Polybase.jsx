@@ -8,6 +8,10 @@ import { ethers } from "ethers";
 import { signMessage } from "@wagmi/core";
 import { GPTcontent } from "../../constants/chatGPTcontent";
 import { solidityCourseContent } from "../../constants/solidityCourseContent";
+import { atharava } from "../../constants/instructors/atharava";
+import { pathak } from "../../constants/instructors/pathak";
+import { VideoEdtingContent } from "../../constants/course/videoEdtingCourse";
+// import { videoEditingCourse } from "../../constants/course/videoEdtingCourse";
 
 const db = new Polybase({
   defaultNamespace:
@@ -128,8 +132,8 @@ const PolybaseHook = () => {
       const publicKey = await getPublicKey(sig);
       const res = await db
         .collection("Course")
-        .record("0000")
-        .call("addCourseContent", [JSON.stringify(solidityCourseContent)]);
+        .record("1245")
+        .call("addCourseContent", [JSON.stringify(VideoEdtingContent)]);
 
       console.log(res);
     } catch (error) {
@@ -146,15 +150,7 @@ const PolybaseHook = () => {
         };
       });
       const publicKey = await getPublicKey(sig);
-      const res = await db
-        .collection("Instructor")
-        .create([
-          "2222",
-          "Faraz Rawala",
-          "Hi there! My name is Faraz Rawala, and I am a 32-year-old software engineer with seven years of experience in the field. Throughout my career, I have gained valuable knowledge and experience in the digital market and have successfully applied it to my work. Now, I am excited to share my expertise with others and help them get started in this dynamic and exciting field. Join me as we explore the world of internet marketing and discover all that it has to offer.",
-          "Software Engineer",
-          "https://gateway.lighthouse.storage/ipfs/QmeWvVmMTzkUEzD7ggoiCs8MfXaYpoiGvaLC8ZjLgqnV7t",
-        ]);
+      const res = await db.collection("Instructor").create(pathak);
 
       console.log(res);
     } catch (error) {
@@ -183,23 +179,26 @@ const PolybaseHook = () => {
     const res = await db
       .collection("Course")
       .create([
-        "2222",
-        "Learn Chat GPT from scratch, for free!",
-        "AI",
-        db.collection("Instructor").record("2222"),
-        "August 17, 2023",
+        "1245",
+        "Get started with Video Editing",
+        "DESIGN",
+        db.collection("Instructor").record("8888"),
+        "August 28, 2023",
         "2",
-        "50",
-        "https://gateway.lighthouse.storage/ipfs/QmYEtdL8uirHd2L5V3NbehnD52uv5Bq9WTd8fW4NG2C94U",
-        "Learn ChatGPT with experienced experts, from basic to advanced level, for free!",
-        "ChatGPT is essential to learn for everyone because it is a powerful language model that can generate human-like text and hold natural language conversations with users. Here are a few reasons why ChatGPT is an important tool to learn: \n\n Improved communication: ChatGPT can help individuals communicate more effectively and efficiently. It can generate text that is grammatically correct and contextually relevant, making it an excellent tool for business, education, and personal use.\n\nEnhanced creativity: ChatGPT can also be used to inspire creativity in writing and storytelling. Its ability to generate text on a wide range of topics and in various styles can help individuals explore new ideas and create compelling narratives.\n\nAssistance in research and analysis: ChatGPT can assist in research and analysis by generating summaries, abstracts, and reports. It can also help in data analysis by summarizing large amounts of information in a concise and coherent manner.\n\nAccessibility: ChatGPT can make information more accessible by translating text into multiple languages, generating audio descriptions of visual content, and answering questions in real-time. This can be particularly helpful for individuals with disabilities or those who speak different languages.",
+        "7",
+        "https://gateway.lighthouse.storage/ipfs/QmbUS5nJcEghXd2BCBh7r1b3SFrgVVpS7A5Gxz8fAuZECj",
+        "If you're looking to master video editing, our Adobe Premiere Pro course is your gateway to crafting professional videos.",
+        "Unleash your creative potential with our Adobe Premiere Pro course. From the basics of importing and editing to advanced motion control and animation, this course is your gateway to crafting professional videos. Get hands-on with industry-standard software, and transform your ideas into compelling visual stories. Perfect for beginners looking to master video editing. Join today and bring your vision to life!",
         [
-          "Master the many flavors of artificial intelligence",
-          "Help you spend less time on weekly administrative duties.",
-          "Think on how using Chat GPT might change your grading practices.",
-          "Hone your skills as a writer and watch your career grow",
+          "Solid foundation in video editing and learn essential skills to create professional-looking videos",
+          "By the end of the course, you will be able to confidently edit, enhance, and transform your raw footage into polished videos that captivate and engage your audience",
         ],
-        ["No prerequisites"],
+        [
+          "Computer or Laptop with minimum of (8gb RAM, i5 or Ryzen 5 CPU, 2gb GPU, 256gb SSD)",
+          "Installed Adobe Premiere Pro software  😎",
+          "Basic computer skills for smooth navigation.",
+          "Desire to learn.",
+        ],
       ]);
 
     console.log(res);
