@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Polybase } from "@polybase/client";
 import { useAccount, usePublicClient, useSignMessage, useWalletClient } from "wagmi";
 import { ethPersonalSignRecoverPublicKey } from "@polybase/eth";
@@ -6,7 +6,6 @@ import { ethPersonalSign } from "@polybase/eth";
 import { ethers } from "ethers";
 import { signMessage } from "@wagmi/core";
 import { toast } from "react-hot-toast";
-import { ParentContext } from "../contexts/ParentContext";
 
 export const db = new Polybase({
   defaultNamespace:
@@ -41,8 +40,10 @@ export const getInstructorById = async (id) => {
   return record;
 };
 
+
 export const buyCourse = async (sig, courseId, address, setcourseBought, courseName, img, sendNotification) => {
   // const { courseBought, setcourseBought } = useContext(ParentContext);c
+
   try {
     db.signer(async (data) => {
       return {

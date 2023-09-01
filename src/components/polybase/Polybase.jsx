@@ -6,6 +6,7 @@ import { ethPersonalSignRecoverPublicKey } from "@polybase/eth";
 import { ethPersonalSign } from "@polybase/eth";
 import { ethers } from "ethers";
 import { signMessage } from "@wagmi/core";
+
 import { GPTcontent } from "../../constants/chatGPTcontent";
 import { solidityCourseContent } from "../../constants/solidityCourseContent";
 import { atharava } from "../../constants/instructors/atharava";
@@ -41,11 +42,11 @@ const PolybaseHook = () => {
     message: "gm wagmi frens",
     onSuccess(data) {
       // console.log(data);
-      // addCourse(data);
+      addCourse(data);
       // updateCourseId(data);
       // addInstructor(data);
       // deleteCourse(data);
-      addContentToCourse(data);
+      // addContentToCourse(data);
       // addWhatyllearn(data);
       // addRequirements(data);
     },
@@ -132,6 +133,7 @@ const PolybaseHook = () => {
       const publicKey = await getPublicKey(sig);
       const res = await db
         .collection("Course")
+
         .record("1245")
         .call("addCourseContent", [JSON.stringify(VideoEdtingContent)]);
 

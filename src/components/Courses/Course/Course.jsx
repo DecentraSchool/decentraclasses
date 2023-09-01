@@ -25,6 +25,7 @@ const Course = ({}) => {
     setcourseInfo(data.data ? data.data : {});
     setcontentInfo(data.data.courseContent ? JSON.parse(data.data.courseContent) : {});
     const instructor = await getInstructorById(data?.data?.instructor?.id);
+    console.log(instructor?.data);
     setinstructorInfo(instructor.data);
     // console.log(instructorInfo);
   };

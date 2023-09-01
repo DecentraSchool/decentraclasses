@@ -3,7 +3,7 @@ import WhyLand from "./landing-why.png";
 export default function Why() {
   return (
     <div className="w-[99%]">
-      <div className=" flex flex-col gap-16 mt-10 md:mt-[12em]">
+      <div className=" flex flex-col gap-16 mt-10 md:mt-[6em]">
         <h1 className="font-extrabold text-2xl md:text-3xl mx-3">Why Decentraclasses ?</h1>
         <p className="text-l md:text-xl mx-3">
           At Decentraclasses, we're passionate about revolutionizing education through decentralized technology. Choose
