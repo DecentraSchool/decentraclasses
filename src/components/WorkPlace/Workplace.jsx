@@ -3,7 +3,6 @@ import ReactPlayer from "react-player";
 import { getCoursebyId } from "../../utils/PolybaseUtils";
 import { useLocation, useParams } from "react-router-dom";
 
-
 const Workplace = () => {
   const [courseInfo, setcourseInfo] = useState({});
   const [contentInfo, setcontentInfo] = useState([]);

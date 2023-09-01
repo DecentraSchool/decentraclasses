@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+import React from "react";
 import * as PushAPI from "@pushprotocol/restapi";
 import * as ethers from "ethers";
 
-export const ParentContext = createContext();
+// sendNotification();
 
-export const ParentProvider = ({ children }) => {
+const Push = () => {
   const PK = import.meta.env.VITE_push_channel_private_key;
   console.log(PK);
   const Pkey = `0x${PK}`;
@@ -34,10 +34,21 @@ export const ParentProvider = ({ children }) => {
       console.error("Error: ", err);
     }
   };
-  const [courseBought, setcourseBought] = useState(false);
   return (
-    <ParentContext.Provider value={{ courseBought, setcourseBought, sendNotification }}>
-      {children}
-    </ParentContext.Provider>
+    <div>
+      <button
+        onClick={() =>
+          sendNotification({
+            title: "Hurrah🎉 new accomplishment",
+            body: "You have successfully brought 'Learn Ethereum Programming: The Solidity Mastery Course',\n What are you waiting for lets learn!!!",
+            img: "https://gateway.lighthouse.storage/ipfs/QmNruXKmgvEDPqkRuHaFGWK5czerHQJKZKk5XJZXnTcKXS",
+          })
+        }
+      >
+        Click to send notification
+      </button>
+    </div>
   );
 };
+
+export default Push;

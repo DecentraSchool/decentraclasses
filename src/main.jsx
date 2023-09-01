@@ -10,7 +10,9 @@ import {
   rainbowWallet,
   walletConnectWallet,
   talismanWallet,
+  
   metaMaskWallet,
+  
 } from "@rainbow-me/rainbowkit/wallets";
 import { WagmiConfig, configureChains, createConfig, createStorage } from "wagmi";
 import { mainnet, optimism, zora, polygon, polygonMumbai,goerli } from "wagmi/chains";

@@ -40,7 +40,10 @@ export const getInstructorById = async (id) => {
   return record;
 };
 
-export const buyCourse = async (sig, courseId, address, setcourseBought) => {
+
+export const buyCourse = async (sig, courseId, address, setcourseBought, courseName, img, sendNotification) => {
+  // const { courseBought, setcourseBought } = useContext(ParentContext);c
+
   try {
     db.signer(async (data) => {
       return {
@@ -51,8 +54,13 @@ export const buyCourse = async (sig, courseId, address, setcourseBought) => {
     // const publicKey = await getPublicKey(sig);
     const res = await db.collection("Course").record(courseId).call("addUserToCourse", [address]);
     console.log(res);
-    toast.success("Course Successfully Brought");
+    toast.success("Course Successfully brought - Lets Learn");
     setcourseBought(true);
+    sendNotification({
+      title: "Hurray🎉 new accomplishment",
+      body: `You have successfully brought ${courseName},\n What are you waiting for lets learn!!!`,
+      img: img,
+    });
     return true;
   } catch (error) {
     console.log(error);
