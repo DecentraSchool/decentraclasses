@@ -1,8 +1,7 @@
 import React from "react";
-import { ethers } from "ethers";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import NewConnectButton from './NewConnectButton';
 import logo from "./logo.svg";
 import "./Explore.css";
 import { HashLink } from "react-router-hash-link";
@@ -10,20 +9,7 @@ import { HashLink } from "react-router-hash-link";
 const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
 const activeNavEl = "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full"
 export default function Header() {
-  const [account, setAccount] = useState(null);
-  const coursesRef = useRef(null);
 
-  const scrollToCourses = () => {
-    coursesRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const connectHandler = async () => {
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    const account = ethers.utils.getAddress(accounts[0]);
-    setAccount(account);
-  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,7 +50,9 @@ export default function Header() {
               <li className={targetLinks[1] === "#about" ? activeNavEl : styleNavEl}>
                 <HashLink to="/#about" smooth>About us</HashLink>
               </li>
-              <ConnectButton />
+              <li>
+                <NewConnectButton />
+              </li>
             </ul>
             <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
@@ -106,7 +94,7 @@ export default function Header() {
               About us
             </a>
             <div className="flex items-center justify-center py-4">
-              <ConnectButton className="block" />
+              <NewConnectButton />
             </div>
           </div>
         )}

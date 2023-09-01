@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="module">
+      import { Buffer } from "buffer";
+      import process from "process";
+      window.Buffer = Buffer;
+      window.process = process;
+    </script>
     <meta charset="UTF-8" />
     <meta name="author" content="DecentraClasses" />
     <meta property="og:url" content="https://Decentraclasses.com/" />
@@ -15,7 +21,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decentraclasses</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
