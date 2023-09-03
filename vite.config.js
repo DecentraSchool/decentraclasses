@@ -7,4 +7,11 @@ export default defineConfig({
   define: {
     "process.env": {},
   },
+  resolve: {
+    alias: {
+      process: "process",
+      // stream: "stream-browserify",
+      util: "util",
+    },
+  },
 });

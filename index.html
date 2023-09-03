@@ -18,6 +18,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
   </head>
   <body>
+    <script>
+      window.global = window;
+    </script>
+    <script type="module">
+      import process from "process";
+      import { Buffer } from "buffer";
+      // import EventEmitter from "events";
+
+      window.Buffer = Buffer;
+      window.process = process;
+      // window.EventEmitter = EventEmitter;
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 
     <div id="root"></div>
