@@ -42,10 +42,10 @@ export const rainbowWeb3AuthConnector = ({ chains }) => {
   const openloginAdapterInstance = new OpenloginAdapter({
     privateKeyProvider,
     adapterSettings: {
-      network: "cyan",
+      network: "aqua",
       uxMode: "redirect",
       whiteLabel: {
-        name: "Your app Name",
+        name: "Decentraclasses",
         logoLight: "https://web3auth.io/images/w3a-L-Favicon-1.svg",
         logoDark: "https://web3auth.io/images/w3a-D-Favicon-1.svg",
         defaultLanguage: "en",
