@@ -1,11 +1,12 @@
 import { ethers } from "ethers";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { contractABI, contractAddress } from "../../../contractABI";
 import Confetti from "react-confetti";
 import { Link } from "react-router-dom";
 import { useAccount, useSignMessage } from "wagmi";
 import { buyCourse } from "../../../utils/PolybaseUtils";
+import { ParentContext } from "../../../contexts/ParentContext";
 
 const Card = (props) => {
   // console.log(JSON.parse(props?.courseInfo?.content));
