@@ -3,7 +3,10 @@ import ReactPlayer from "react-player";
 import arrowDown from "./down-arrow.svg";
 import { useLocation } from "react-router";
 import { getCoursebyId } from "../../utils/PolybaseUtils";
+import { useAccount, useSignMessage } from "wagmi";
+import { InjectedConnector } from 'wagmi/connectors/injected'
 const Courseplace = () => {
+  const { address, isConnected } = useAccount();  
   const [courseInfo, setcourseInfo] = useState({});
   const [contentInfo, setcontentInfo] = useState([]);
   const [videoUrl, setvideoUrl] = useState("");
@@ -27,12 +30,12 @@ const Courseplace = () => {
   console.log(contentInfo);
   return (
     <div className="md:flex justify-between">
-      <div className="w-[60%] md:m-10 m-5">
+      <div className="md:w-[60%] md:m-10 m-3">
         <div className="hidden md:flex h-[500px] justify-center align-middle bg-slate-300 mix-blend-multiply py-5 ">
           <ReactPlayer width="800px" height="100%" controls url={videoUrl} />
         </div>
-        <div className="md:hidden h-[250px] w-[90vw] flex justify-center align-middle bg-slate-300 mix-blend-multiply">
-          <ReactPlayer width="300px" height="90%" controls url={videoUrl} />
+        <div className="md:hidden h-[250px] w-[90vw] flex justify-center align-middle ">
+          <ReactPlayer width="400px" height="90%" controls url={videoUrl} />
         </div>
         <div className="hidden md:inline md:mt-10">
           <ul className="flex justify-between">
@@ -51,7 +54,7 @@ const Courseplace = () => {
         <div className="w-[90%] md:w-[80%]">
           <h1 className="font-bold text-xl p-5 flex justify-center">Course Content</h1>
           {contentInfo?.section?.map((s, index) => (
-            <details key={s} className="group mb-5 ">
+            <details key={s} className="group mb-5 ml-5 md:ml-0">
               <summary className="font-medium cursor-pointer list-none text-black rounded-md focus:bg-slate-400 bg-white">
                 <div className="p-5">
                   <div className="flex justify-between">
