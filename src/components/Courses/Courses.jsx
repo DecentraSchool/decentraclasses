@@ -24,6 +24,9 @@ export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
   const [courseData, setcourseData] = useState([]);
   const [loader, setloader] = useState(true);
+  const [searchNotFound, setsearchNotFound] = useState(false);
+
+  const [query, setQuery] = useState("");
 
   const getCourseData = async () => {
     setloader(true);
@@ -92,22 +95,15 @@ export default function Courses() {
   //   });
   // };
 
-  const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
-  ];
-
   return (
     <div className="flex justify-center ">
       <Toaster position="top-center" reverseOrder={false} />
       <div className="w-full">
-        <Select options={options} />
         {/* <Header /> */}
         <main>
           <section className="px-10 flex flex-col gap-24 pb-20">
             <div className="">
-              <div className="flex flex-col text-center p-8">
+              <div className="flex w-full flex-col align-middle justify-center text-center p-8">
                 <motion.h1
                   className="text-[1.5rem] md:text-2xl font-bold mb-5"
                   variants={slideAnimateVariants}
@@ -135,32 +131,45 @@ export default function Courses() {
               </div>
 
               {loader && <SkeletonLoader></SkeletonLoader>}
-              <div className="flex flex-wrap mb-10 md:container m-auto gap-8 align-middle md:content-center justify-center">
-                {loader == false &&
-                  courseData.map((course) => {
-                    return (
-                      // <div className="flex mb-5 gap-10 justify-center flex-row align-middle items-center flex-wrap">
-                      <CourseCard
-                        img={course?.imageurl}
-                        title={course?.courseName}
-                        desc={course.shortdesc}
-                        course={course}
-                      />
-                      // </div>
-                    );
-                  })}
-                <CourseCard
-                  img={bbt}
-                  title="Basics of blockchain"
-                  desc="Explore the foundational concepts of blockchain technology in this comprehensive introductory course. "
-                  course="course"
+              <div className="w-[100%] flex justify-center align-middle">
+                <input
+                  className="m-5 align-middle pl-5"
+                  style={{
+                    width: "350px",
+                    height: "40px",
+                    border: "2px solid black",
+                    borderRadius: "20px",
+                    fontSize: "20px",
+                    fontFamily: "monospace",
+                  }}
+                  placeholder=" &#128270; Search course by title"
+                  onChange={(event) => setQuery(event.target.value)}
                 />
               </div>
-              {/* <hr /> */}
+              <div className="flex flex-wrap mb-10 md:container m-auto gap-8 align-middle md:content-center justify-center">
+                {loader == false &&
+                  courseData
+                    .filter((course) => {
+                      if (query == "") {
+                        // setsearchNotFound(false);
+                        return course;
+                      } else if (course?.courseName?.toLowerCase().includes(query.toLowerCase())) {
+                        // setsearchNotFound(false);
+                        return course;
+                      }
+                    })
+                    .map((course) => {
+                      return (
+                        <CourseCard
+                          img={course?.imageurl}
+                          title={course?.courseName}
+                          desc={course.shortdesc}
+                          course={course}
+                        />
+                      );
+                    })}
+              </div>
 
-              {/* manual card  */}
-
-              {/* <p>pagination</p> */}
               <div className="flex flex-col text-center p-8">
                 <motion.h1
                   className="text-[1.5rem] md:text-[1.5rem] font-bold"
