@@ -70,7 +70,7 @@ function App() {
  
   return (
     <>
-    <div className="sticky top-0 p-2 flex justify-center bg-red-500 text-white font-semibold">Phase 1 is out 🔥🎊!!! Explore our platform and our free courses 🎯 !</div>
+    <div className="md:sticky top-0 p-2 flex justify-center bg-red-500 text-white font-semibold">Phase 1 is out 🔥🎊!!! Explore our platform and our free courses 🎯 !</div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

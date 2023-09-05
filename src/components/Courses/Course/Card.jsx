@@ -171,7 +171,7 @@ const Card = (props) => {
             </div>
           ) : (
             <button className="bg-yellow-400 " onClick={handleBuy}>
-              Start course
+              {isConnected ? "Start course" : "Login To Buy" }
             </button>
           )}
 
