@@ -18,9 +18,9 @@ export default function Main() {
       <About />
       <Start />
       <Courses />
-      <div>
+      {/* <div>
         <Tweet id="1629307668568633344" />
-      </div>
+      </div> */}
       {/* <Supporters /> */}
     </main>
   );
