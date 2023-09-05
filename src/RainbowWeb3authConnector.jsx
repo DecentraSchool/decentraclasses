@@ -13,7 +13,9 @@ const iconUrl =
 export const rainbowWeb3AuthConnector = ({ chains }) => {
   // Create Web3Auth Instance
 
-  const clientId = "BMkKHE4n2KgzLWFXDmpCVIpWMggQ8Pe8_4pRkbm9aNafKnn0WRlb1zoy6JlOh2nN2Aw54jIAbFbsAUut3tuJr8w";
+  // const clientId = "BMkKHE4n2KgzLWFXDmpCVIpWMggQ8Pe8_4pRkbm9aNafKnn0WRlb1zoy6JlOh2nN2Aw54jIAbFbsAUut3tuJr8w";
+  // const clientId = "BEiKywx7OIUl832MkrJekbhIGEq78pgkdLOYFhAz0aamsGLXPqInKea2MV33-J3AkoSRJ46_7Tm48yZwug7QsH8";
+  const clientId = "BCUIf4lI2Zbrd_xE-ZKigU9ptoF61GrzRuZJ_QBCNiAHqFtI4DXT62xD1lHW1e4kxqwVs_FpxZxy-e_FfzoU0eY";
   const chainConfig = {
     chainNamespace: CHAIN_NAMESPACES.EIP155,
     chainId: "0x" + chains[0].id.toString(16),
@@ -33,7 +35,7 @@ export const rainbowWeb3AuthConnector = ({ chains }) => {
       appLogo: "https://gateway.lighthouse.storage/ipfs/QmWBJkyq3tsod47zP9jHUNH89GYBLa35N6SSqLXussGH4r", // Your App Logo Here
       modalZIndex: "2147483647",
     },
-    web3AuthNetwork: "cyan",
+    web3AuthNetwork: "aqua",
   });
 
   // Add openlogin adapter for customisations
@@ -41,10 +43,10 @@ export const rainbowWeb3AuthConnector = ({ chains }) => {
   const openloginAdapterInstance = new OpenloginAdapter({
     privateKeyProvider,
     adapterSettings: {
-      network: "cyan",
+      network: "aqua",
       uxMode: "redirect",
       whiteLabel: {
-        name: "Your app Name",
+        name: "Decentraclasses",
         logoLight: "https://web3auth.io/images/w3a-L-Favicon-1.svg",
         logoDark: "https://web3auth.io/images/w3a-D-Favicon-1.svg",
         defaultLanguage: "en",
