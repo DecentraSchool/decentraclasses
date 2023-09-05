@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useAccount, useSignMessage } from "wagmi";
 import { buyCourse } from "../../../utils/PolybaseUtils";
 import { ParentContext } from "../../../contexts/ParentContext";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Card = (props) => {
   // console.log(JSON.parse(props?.courseInfo?.content));
@@ -81,7 +82,6 @@ const Card = (props) => {
   } = useSignMessage({
     message: "gm wagmi frens",
     onSuccess(data) {
-
       const res = buyCourse(
         data,
 
@@ -169,10 +169,54 @@ const Card = (props) => {
               </svg>
               <span class="sr-only">Loading...</span>
             </div>
-          ) : (
+          ) : isConnected ? (
             <button className="bg-yellow-400 " onClick={handleBuy}>
-              {isConnected ? "Start course" : "Login To Buy" }
+              Start course
             </button>
+          ) : (
+            <ConnectButton.Custom>
+              {({
+                account,
+                chain,
+                openAccountModal,
+                openChainModal,
+                openConnectModal,
+                authenticationStatus,
+                mounted,
+              }) => {
+                // Note: If your app doesn't use authentication, you
+                // can remove all 'authenticationStatus' checks
+                const ready = mounted && authenticationStatus !== "loading";
+                const connected =
+                  ready && account && chain && (!authenticationStatus || authenticationStatus === "authenticated");
+
+                return (
+                  <div style={{ width: "100%" }}>
+                    {(() => {
+                      if (!connected) {
+                        return (
+                          <button
+                            onClick={openConnectModal}
+                            type="button"
+                            class="text-gray-900 w-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                          >
+                            Connect Wallet
+                          </button>
+                        );
+                      }
+
+                      if (chain.unsupported) {
+                        return (
+                          <button onClick={openChainModal} type="button">
+                            Wrong network
+                          </button>
+                        );
+                      }
+                    })()}
+                  </div>
+                );
+              }}
+            </ConnectButton.Custom>
           )}
 
           {/* <ul>
