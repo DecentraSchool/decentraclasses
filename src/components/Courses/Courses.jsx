@@ -17,7 +17,9 @@ import { motion } from "framer-motion";
 import { slideAnimateVariants } from "../animate/animate";
 import calendar from "../../assets/calendar.png";
 import gift from "../../assets/gift.png";
-import bbt from "../../assets/bbt.jpg"
+import bbt from "../../assets/bbt.jpg";
+import Select from "react-select";
+
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
   const [courseData, setcourseData] = useState([]);
@@ -90,10 +92,17 @@ export default function Courses() {
   //   });
   // };
 
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
+
   return (
     <div className="flex justify-center ">
       <Toaster position="top-center" reverseOrder={false} />
       <div className="w-full">
+        <Select options={options} />
         {/* <Header /> */}
         <main>
           <section className="px-10 flex flex-col gap-24 pb-20">
@@ -131,29 +140,25 @@ export default function Courses() {
                   courseData.map((course) => {
                     return (
                       // <div className="flex mb-5 gap-10 justify-center flex-row align-middle items-center flex-wrap">
-                        <CourseCard
-                          img={course?.imageurl}
-                          title={course?.courseName}
-                          desc={course.shortdesc}
-                          course={course}
-                        />
+                      <CourseCard
+                        img={course?.imageurl}
+                        title={course?.courseName}
+                        desc={course.shortdesc}
+                        course={course}
+                      />
                       // </div>
                     );
                   })}
-                  <CourseCard
-                          img={bbt}
-                          title="Basics of blockchain"
-                          desc="Explore the foundational concepts of blockchain technology in this comprehensive introductory course. "
-                          course="course"
-                        />
+                <CourseCard
+                  img={bbt}
+                  title="Basics of blockchain"
+                  desc="Explore the foundational concepts of blockchain technology in this comprehensive introductory course. "
+                  course="course"
+                />
               </div>
               {/* <hr /> */}
 
               {/* manual card  */}
-              
-
-
-              
 
               {/* <p>pagination</p> */}
               <div className="flex flex-col text-center p-8">
