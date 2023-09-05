@@ -9,6 +9,11 @@ import { HashLink } from "react-router-hash-link";
 
 const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
 const activeNavEl = "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full"
+const styleMobileNavEl = "p-3 font-medium"
+const activeMobileNavEl = "bg-sky-400 text-white font-medium relative h-full   w-full text-center p-3"
+const styleMobileNavBox = "opacity-0 z-[60]  relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-1000 flex shadow-sm flex-col gap-0 items-center -top-[26rem] bg-white -z-20"
+const activeMobileNavBox = "z-[60] relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-500 flex flex-col gap-2 items-center  absolute top-0 bg-gray-100 pb-5 sm:shadow-none shadow-md shadow-gray-700"
+
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
@@ -85,31 +90,29 @@ export default function Header() {
             </div>
           </div>
         </div>
-        {isOpen && (
-          <div className="mobile-nav z-20 relative md:hidden mt-2 py-2">
-            <Link to="/" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              Home
-            </Link>
-            <Link to="/courses" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              Courses
-            </Link>
-            <Link to="/community" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              Community
-            </Link>
-            <Link to="/mentor" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              Mentorships
-            </Link>
-            <Link to="/careers" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              Career
-            </Link>
-            <a href="#" className="flex justify-center px-4 py-2 hover:bg-blue-500 hover:text-white">
-              About us
-            </a>
-            <div className="flex items-center justify-center py-4">
-              <ConnectButton className="block" />
-            </div>
-          </div>
-        )}
+        <ul className={isOpen ? activeMobileNavBox : styleMobileNavBox}>
+          <li className={(targetLinks[0] === "/" && targetLinks[1] === "") ? activeMobileNavEl : styleMobileNavEl} >
+            <Link to="/" onClick={toggleNavbar}>Home</Link>
+          </li>
+          <li className={targetLinks[2] === "courses" ? activeMobileNavEl : styleMobileNavEl} >
+            <Link to="/courses" onClick={toggleNavbar}>Courses</Link>
+          </li>
+          <li className={targetLinks[2] === "community" ? activeMobileNavEl : styleMobileNavEl} >
+            <Link to="/community" onClick={toggleNavbar}>Community</Link>
+          </li>
+          <li className={targetLinks[2] === "mentor" ? activeMobileNavEl : styleMobileNavEl} >
+            <Link to="/mentor" onClick={toggleNavbar}>Mentorship</Link>
+          </li>
+          {/* <li className={targetLinks[2] === "careers" ? activeMobileNavEl : styleMobileNavEl}>
+                <Link to="/careers" >Career</Link>
+              </li> */}
+          <li className={targetLinks[1] === "#about" ? activeMobileNavEl : styleMobileNavEl} >
+            <HashLink to="/#about" onClick={toggleNavbar} smooth>About us</HashLink>
+          </li>
+          <li className="mt-3 rounded-lg" onClick={toggleNavbar}>
+            <ConnectButton />
+          </li>
+        </ul>
       </nav>
     </header>
   );
