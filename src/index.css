@@ -10,19 +10,16 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    92deg,
-    rgba(190, 235, 255, 0.7) 45%,
-    rgba(255, 235, 204, 0.7) 67%
-  );
+  background: linear-gradient(92deg,
+      rgba(190, 235, 255, 0.7) 45%,
+      rgba(255, 235, 204, 0.7) 67%);
   word-break: keep-all;
 }
+
 .home-here {
-  background: linear-gradient(
-      92deg,
+  background: linear-gradient(92deg,
       rgba(190, 235, 255, 0.7) 45%,
-      rgba(255, 235, 204, 0.7) 67%
-    ),
+      rgba(255, 235, 204, 0.7) 67%),
     url("./assets/BACKGROUND.png") no-repeat top;
   background-size: 100%;
 }

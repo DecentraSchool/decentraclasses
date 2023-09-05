@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import { motion } from "framer-motion";
 import Home from "./components/Home/Home";
 import Courses from "./components/Courses/Courses";
 import Course from "./components/Courses/Course/Course";
@@ -33,6 +34,8 @@ function App() {
     setAccount(account);
   };
 
+  
+
   // useEffect(() => {
   //   connectHandler();
   //   if (window.ethereum.networkVersion !== chainID) {
@@ -64,9 +67,10 @@ function App() {
   //   const account1 = getAccount();
   //   setAccount(account1.address);
   // }, []);
-
+ 
   return (
     <>
+    <div className="sticky top-0 p-2 flex justify-center bg-red-500 text-white font-semibold">Phase 1 is out 🔥🎊!!! Explore our platform and our free courses 🎯 !</div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
