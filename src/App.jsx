@@ -21,6 +21,7 @@ import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
 import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
+import Announcment from "./components/Announcment";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
     setAccount(account);
   };
 
-  
+
 
   // useEffect(() => {
   //   connectHandler();
@@ -67,10 +68,10 @@ function App() {
   //   const account1 = getAccount();
   //   setAccount(account1.address);
   // }, []);
- 
+
   return (
     <>
-    <div className="md:sticky top-0 p-2 flex justify-center bg-red-500 text-white font-semibold">Phase 1 is out 🔥🎊!!! Explore our platform and our free courses 🎯 !</div>
+      <Announcment text='Phase 1 is now available🔥🎊!!! Check out our platform and the free courses we offer on it🎯 !' />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -18,7 +18,6 @@ import { slideAnimateVariants } from "../animate/animate";
 import calendar from "../../assets/calendar.png";
 import gift from "../../assets/gift.png";
 import bbt from "../../assets/bbt.jpg";
-import Select from "react-select";
 
 export default function Courses() {
   const [noOfCourses, setnoOfCourses] = useState(0);
