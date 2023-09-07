@@ -7,8 +7,10 @@ import logo from "./logo.svg";
 import "./Explore.css";
 import { HashLink } from "react-router-hash-link";
 
-const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
-const activeNavEl = "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full"
+const styleNavEl =
+  "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full ";
+const activeNavEl =
+  "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full";
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
@@ -38,15 +40,13 @@ export default function Header() {
       <nav className="p-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
-
             <div className="flex items-center lg:w-[260px] w-[200px]">
-
               <a href="/">
                 <img src={logo} alt="Logo" className="w-full" />
               </a>
             </div>
             <ul className="hidden lg:flex items-center xl:gap-9 lg:gap-6 ">
-              <li className={(targetLinks[0] === "/" && targetLinks[1] === "") ? activeNavEl : styleNavEl}>
+              <li className={targetLinks[0] === "/" && targetLinks[1] === "" ? activeNavEl : styleNavEl}>
                 <Link to="/">Home</Link>
               </li>
               <li className={targetLinks[2] === "courses" ? activeNavEl : styleNavEl}>
@@ -62,9 +62,11 @@ export default function Header() {
                 <Link to="/careers" >Career</Link>
               </li> */}
               <li className={targetLinks[1] === "#about" ? activeNavEl : styleNavEl}>
-                <HashLink to="/#about" smooth>About us</HashLink>
+                <HashLink to="/#about" smooth>
+                  About us
+                </HashLink>
               </li>
-              <ConnectButton />
+              <ConnectButton label="Login" chainStatus="full" />
             </ul>
             <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
@@ -106,7 +108,7 @@ export default function Header() {
               About us
             </a>
             <div className="flex items-center justify-center py-4">
-              <ConnectButton className="block" />
+              <ConnectButton className="block" label="Login" />
             </div>
           </div>
         )}
