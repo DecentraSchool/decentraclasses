@@ -126,7 +126,7 @@ export default function Courses() {
                   }}
                   custom={3}
                 >
-                  Intresting videos with all the information you need to get started in the world of web3 and blockchain
+                  Intersting videos with all the information you need to get started in the world of web3 and blockchain
                 </motion.p>
               </div>
 

@@ -13,6 +13,7 @@ import like from "../../../assets/like.svg";
 import dislike from "../../../assets/dislike.svg";
 import reviewDp from "../../../assets/review-dp.svg";
 import { ParentContext } from "../../../contexts/ParentContext";
+import Stripe from "../stripe/stripe";
 
 const Course = ({}) => {
   const [courseInfo, setcourseInfo] = useState({});
@@ -92,7 +93,10 @@ const Course = ({}) => {
             anum={courseInfo?.nofarticles}
             newClass="side3 lg:w-[30%] w-full"
           />
+          <Stripe />
+          
         </section>
+        
       </main>
     </>
   );
