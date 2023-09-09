@@ -29,12 +29,12 @@ const CourseCard = ({ img, title, desc, course, category }) => {
         </h1>
         <p style={{ textAlign: "left" }}>{desc}</p>
       </div>
-      <div className="flex items-center justify-center gap-3 mt-2">
+      {/* <div className="flex items-center justify-center gap-3 mt-2">
         <p className="text-orange">{(rating > 5) ? 5 : rating}</p>
         <p>
           {starRating()}
         </p>
-      </div>
+      </div> */}
 
       <div className="mt-5 pricing flex justify-center ">
         <Link to={`/course/${course?.id}`}>
