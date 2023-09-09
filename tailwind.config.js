@@ -59,7 +59,7 @@ module.exports = {
       "run": {
         from: {
           transform: 'translateX(10%)'
-        }
+        } 
       }
     }
   },

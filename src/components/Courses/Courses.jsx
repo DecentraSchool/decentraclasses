@@ -167,12 +167,6 @@ export default function Courses() {
                         />
                       );
                     })}
-                    <CourseCard
-                          img={bbt}
-                          title="Basics of blockchain"
-                          desc="Explore the foundational concepts of blockchain technology in this comprehensive introductory course. "
-                          course="course"
-                        />
               </div>
 
               <div className="flex flex-col text-center p-8">
