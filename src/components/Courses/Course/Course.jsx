@@ -100,7 +100,7 @@ const Course = ({}) => {
       </main>
       
       <Stripe />
-      <a href="https://donate.stripe.com/test_fZe8zk0Ox9eN4GkaEE">hello</a>
+
     </>
   );
 };
