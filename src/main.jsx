@@ -9,7 +9,7 @@ import {
   injectedWallet,
   rainbowWallet,
   walletConnectWallet,
-  talismanWallet,
+  // talismanWallet,
   metaMaskWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 import { WagmiConfig, configureChains, createConfig, createStorage } from "wagmi";
@@ -76,7 +76,7 @@ const connectors = connectorsForWallets([
       rainbowWeb3AuthConnector({ chains }),
       rainbowWallet({ projectId, chains }),
       walletConnectWallet({ projectId, chains }),
-      talismanWallet({ chains }),
+      // talismanWallet({ chains }),
       metaMaskWallet({ chains, projectId }),
     ],
   },

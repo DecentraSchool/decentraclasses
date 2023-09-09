@@ -22,6 +22,7 @@ import LightHouseUtils from "./utils/LightHouseUtils";
 import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
 import Announcment from "./components/Announcment";
+import Success from "./components/Stripe/Success";
 
 
 function App() {
@@ -88,6 +89,7 @@ function App() {
         <Route path="/light" element={<LightHouseUtils />} />
         <Route path="/Mentor" element={<Mentorship />} />
         <Route path="/workplace" element={<Courseplace />} />
+        <Route path="/stripe/success" element={<Success />} />
       </Routes>
       <Footer />
     </>

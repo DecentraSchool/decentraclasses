@@ -13,6 +13,7 @@ import like from "../../../assets/like.svg";
 import dislike from "../../../assets/dislike.svg";
 import reviewDp from "../../../assets/review-dp.svg";
 import { ParentContext } from "../../../contexts/ParentContext";
+import Stripe from "../../Stripe/Stripe";
 
 const Course = ({}) => {
   const [courseInfo, setcourseInfo] = useState({});
@@ -92,8 +93,14 @@ const Course = ({}) => {
             anum={courseInfo?.nofarticles}
             newClass="side3 lg:w-[30%] w-full"
           />
+
         </section>
+        
+        
       </main>
+      
+      <Stripe />
+      <a href="https://donate.stripe.com/test_fZe8zk0Ox9eN4GkaEE">hello</a>
     </>
   );
 };
