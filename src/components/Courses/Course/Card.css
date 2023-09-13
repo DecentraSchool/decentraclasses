@@ -1,0 +1,76 @@
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: Lato, sans-serif;
+	font-size: 15px;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 20px 45px;
+	display: inline-block;
+	margin: 15px 10px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+.btn-1 {
+	border: 2px solid #fe6159;
+	color: #FE615C;
+}
+
+
+/* Button 1e */
+.btn-1e {
+	overflow: hidden;overflow: hidden;
+font-family: Lato;
+font-weight: bold;
+font-size: 15px;
+}
+
+.btn-1e:after {
+	width: 100%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+background-image: -webkit-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
+background-image: -moz-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
+background-image: -o-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
+background-image: linear-gradient(to right,#ff5e3a 0,#ff2a68 100%);
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.btn-1e:hover,
+.btn-1e:active {
+	color: #fff;
+}
+
+.btn-1e:hover:after {
+	height: 400%;
+	opacity: 1;
+}
+
+.btn-1e:active:after {
+	height: 600%;
+	opacity: 1;
+}

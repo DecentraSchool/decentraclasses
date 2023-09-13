@@ -8,6 +8,7 @@ import { useAccount, useSignMessage } from "wagmi";
 import { buyCourse } from "../../../utils/PolybaseUtils";
 import { ParentContext } from "../../../contexts/ParentContext";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import "./Card.css";
 
 const Card = (props) => {
   // console.log(JSON.parse(props?.courseInfo?.content));
@@ -145,7 +146,9 @@ const Card = (props) => {
           <div>
             <img style={{ width: "100%", height: "300px", objectFit: "contain" }} src={props.image} alt="" />
           </div>
-          {userAlreadyBought ? (
+          {props.courseInfo.id == "0000" || props.courseInfo.id == "2222" ? (
+            <button className="btn btn-1 btn-1e">Coming soon</button>
+          ) : userAlreadyBought ? (
             <button className="bg-green-400">
               <Link to={`/workplace?userId=${address}&courseId=${props.courseInfo.id}`}>continue to dashboard</Link>{" "}
             </button>

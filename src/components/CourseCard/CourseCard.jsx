@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 // import style from './style.css' ;
 
 const CourseCard = ({ img, title, desc, course, category }) => {
-  const rating = (Math.random() * 3 + 3).toFixed(1)//courses with 3 star at least
+  const rating = (Math.random() * 3 + 3).toFixed(1); //courses with 3 star at least
   const starRating = () => {
     const listItems = [];
     for (let i = 0; i < Math.floor(rating); i++) {
-      listItems.push(<span key={i}>{'⭐'}</span>);
+      listItems.push(<span key={i}>{"⭐"}</span>);
     }
     return listItems;
   };
