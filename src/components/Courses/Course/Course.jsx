@@ -76,7 +76,7 @@ const Course = ({}) => {
                 interactive coding examples. In this course we'll build one massive web application that profiles the
                 advanced features of React, Redux, Express, and Mongo. By putting each concept into a real app, you'll
                 get a better idea of when to use each unique and powerful feature.
-              </p> */}
+              </p>  */}
             </div>
 
             <InstructorCard instructorInfo={instructorInfo} />
