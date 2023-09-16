@@ -1,15 +1,16 @@
-import React from 'react';
-import './success.css';
-import success from '../../assets/success.png';
+import React from "react";
+import "./success.css";
+import success from "../../assets/success.png";
 
 const Success = () => {
   return (
     <div className="flex flex-col justify-center align-middle">
-      <div className="container">
-        <h2 className="title">
+      <div className="container w-full flex text-center align-middle justify-center">
+        <h2 className="title flex w-full justify-center align-middle text-center">
           <span className="title-word title-word-1">Thank you </span>
-          <span className="title-word title-word-2">for supporting </span>
-          <span className="title-word title-word-3">our </span>
+          <span className="title-word title-word-2">.
+          for supporting </span>
+          <span className="title-word title-word-3"> our </span>
           <span className="title-word title-word-4"> creators !!!</span>
         </h2>
       </div>

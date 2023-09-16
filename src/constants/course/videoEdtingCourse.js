@@ -2,7 +2,7 @@ export const videoEditingCourse = [
   "1245",
   "Get started with Video Editing",
   "DESIGN",
-//   db.collection("Instructor").record("8888"),
+  //   db.collection("Instructor").record("8888"),
   "August 28, 2023",
   "1.5",
   "7",
@@ -77,7 +77,7 @@ export const VideoEdtingContent = {
     },
     {
       title: "Animate layer with key frames",
-      lecturesCount: "3",
+      lecturesCount: "1",
       totalDuration: "30 Min",
       lecture: [
         {
@@ -86,15 +86,94 @@ export const VideoEdtingContent = {
           videoUrl: "https://gateway.lighthouse.storage/ipfs/QmdrcMuXJUmprQ9hAhifq5wqR6v2Nvn1XqQBWULhohtsvd9",
           usersCompleted: [],
         },
+      ],
+    },
+    {
+      title: "Marker Tool",
+      lecturesCount: "1",
+      totalDuration: "20 Min",
+      lecture: [
         {
-          title: "Animating Layers using keyframes - 2",
-          desc: "Introduction to layers and their role in animations.Text, images, and graphics on separate layers.",
+          title: "Introduction to the Marker Tool",
+          desc: "Adding Markers to Your Timeline.",
           videoUrl: "https://gateway.lighthouse.storage/ipfs/QmWV6KAAKcLCoTj6rWeg3ohS9yYZzijQyTKeP3J7bh9c6N",
           usersCompleted: [],
         },
+      ],
+    },
+    {
+      title: "Masking",
+      lecturesCount: "1",
+      totalDuration: "20 Min",
+      lecture: [
         {
-          title: "Animating Layers using keyframes - 3",
-          desc: "Introduction to layers and their role in animations.Text, images, and graphics on separate layers.",
+          title: "Understanding Masks",
+          desc: "Creating Shape Masks, Mask Animations, Combining Mask Animations with Keyframes",
+          videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
+          usersCompleted: [],
+        },
+      ],
+    },
+    {
+      title: "Title in Premiere Pro",
+      lecturesCount: "1",
+      totalDuration: "25 Min",
+      lecture: [
+        {
+          title: "Adding Text Layers to Your Timeline",
+          desc: "Text Formatting and Styling, Rolling edit, Crawling Text, Creating Text Animations",
+          videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
+          usersCompleted: [],
+        },
+      ],
+    },
+    {
+      title: "Hide Face/Blur Face",
+      lecturesCount: "1",
+      totalDuration: "15 Min",
+      lecture: [
+        {
+          title: "Blur face in Adobe",
+          desc: "Why Blur or Hide Faces?, Applying a Gaussian Blur to Faces, Using Mosaic Effects to Obscure Faces",
+          videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
+          usersCompleted: [],
+        },
+      ],
+    },
+    {
+      title: "Custom Keyboards Shortcuts",
+      lecturesCount: "1",
+      totalDuration: "15 Min",
+      lecture: [
+        {
+          title: "Why Use Keyboard Shortcuts?",
+          desc: "Creating Custom Keyboard Shortcuts, Popular Custom Keyboard Shortcuts",
+          videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
+          usersCompleted: [],
+        },
+      ],
+    },
+    {
+      title: "Music Remix in Adobe Premiere Pro",
+      lecturesCount: "1",
+      totalDuration: "15 Min",
+      lecture: [
+        {
+          title: "Music Remix in Adobe Premiere Pro",
+          desc: "",
+          videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
+          usersCompleted: [],
+        },
+      ],
+    },
+    {
+      title: "Exporting and Rendering Your Video",
+      lecturesCount: "1",
+      totalDuration: "15 Min",
+      lecture: [
+        {
+          title: "Choosing the Right Export Settings for Your Project",
+          desc: "",
           videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaZYWnehFQpMpVi3Yhc1LMhRnm2j31RUosi8yunt5eVFA",
           usersCompleted: [],
         },
