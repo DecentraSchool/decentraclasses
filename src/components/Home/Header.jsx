@@ -6,6 +6,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import logo from "./logo.svg";
 import "./Explore.css";
 import { HashLink } from "react-router-hash-link";
+import Burger from "./Burger";
 
 
 const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
@@ -73,21 +74,10 @@ export default function Header() {
               </li>
               <ConnectButton label="Login" chainStatus="full" />
             </ul>
+            
             <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
-                <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  {isOpen ? (
-                    <path
-                      fillRule="evenodd"
-                      d="M3.293 6.293a1 1 0 0 1 1.414 0L10 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L11.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L10 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L8.586 12 3.293 6.707a1 1 0 0 1 0-1.414z"
-                    ></path>
-                  ) : (
-                    <path
-                      fillRule="evenodd"
-                      d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 10a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 15a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z"
-                    ></path>
-                  )}
-                </svg>
+                <Burger />
               </button>
             </div>
           </div>
