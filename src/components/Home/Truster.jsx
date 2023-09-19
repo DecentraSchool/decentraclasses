@@ -1,6 +1,8 @@
 import huddle01 from '../../assets/huddle01.jpg';
 import lighthouse from '../../assets/lighthouse.jpg';
 import polybase from '../../assets/polybase.jpg';
+import tnc from '../../assets/tnc.png';
+
 
 export default function Truster() {
     return (
@@ -19,17 +21,9 @@ export default function Truster() {
                     <img src={polybase} className="w-7" alt="" />
                     <h3>Polybase</h3>
                 </div>
-                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 ">
-                    <img src={huddle01} className="w-8" alt="" />
-                    <h3>Huddle01</h3>
-                </div>
-                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 ">
-                    <img src={lighthouse} className="w-8" alt="" />
-                    <h3>Lighthouse</h3>
-                </div>
-                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
-                    <img src={polybase} className="w-7" alt="" />
-                    <h3>Polybase</h3>
+                <div className="flex items-center gap-4 w-[250px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
+                    <img src={tnc} className="w-10" alt="" />
+                    <h3>The News Crypto</h3>
                 </div>
                 <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 ">
                     <img src={huddle01} className="w-8" alt="" />
@@ -42,6 +36,26 @@ export default function Truster() {
                 <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
                     <img src={polybase} className="w-7" alt="" />
                     <h3>Polybase</h3>
+                </div>
+                <div className="flex items-center gap-4 w-[250px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
+                    <img src={tnc} className="w-10" alt="" />
+                    <h3>The News Crypto</h3>
+                </div>
+                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 ">
+                    <img src={huddle01} className="w-8" alt="" />
+                    <h3>Huddle01</h3>
+                </div>
+                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 ">
+                    <img src={lighthouse} className="w-8" alt="" />
+                    <h3>Lighthouse</h3>
+                </div>
+                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
+                    <img src={polybase} className="w-7" alt="" />
+                    <h3>Polybase</h3>
+                </div>
+                <div className="flex items-center gap-4 w-[250px] px-4 py-3 rounded-md backdrop-blur-sm bg-white/30 b ">
+                    <img src={tnc} className="w-10" alt="" />
+                    <h3>The News Crypto</h3>
                 </div>
             </div>
         </div>
