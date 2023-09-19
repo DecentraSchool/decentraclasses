@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 export default function Explore() {
   return (
     <div className="md:flex mx-2 md:gap-20 md:px-10 md:justify-between overflow-x-hidden mt-10">
+      <div></div>
     <div className=" md:w-[55%] md:flex md:flex-col md:justify-around md:items-start">
       <div>
         <h1 className="text-[1.5em] w-[100%] my-8 linear-wipe text font-extrabold md:text-[40px] break-keep md:leading-tight">
@@ -22,7 +23,7 @@ export default function Explore() {
         </button>
       </Link>
     </div>
-    <div className="mt-10 md:w-[45%] md:vert-move md:block md:mt-20 md:justify-center">
+  <div className="mt-10 md:w-[45%] md:vert-move md:block md:mt-20 md:justify-center">
       <img src={DCls} alt="" className="w-[60%] vert-move mx-auto md:ml-[30%]" />
     </div>
   </div>
