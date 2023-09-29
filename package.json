@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arcana/auth": "^1.0.8",
+    "@arcana/auth-react": "^0.0.3",
+    "@arcana/auth-wagmi": "^2.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",

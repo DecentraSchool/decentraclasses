@@ -1,15 +1,45 @@
 import { Web3AuthConnector } from "@web3auth/web3auth-wagmi-connector";
 import { Web3Auth } from "@web3auth/modal";
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 import { CHAIN_NAMESPACES } from "@web3auth/base";
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { TorusWalletConnectorPlugin } from "@web3auth/torus-wallet-connector-plugin";
-
+import { getAuthProvider } from "./getArcanaAuth";
+import { ArcanaConnector,sequenceLogo } from "@arcana/auth-wagmi";
+import { metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
 const name = "Socials Login";
 // const iconUrl = "https://web3auth.io/docs/content-hub/logo-ethereum.png";
 const iconUrl =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/150px-Google_%22G%22_Logo.svg.png";
 
+  export const ArcanaRainbowConnector = ({ chains }) => {
+    return {
+      id: "arcana-auth",
+      name: "Login with Email/Social",
+      iconUrl: sequenceLogo,
+      iconBackground: "#101010",
+      createConnector: () => {
+        const connector = new ArcanaConnector({
+          chains,
+          options: {
+            auth: getAuthProvider()
+          }
+        });
+        return {
+          connector
+        };
+      }
+    };
+  };
+
+export const connectors = (chains) =>
+  connectorsForWallets([
+    {
+      groupName: "Recommended",
+      wallets: [ArcanaRainbowConnector({ chains }), metaMaskWallet({ chains })]
+    }
+  ]);
 export const rainbowWeb3AuthConnector = ({ chains }) => {
   // Create Web3Auth Instance
 
