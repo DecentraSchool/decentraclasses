@@ -23,7 +23,8 @@ import { PolybaseProvider } from "@polybase/react";
 import { Polybase } from "@polybase/client";
 import ScrollToTop from "./ScrollToTop";
 import { rainbowWeb3AuthConnector } from "./RainbowWeb3authConnector";
-
+import { ArcanaRainbowConnector } from "./RainbowWeb3authConnector";
+// import { connectors } from "./RainbowWeb3authConnector";
 export const Mantle = {
   id: 5001,
   name: "Mantle",
@@ -61,6 +62,9 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 
 const polybase = new Polybase();
+// const wagmiEntity = createConfig({
+//   connectors: connectors(chains),
+//   autoConnect: true});
 
 // const { connectors } = getDefaultWallets({
 //   projectId: projectId,
@@ -72,6 +76,7 @@ const connectors = connectorsForWallets([
   {
     groupName: "Recommended",
     wallets: [
+      ArcanaRainbowConnector({ chains }),
       // injectedWallet({ chains }),
       rainbowWeb3AuthConnector({ chains }),
       rainbowWallet({ projectId, chains }),
@@ -89,6 +94,7 @@ const wagmiConfig = createConfig({
   storage: createStorage({ storage: window.localStorage }),
   // connectors: publicClient,
 });
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <WagmiConfig config={wagmiConfig}>

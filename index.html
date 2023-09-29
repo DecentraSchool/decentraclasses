@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="DecentraClasses" />
-    <meta property="og:url" content="https://Decentraclasses.com/" />
-    <meta property="og:type" content="website" />
-    <meta
-      name="description"
-      content="To make education courses 👨‍🎓 an asset and decentralised education so everyone can learn to earn 💰 and monetise their learnings."
-    />
-    <meta property="og:image" content="./src/assets/shortLogo.jpg" />
-    <meta property="og:title" content="DecentraClasses" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/shortLogo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decentraclasses</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
-  </head>
-  <body>
-    <script>
-      window.global = window;
-    </script>
-    <script type="module">
-      import process from "process";
-      import { Buffer } from "buffer";
-      // import EventEmitter from "events";
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="DecentraClasses" />
+  <meta property="og:url" content="https://Decentraclasses.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="description"
+    content="To make education courses 👨‍🎓 an asset and decentralised education so everyone can learn to earn 💰 and monetise their learnings." />
+  <meta property="og:image" content="./src/assets/shortLogo.jpg" />
+  <meta property="og:title" content="DecentraClasses" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/shortLogo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decentraclasses</title>
 
-      window.Buffer = Buffer;
-      window.process = process;
-      // window.EventEmitter = EventEmitter;
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+</head>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BJPFZHZCP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<body>
+  <script>
+    window.global = window;
+  </script>
+  <script type="module">
+    import process from "process";
+    import { Buffer } from "buffer";
+    // import EventEmitter from "events";
 
-      gtag('config', 'G-9BJPFZHZCP');
-    </script>
-    
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    window.Buffer = Buffer;
+    window.process = process;
+    // window.EventEmitter = EventEmitter;
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BJPFZHZCP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9BJPFZHZCP');
+  </script>
+
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@arcana/auth"></script>
+  <script src="https://unpkg.com/@arcana/auth"></script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
