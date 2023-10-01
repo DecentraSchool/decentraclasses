@@ -40,10 +40,10 @@ export const getInstructorById = async (id) => {
   return record;
 };
 
-
 export const buyCourse = async (sig, courseId, address, setcourseBought, courseName, img, sendNotification) => {
-  // const { courseBought, setcourseBought } = useContext(ParentContext);c
+  // const { courseBought, setcourseBought } = useContext(ParentContext);
 
+  console.log("called this");
   try {
     db.signer(async (data) => {
       return {

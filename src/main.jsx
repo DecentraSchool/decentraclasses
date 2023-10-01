@@ -50,10 +50,7 @@ export const Mantle = {
   },
 };
 
-// const { chains, publicClient, webSocketPublicClient } = configureChains(
-//   [polygon, polygonMumbai, Mantle],
-//   [publicProvider()]
-// );
+
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [mainnet, goerli, polygonMumbai, polygon],
   [alchemyProvider({ apiKey: "7wSu45FYTMHUO4HJkHjQwX4HFkb7k9Ui" }), publicProvider()]
@@ -62,23 +59,13 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = "b2024bb978e05dbfcd98d3ca8318ee07";
 
 const polybase = new Polybase();
-// const wagmiEntity = createConfig({
-//   connectors: connectors(chains),
-//   autoConnect: true});
-
-// const { connectors } = getDefaultWallets({
-//   projectId: projectId,
-//   appName: "decentraschool",
-//   chains,
-// });
 
 const connectors = connectorsForWallets([
   {
     groupName: "Recommended",
     wallets: [
       ArcanaRainbowConnector({ chains }),
-      // injectedWallet({ chains }),
-      rainbowWeb3AuthConnector({ chains }),
+      // rainbowWeb3AuthConnector({ chains }),
       rainbowWallet({ projectId, chains }),
       walletConnectWallet({ projectId, chains }),
       // talismanWallet({ chains }),

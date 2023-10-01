@@ -3,8 +3,10 @@ import { ethers } from "ethers";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { PeraWalletConnect } from "@perawallet/connect";
 
 export default function Header() {
+
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
 
@@ -17,6 +19,44 @@ export default function Header() {
     const account = ethers.utils.getAddress(accounts[0]);
     setAccount(account);
   };
+  function handleConnectWalletClick() {
+    peraWallet
+      .connect()
+      .then((newAccounts) => {
+        // Setup the disconnect event listener
+        peraWallet.connector?.on("disconnect", handleDisconnectWalletClick);
+
+        setAccountAddress(newAccounts[0]);
+      })
+      .reject((error) => {
+        // You MUST handle the reject because once the user closes the modal, peraWallet.connect() promise will be rejected.
+        // For the async/await syntax you MUST use try/catch
+        if (error?.data?.type !== "CONNECT_MODAL_CLOSED") {
+          // log the necessary errors
+        }
+      });
+  }
+
+  function handleDisconnectWalletClick() {
+    peraWallet.disconnect();
+    setAccountAddress(null);
+  }
+
+  const [accountAddress, setAccountAddress] = (useState < string) | (null > null);
+  // Check app is connected with Pera Wallet
+  const isConnectedToPeraWallet = !!accountAddress;
+
+  useEffect(() => {
+    // Reconnect to the session when the component is mounted
+    peraWallet.reconnectSession().then((accounts) => {
+      // Setup the disconnect event listener
+      peraWallet.connector?.on("disconnect", handleDisconnectWalletClick);
+
+      if (peraWallet.isConnected && accounts.length) {
+        setAccountAddress(accounts[0]);
+      }
+    });
+  }, []);
 
   return (
     <header>
@@ -38,7 +78,10 @@ export default function Header() {
             <Link to="/">About Us</Link>
           </li>
           <li>
-            <ConnectButton />
+            {/* <ConnectButton /> */}
+            <button onClick={isConnectedToPeraWallet ? handleDisconnectWalletClick : handleConnectWalletClick}>
+              {isConnectedToPeraWallet ? "Disconnect" : "Connect to Pera Wallet"}
+            </button>
           </li>
           {/* <li>
             {account ? (

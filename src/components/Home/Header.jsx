@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ethers } from "ethers";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import logo from "./logo.svg";
 import "./Explore.css";
 import { HashLink } from "react-router-hash-link";
 import Burger from "./Burger";
+import { PeraWalletConnect } from "@perawallet/connect";
+import { ParentContext } from "../../contexts/ParentContext";
 
-
-const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
-const activeNavEl = "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full"
-const styleMobileNavEl = "p-3 font-medium"
-const activeMobileNavEl = "bg-sky-400 text-white font-medium relative h-full   w-full text-center p-3"
-const styleMobileNavBox = "opacity-0 z-[60]  relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-1000 flex shadow-sm flex-col gap-0 items-center -top-[26rem] bg-white -z-20"
-const activeMobileNavBox = "z-[60] relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-500 flex flex-col gap-2 items-center  absolute top-0 bg-gray-100 pb-5 sm:shadow-none shadow-md shadow-gray-700"
-
+const styleNavEl =
+  "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full ";
+const activeNavEl =
+  "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full";
+const styleMobileNavEl = "p-3 font-medium";
+const activeMobileNavEl = "bg-sky-400 text-white font-medium relative h-full   w-full text-center p-3";
+const styleMobileNavBox =
+  "opacity-0 z-[60]  relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-1000 flex shadow-sm flex-col gap-0 items-center -top-[26rem] bg-white -z-20";
+const activeMobileNavBox =
+  "z-[60] relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-500 flex flex-col gap-2 items-center  absolute top-0 bg-gray-100 pb-5 sm:shadow-none shadow-md shadow-gray-700";
 
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
+  const {
+    courseBought,
+    setcourseBought,
+    isConnectedToPeraWallet,
+    accountAddress,
+    setAccountAddress,
+    handleDisconnectWalletClick,
+    handleConnectWalletClick,
+  } = useContext(ParentContext);
 
   const scrollToCourses = () => {
     coursesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -41,6 +54,7 @@ export default function Header() {
   const Location = useLocation();
   const targetLinks = [Location.pathname, Location.hash, Location.pathname.split("/")[1]];
 
+  const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
   return (
     <header className="header">
       <nav className="p-4">
@@ -72,9 +86,23 @@ export default function Header() {
                   About us
                 </HashLink>
               </li>
-              <ConnectButton label="Login" chainStatus="full" />
+              {isConnectedToPeraWallet && (
+                <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  {shortenAddress(accountAddress)}
+                </button>
+              )}
+              <li>
+                {/* <ConnectButton /> */}
+                <button
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  onClick={isConnectedToPeraWallet ? handleDisconnectWalletClick : handleConnectWalletClick}
+                >
+                  {isConnectedToPeraWallet ? "Disconnect" : "Connect to Pera Wallet"}
+                </button>
+              </li>
+              {/* <ConnectButton label="Login" chainStatus="full" /> */}
             </ul>
-            
+
             <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
                 <Burger />
@@ -84,29 +112,38 @@ export default function Header() {
         </div>
 
         <ul className={isOpen ? activeMobileNavBox : styleMobileNavBox}>
-          <li className={(targetLinks[0] === "/" && targetLinks[1] === "") ? activeMobileNavEl : styleMobileNavEl} >
-            <Link to="/" onClick={toggleNavbar}>Home</Link>
+          <li className={targetLinks[0] === "/" && targetLinks[1] === "" ? activeMobileNavEl : styleMobileNavEl}>
+            <Link to="/" onClick={toggleNavbar}>
+              Home
+            </Link>
           </li>
-          <li className={targetLinks[2] === "courses" ? activeMobileNavEl : styleMobileNavEl} >
-            <Link to="/courses" onClick={toggleNavbar}>Courses</Link>
+          <li className={targetLinks[2] === "courses" ? activeMobileNavEl : styleMobileNavEl}>
+            <Link to="/courses" onClick={toggleNavbar}>
+              Courses
+            </Link>
           </li>
-          <li className={targetLinks[2] === "community" ? activeMobileNavEl : styleMobileNavEl} >
-            <Link to="/community" onClick={toggleNavbar}>Community</Link>
+          <li className={targetLinks[2] === "community" ? activeMobileNavEl : styleMobileNavEl}>
+            <Link to="/community" onClick={toggleNavbar}>
+              Community
+            </Link>
           </li>
-          <li className={targetLinks[2] === "mentor" ? activeMobileNavEl : styleMobileNavEl} >
-            <Link to="/mentor" onClick={toggleNavbar}>Mentorship</Link>
+          <li className={targetLinks[2] === "mentor" ? activeMobileNavEl : styleMobileNavEl}>
+            <Link to="/mentor" onClick={toggleNavbar}>
+              Mentorship
+            </Link>
           </li>
           {/* <li className={targetLinks[2] === "careers" ? activeMobileNavEl : styleMobileNavEl}>
                 <Link to="/careers" >Career</Link>
               </li> */}
-          <li className={targetLinks[1] === "#about" ? activeMobileNavEl : styleMobileNavEl} >
-            <HashLink to="/#about" onClick={toggleNavbar} smooth>About us</HashLink>
+          <li className={targetLinks[1] === "#about" ? activeMobileNavEl : styleMobileNavEl}>
+            <HashLink to="/#about" onClick={toggleNavbar} smooth>
+              About us
+            </HashLink>
           </li>
           <li className="mt-3 rounded-lg" onClick={toggleNavbar}>
             <ConnectButton />
           </li>
         </ul>
-
       </nav>
     </header>
   );

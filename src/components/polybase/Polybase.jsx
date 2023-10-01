@@ -42,11 +42,11 @@ const PolybaseHook = () => {
     message: "gm wagmi frens",
     onSuccess(data) {
       // console.log(data);
-      addCourse(data);
+      // addCourse(data);
       // updateCourseId(data);
       // addInstructor(data);
       // deleteCourse(data);
-      // addContentToCourse(data);
+      addContentToCourse(data);
       // addWhatyllearn(data);
       // addRequirements(data);
     },

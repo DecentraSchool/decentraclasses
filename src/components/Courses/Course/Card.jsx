@@ -9,70 +9,60 @@ import { buyCourse } from "../../../utils/PolybaseUtils";
 import { ParentContext } from "../../../contexts/ParentContext";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import "./Card.css";
+import { PeraWalletConnect } from "@perawallet/connect";
+import algosdk from "algosdk";
 
 const Card = (props) => {
   // console.log(JSON.parse(props?.courseInfo?.content));
 
   // const [courseBought, setcourseBought] = useState(false);
-  const { courseBought, setcourseBought, sendNotification } = useContext(ParentContext);
+
+  const {
+    isConnectedToPeraWallet,
+    accountAddress,
+    courseBought,
+    setAccountAddress,
+    handleDisconnectWalletClick,
+    handleConnectWalletClick,
+    setcourseBought,
+  } = useContext(ParentContext);
 
   const [userAlreadyBought, setuserAlreadyBought] = useState(false);
   const { address, isConnected } = useAccount();
   const [loader, setloader] = useState(false);
-  // let provider;
-  // if (window.ethereum) {
-  //   provider = new ethers.providers.Web3Provider(window.ethereum);
-  // } else {
-  //   toast("Please install MetaMask!");
-  // }
+  const peraWallet = new PeraWalletConnect();
 
-  // const contract = new ethers.Contract(contractAddress, contractABI, provider);
+  // const algodToken = "a".repeat(64);
+  // const algodServer = "http://localhost";
+  // const algodPort = 5173;
 
-  // const getStudentCourses = async () => {
-  //   let arr = [];
-  //   const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-  //   const account = ethers.utils.getAddress(accounts[0]);
-  //   const course = await contract.getCourseByStudent(ethers.utils.getAddress(accounts[0]));
+  const signPeraSign = async () => {
+    try {
+      const algodToken = "a".repeat(64);
+      const algodServer = "http://localhost";
+      const algodPort = 5173;
 
-  //   course[0].forEach((c) => arr.push(c.toString()));
-  //   console.log(props.courseInfo);
-  //   console.log(arr);
+      const algodClient = new algosdk.Algodv2(algodToken, algodServer, algodPort);
+      // console.log(algodClient);
+      // const acctInfo = await algodClient.accountInformation(accountAddress).do();
+      // console.log(`Account balance: ${acctInfo.amount} microAlgos`);
 
-  //   if (arr.includes(props.courseInfo.id)) {
-  //     setuserAlreadyBought(true);
-  //   } else {
-  //     setuserAlreadyBought(false);
-  //   }
-  // };
+      const suggestedParams = await algodClient.getTransactionParams().do();
+      // const optInTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      //   from: accountAddress,
+      //   to: accountAddress,
+      //   assetIndex: 1,
+      //   amount: 0,
+      //   suggestedParams,
+      // });
 
-  // const handleBuy = async () => {
-  //   try {
-  //     let courseId = props.courseInfo.id;
-  //     toast("Buying...");
-
-  //     const price = props.pricepshare;
-
-  //     // Check if MetaMask is connected
-  //     if (!window.ethereum || !window.ethereum.selectedAddress) {
-  //       toast("Please connect MetaMask");
-  //     }
-
-  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //     const signer = provider.getSigner();
-  //     const contractWithSigner = contract.connect(signer);
-
-  //     let transaction = await contractWithSigner.buyCourse(courseId, 1, {
-  //       value: 100,
-  //     });
-  //     await transaction.wait();
-
-  //     toast.success("Buy successful!");
-  //     setcourseBought(true);
-  //   } catch (error) {
-  //     toast.error("Buy failed:", error);
-  //     console.log(error);
-  //   }
-  // };
+      // const singleTxnGroups = [{ txn: optInTxn, signers: [accountAddress] }];
+      // const signedTxn = await peraWallet.signTransaction([singleTxnGroups]);
+      // console.log(signedTxn);
+    } catch (error) {
+      console.log("Couldn't sign Opt-in txns", error);
+    }
+  };
 
   const {
     data: sig,
@@ -85,13 +75,11 @@ const Card = (props) => {
     onSuccess(data) {
       const res = buyCourse(
         data,
-
         props.courseInfo.id,
         address,
         setcourseBought,
         props?.courseInfo?.courseName,
         props?.courseInfo?.imageurl,
-        sendNotification
       );
 
       setloader(false);
@@ -109,7 +97,18 @@ const Card = (props) => {
   const handleBuy = async () => {
     try {
       setloader(true);
-      const res = await signMessage();
+      console.log("called handle buy");
+      const res = buyCourse(
+        "data",
+        props.courseInfo.id,
+        address,
+        setcourseBought,
+        props?.courseInfo?.courseName,
+        props?.courseInfo?.imageurl,
+        sendNotification
+      );
+      console.log(res);
+      // const res = await signMessage();
       // console.log(res);
       // setcourseBought(true);
     } catch (error) {
@@ -172,54 +171,24 @@ const Card = (props) => {
               </svg>
               <span class="sr-only">Loading...</span>
             </div>
-          ) : isConnected ? (
-            <button className="bg-yellow-400 " onClick={handleBuy}>
+          ) : isConnectedToPeraWallet ? (
+            <button
+              className="bg-yellow-400 "
+              onClick={() => {
+                buyCourse(
+                  0x4793f5ba7c4b8760177d728712b46226693e68f17611ddad2a095fae5f6d3134096fa0ab32865e8897963b500c59647db362ca047725a6fe98afba571fb0b35d1b,
+                  props.courseInfo.id,
+                  address,
+                  setcourseBought,
+                  props?.courseInfo?.courseName,
+                  props?.courseInfo?.imageurl
+                );
+              }}
+            >
               Start course
             </button>
           ) : (
-            <ConnectButton.Custom>
-              {({
-                account,
-                chain,
-                openAccountModal,
-                openChainModal,
-                openConnectModal,
-                authenticationStatus,
-                mounted,
-              }) => {
-                // Note: If your app doesn't use authentication, you
-                // can remove all 'authenticationStatus' checks
-                const ready = mounted && authenticationStatus !== "loading";
-                const connected =
-                  ready && account && chain && (!authenticationStatus || authenticationStatus === "authenticated");
-
-                return (
-                  <div style={{ width: "100%" }}>
-                    {(() => {
-                      if (!connected) {
-                        return (
-                          <button
-                            onClick={openConnectModal}
-                            type="button"
-                            class="text-gray-900 w-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                          >
-                            Login to continue
-                          </button>
-                        );
-                      }
-
-                      if (chain.unsupported) {
-                        return (
-                          <button onClick={openChainModal} type="button">
-                            Wrong network
-                          </button>
-                        );
-                      }
-                    })()}
-                  </div>
-                );
-              }}
-            </ConnectButton.Custom>
+            <div>Please Connect to Pera Wallet</div>
           )}
 
           {/* <ul>
