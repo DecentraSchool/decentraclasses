@@ -66,6 +66,8 @@ const polybase = new Polybase();
 //   connectors: connectors(chains),
 //   autoConnect: true});
 
+
+
 // const { connectors } = getDefaultWallets({
 //   projectId: projectId,
 //   appName: "decentraschool",
@@ -86,6 +88,12 @@ const connectors = connectorsForWallets([
     ],
   },
 ]);
+
+const wagmiEntity = createConfig({
+  connectors: connectors(chains),
+  autoConnect: true,
+  publicClient,
+});
 const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
@@ -97,7 +105,7 @@ const wagmiConfig = createConfig({
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <WagmiConfig config={wagmiConfig}>
+  <WagmiConfig config={wagmiEntity}>
     <RainbowKitProvider chains={chains}>
       <ParentProvider>
         <BrowserRouter>
