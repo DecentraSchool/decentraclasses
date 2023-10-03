@@ -13,12 +13,12 @@ const name = "Socials Login";
 const iconUrl =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/150px-Google_%22G%22_Logo.svg.png";
 
-  export const ArcanaRainbowConnector = ({ chains }) => {
+export const ArcanaRainbowConnector = ({ chains }) => {
     return {
       id: "arcana-auth",
       name: "Login with Email/Social",
       iconUrl: sequenceLogo,
-      iconBackground: "#101010",
+      iconBackground: "#111111",
       createConnector: () => {
         const connector = new ArcanaConnector({
           chains,
