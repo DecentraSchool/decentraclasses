@@ -22,8 +22,8 @@ import { ParentProvider } from "./contexts/ParentContext";
 import { PolybaseProvider } from "@polybase/react";
 import { Polybase } from "@polybase/client";
 import ScrollToTop from "./ScrollToTop";
-import { rainbowWeb3AuthConnector } from "./RainbowWeb3authConnector";
-import { ArcanaRainbowConnector } from "./RainbowWeb3authConnector";
+// import { rainbowWeb3AuthConnector } from "./RainbowWeb3authConnector";
+import { ArcanaRainbowConnector } from "./ArcanaRainbowConnector";
 // import { connectors } from "./RainbowWeb3authConnector";
 export const Mantle = {
   id: 5001,
@@ -80,7 +80,7 @@ const connectors = connectorsForWallets([
     wallets: [
       ArcanaRainbowConnector({ chains }),
       // injectedWallet({ chains }),
-      rainbowWeb3AuthConnector({ chains }),
+      // rainbowWeb3AuthConnector({ chains }),
       rainbowWallet({ projectId, chains }),
       walletConnectWallet({ projectId, chains }),
       // talismanWallet({ chains }),
