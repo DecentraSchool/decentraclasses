@@ -12,6 +12,7 @@ import { solidityCourseContent } from "../../constants/solidityCourseContent";
 import { atharava } from "../../constants/instructors/atharava";
 import { pathak } from "../../constants/instructors/pathak";
 import { VideoEdtingContent } from "../../constants/course/videoEdtingCourse";
+import { ContentIntroBC, jaskirat } from "../../constants/course/introBC";
 // import { videoEditingCourse } from "../../constants/course/videoEdtingCourse";
 
 const db = new Polybase({
@@ -42,11 +43,11 @@ const PolybaseHook = () => {
     message: "gm wagmi frens",
     onSuccess(data) {
       // console.log(data);
-      addCourse(data);
+      // addCourse(data);
       // updateCourseId(data);
       // addInstructor(data);
       // deleteCourse(data);
-      // addContentToCourse(data);
+      addContentToCourse(data);
       // addWhatyllearn(data);
       // addRequirements(data);
     },
@@ -134,8 +135,8 @@ const PolybaseHook = () => {
       const res = await db
         .collection("Course")
 
-        .record("1245")
-        .call("addCourseContent", [JSON.stringify(VideoEdtingContent)]);
+        .record("2222")
+        .call("addCourseContent", [JSON.stringify(GPTcontent)]);
 
       console.log(res);
     } catch (error) {
@@ -152,7 +153,7 @@ const PolybaseHook = () => {
         };
       });
       const publicKey = await getPublicKey(sig);
-      const res = await db.collection("Instructor").create(pathak);
+      const res = await db.collection("Instructor").create(jaskirat);
 
       console.log(res);
     } catch (error) {
@@ -181,26 +182,18 @@ const PolybaseHook = () => {
     const res = await db
       .collection("Course")
       .create([
-        "1245",
-        "Get started with Video Editing",
-        "DESIGN",
-        db.collection("Instructor").record("8888"),
-        "August 28, 2023",
-        "2",
-        "7",
-        "https://gateway.lighthouse.storage/ipfs/QmbUS5nJcEghXd2BCBh7r1b3SFrgVVpS7A5Gxz8fAuZECj",
-        "If you're looking to master video editing, our Adobe Premiere Pro course is your gateway to crafting professional videos.",
-        "Unleash your creative potential with our Adobe Premiere Pro course. From the basics of importing and editing to advanced motion control and animation, this course is your gateway to crafting professional videos. Get hands-on with industry-standard software, and transform your ideas into compelling visual stories. Perfect for beginners looking to master video editing. Join today and bring your vision to life!",
-        [
-          "Solid foundation in video editing and learn essential skills to create professional-looking videos",
-          "By the end of the course, you will be able to confidently edit, enhance, and transform your raw footage into polished videos that captivate and engage your audience",
-        ],
-        [
-          "Computer or Laptop with minimum of (8gb RAM, i5 or Ryzen 5 CPU, 2gb GPU, 256gb SSD)",
-          "Installed Adobe Premiere Pro software  😎",
-          "Basic computer skills for smooth navigation.",
-          "Desire to learn.",
-        ],
+        "3333",
+        "Blockchain Basics",
+        "PROGRAMMING",
+        db.collection("Instructor").record("333"),
+        "October 4 2023",
+        "5",
+        "9",
+        "https://gateway.lighthouse.storage/ipfs/Qma52WUz1A8Y5Nye6e1iDVQHuTox9SfsBi6e3mqheWeQMc",
+        "Explore the world of decentralized ledgers",
+        "Blockchain technology is a revolutionary concept that has the potential to transform various industries. It is a distributed ledger that records transactions in a secure and transparent manner. Blockchain technology is used in various applications such as cryptocurrencies, supply chain management, voting systems, and more.",
+        ["What is blockchain?", "How blockchain works", "Types of Blockchain,Smart Contract Basics", "What are Dapps"],
+        ["Computer or Laptop", "Basic computer skills for smooth navigation.", "Desire to learn."],
       ]);
 
     console.log(res);
@@ -250,8 +243,6 @@ const PolybaseHook = () => {
       .call("addContent", [JSON.stringify(data)]);
     console.log(res);
   };
-
-  console.log(typeof JSON.stringify(data));
 
   return (
     <div>

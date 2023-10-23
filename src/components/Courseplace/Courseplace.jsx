@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import arrowDown from "./down-arrow.svg";
-import { useLocation } from "react-router";
+import { redirect, useLocation } from "react-router-dom";
 import { getCoursebyId } from "../../utils/PolybaseUtils";
 import { useAccount, useSignMessage } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
+
 const Courseplace = () => {
   const { address, isConnected } = useAccount();
   const [courseInfo, setcourseInfo] = useState({});
@@ -23,9 +24,18 @@ const Courseplace = () => {
     setvideoUrl(JSON.parse(data.data.content)[0].videoUrl);
   };
 
+  const checkForUser = async () => {
+    if (courseInfo?.usersBrought?.includes(address) == false) {
+      console.log("HII MFER");
+      return redirect("/");
+    }
+  };
+  
+
   useEffect(() => {
     getCourseData();
-  }, [search]);
+    checkForUser();
+  }, [search, address]);
 
   console.log(contentInfo);
   return (
