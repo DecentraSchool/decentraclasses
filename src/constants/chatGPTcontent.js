@@ -8,7 +8,7 @@ export const GPTcontent = {
           {
             title: "How to write an ebook chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmYeXN7rw4Xdtg7QVtopgNvXSdo3MbQD5FoGy6f942DZhW ",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmdo9NEDcfpyfuXJvt7wLf3DWN99czjeFtkqPMufDUfWSB",
             usersCompleted: [],
           },
         ],
@@ -21,7 +21,7 @@ export const GPTcontent = {
           {
             title: "Different Types of Emails using Chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmZNbwiapAsiXhidcD26LH5FGT5C8ak5BsUK197KNZk8HN",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmeuPR9gc2no6mmQmKGhHGmqjh658DatyPHQmwuxu3J24L",
             usersCompleted: [],
           },
         ],
@@ -34,7 +34,7 @@ export const GPTcontent = {
           {
             title: "Algorithms Utilizing the Chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmYKgg5QFWd5DjErHeNYACdVvpLBYEii9wnFs2N2eMgjD9",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmcowCLTxvexKre3vJxBbsqgpP5AK7WPsWACaPBg4oA4zn",
             usersCompleted: [],
           },
         ],
@@ -47,13 +47,13 @@ export const GPTcontent = {
           {
             title: "Code Generations with Chat GPT V1",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmTqFrQ1T84X62yrP978wroUBw3ucYEGXdba6kPE15FaPW",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmeLG1KTcrtV9yrEDkGHV7UzZfbiG3bhisXfGM21FMYrt5",
             usersCompleted: [],
           },
           {
             title: "Code Generations with Chat GPT V1",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmUoKGm824qurDy47AvxgqoBfBCzgchaeUmafdNyQwcfzc",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmbvHxugw8w6CvYxso9r2reKeZ4Q8Jhecb5DJKKwfeidiD",
             usersCompleted: [],
           },
         ],
@@ -66,7 +66,7 @@ export const GPTcontent = {
           {
             title: "Social Media Marketing With Chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmSiWt1rRUhzJnJCXhUGaV82xZ4rbxM4QJT6XSW1HMoBZb",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmaBNUB2c31gKjDWJv8m3BeNQ4p6C8qB2pagr6yBbxKjzH",
             usersCompleted: [],
           },
         ],
@@ -79,7 +79,7 @@ export const GPTcontent = {
           {
             title: "Writing Poetry with ChatGPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmbxut4JG3gnAykPmGnifjinh3kvoixNjwvrqLnQtoGRFd",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmVhjUexq6SKkKBkf4ekyhFKWm8tJu19gZt7fb7RzciLDQ",
             usersCompleted: [],
           },
         ],
@@ -92,7 +92,7 @@ export const GPTcontent = {
           {
             title: "How to use Chat GPT for Proofreading",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmVoiGi6P8ghvBv9QW3L7qkbedPUYZx1sVuwgJXmkTVCaL",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmZUGZ5ifebspQYdbJrLEv1WTQuxpEkeNuqmeVHhkVfTYH",
             usersCompleted: [],
           },
         ],
@@ -105,7 +105,7 @@ export const GPTcontent = {
           {
             title: "Creating a short story",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qma2qVb8wVLppHTUXwqyhvXbgrN6cSBiSbfdnhrmAhSXid",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmSsYufxXmNcbuqckjjpEmdHndsBqGZqtGp84oSKKMDHwx",
             usersCompleted: [],
           },
         ],
@@ -118,7 +118,7 @@ export const GPTcontent = {
           {
             title: "Chat GPT can write Blog Posts",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmVP2Ws9vbo3jh9kEm537qwpKFq28KPPvon2DmXiWgKYWB",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmNv5yrxthpWA6WSSn6kQy33iyVpoLH65CD59yRhNSYDfy",
             usersCompleted: [],
           },
         ],
@@ -131,7 +131,7 @@ export const GPTcontent = {
           {
             title: "How to use Chat GPT for translation.",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmf7hgTvGZ9q5HMBYF2QVcbXMmy4MfCkbviNXFGfcCW41J",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmfXJpK9sU2ezCVioMKbdxQmpRw41QDH1en9TwftoGAmz6",
             usersCompleted: [],
           },
         ],
@@ -144,7 +144,7 @@ export const GPTcontent = {
           {
             title: "Will Google Chat eventually be replaced by GPT?",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmXohjM17BSTzwHbvkhCpKF3CB8YfZ9auS2WFXsZZ39Zuk",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmf3Q9TDbKdvjYN17qSgyB9V8AqcuvgYtjmUhtAcMyGNDY",
             usersCompleted: [],
           },
         ],
@@ -157,7 +157,7 @@ export const GPTcontent = {
           {
             title: "Limitations of ChatGPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmd6muEtFTEFTqQTs3C8q4VgpskMiEvHyykwYNkSrd4GP7",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmYfS2N3CJKpFqykp9ifR23Js93wiP8TY3QMT1GnFAmDrC",
             usersCompleted: [],
           },
         ],
@@ -170,7 +170,7 @@ export const GPTcontent = {
           {
             title: "Ethical Considerations with Chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmeatr19PfiaWC25JWoq2PBhyYZo51tBLBLDjZFxTLX7Z7",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmUDqcKJ7cMCbXHz2Z6oaesuFkZu81Vu5LTyTmezZHPBtc",
             usersCompleted: [],
           },
         ],
@@ -183,13 +183,13 @@ export const GPTcontent = {
           {
             title: "Intro to Dall-E 2",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmYjEkEU5P3feKUQTarNu7kunJ2iuPoi5fJwwD1nYU4XbB",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/Qmap4pefsLMrLv3UrH2cBZTHr8BQN6DhfXyLq2MpSCnRqN",
             usersCompleted: [],
           },
           {
             title: "Dall-E 2 Prompt Design",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmZTw5KegPpRgUEFTNC1JNBosbfynYxaPt2p21RDKSdjKB",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmabGksVtzknZb7F8LefBjD1CX9t8xraRWCmpbCm7w5CtR",
             usersCompleted: [],
           },
         ],
@@ -202,7 +202,7 @@ export const GPTcontent = {
           {
             title: "Gathering Biographical Information on Famous People using Chat GPT",
             desc: "",
-            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmdkL2ApkyYYhxwruTMak2J4oBJnkdHqCtRWPqCuWCHied",
+            videoUrl: "https://gateway.lighthouse.storage/ipfs/QmchviRSJfbbQkoYB6iziV1pgA2xbGZhfAsjqBxD61BH5L",
             usersCompleted: [],
           },
         ],
