@@ -83,6 +83,7 @@ const Card = (props) => {
   } = useSignMessage({
     message: "gm wagmi frens",
     onSuccess(data) {
+      console.log(data);
       const res = buyCourse(
         data,
 
