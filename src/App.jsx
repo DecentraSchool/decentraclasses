@@ -23,6 +23,7 @@ import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
 import Announcment from "./components/Announcment";
 import Success from "./components/Stripe/Success";
+import FindMentor from "./components/FindMentor/FindMentor";
 
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/course/:id" element={<Course />} />
         <Route path="/dash" element={<Dash />} />
+        <Route path="/findMentor" element={<FindMentor />} />
         <Route path="/studentdashboard" element={<StudentDashboard />} />
         <Route path="/studentcourses" element={<StudentCourses />} />
         <Route path="/pay" element={<CoursePayment />} />
