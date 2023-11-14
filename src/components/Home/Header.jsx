@@ -64,9 +64,6 @@ export default function Header() {
               <li className={targetLinks[2] === "mentor" ? activeNavEl : styleNavEl}>
                 <Link to="/mentor">Mentorship</Link>
               </li>
-              <li className={targetLinks[2] === "mentor" ? activeNavEl : styleNavEl}>
-                <Link to="/findMentor">Find a mentor</Link>
-              </li>
               {/* <li className={targetLinks[2] === "careers" ? activeNavEl : styleNavEl}>
                 <Link to="/careers" >Career</Link>
               </li> */}
