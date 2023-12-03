@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Mentor = ({ isrc, name, tagline, experience, linkedIn, id }) => {
     return (
         <Link to={`${id}`}>
-            <div id={id} className="gap-[15px] bg-white bg-opacity-20 rounded-[15px] border border-zinc-300 backdrop-blur-sm flex flex-col shadow-sm  px-[15px] py-[15px]">
+            <div id={id} className="gap-[15px] bg-white bg-opacity-20 rounded-[15px] border border-zinc-300 backdrop-blur-sm flex flex-col shadow-sm  px-[15px] py-[15px] ">
                 <div className='relative'>
                     <img className="w-full rounded-tl-[15px] rounded-tr-[15px]" src={isrc} />
 

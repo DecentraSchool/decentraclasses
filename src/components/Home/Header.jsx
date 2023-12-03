@@ -1,4 +1,4 @@
-import React from "react";
+
 import { ethers } from "ethers";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -7,7 +7,7 @@ import logo from "./logo.svg";
 import "./Explore.css";
 import { HashLink } from "react-router-hash-link";
 import Burger from "./Burger";
-
+import PlugConnect from '@psychedelic/plug-connect';
 
 const styleNavEl = "before:bg-blue-700 before:left-0  hover:text-blue-700 before:transition-transform hover:before:scale-x-100 before:scale-x-0  before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full "
 const activeNavEl = "before:bg-blue-700 before:left-0 text-blue-700 before:transition-transform  before:scale-x-100 before:duration-300 before:flex before:w-full before:h-[2px] relative before:absolute before:bottom-[-4px] before:rounded-full"
@@ -16,10 +16,24 @@ const activeMobileNavEl = "bg-sky-400 text-white font-medium relative h-full   w
 const styleMobileNavBox = "opacity-0 z-[60]  relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-1000 flex shadow-sm flex-col gap-0 items-center -top-[26rem] bg-white -z-20"
 const activeMobileNavBox = "z-[60] relative lg:hidden mt-2 pb-4 flex flex-col items-center transition-all duration-500 flex flex-col gap-2 items-center  absolute top-0 bg-gray-100 pb-5 sm:shadow-none shadow-md shadow-gray-700"
 
+// Canister Ids
+const nnsCanisterId = 'qoctq-giaaa-aaaaa-aaaea-cai'
+
+// Whitelist
+const whitelist = [
+  nnsCanisterId,
+];
 
 export default function Header() {
   const [account, setAccount] = useState(null);
   const coursesRef = useRef(null);
+
+
+  const verifyConnectionAndAgent = async () => {
+    const connected = await window.ic.plug.isConnected();
+    console.log('connected :', connected);
+    console.log('window.ic.plug.agent :', window.ic.plug.agent)
+  };
 
   const scrollToCourses = () => {
     coursesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -64,6 +78,7 @@ export default function Header() {
               <li className={targetLinks[2] === "mentor" ? activeNavEl : styleNavEl}>
                 <Link to="/mentor">Mentorship</Link>
               </li>
+
               {/* <li className={targetLinks[2] === "careers" ? activeNavEl : styleNavEl}>
                 <Link to="/careers" >Career</Link>
               </li> */}
@@ -72,9 +87,13 @@ export default function Header() {
                   About us
                 </HashLink>
               </li>
+              <PlugConnect
+                whitelist={whitelist}
+                onConnectCallback={() => verifyConnectionAndAgent()}
+              />
               <ConnectButton label="Login" chainStatus="full" />
             </ul>
-            
+
             <div className="lg:hidden flex items-center z-60">
               <button className="focus:outline-none" onClick={toggleNavbar}>
                 <Burger />

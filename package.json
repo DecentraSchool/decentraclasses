@@ -20,6 +20,7 @@
     "@lighthouse-web3/sdk": "^0.2.5",
     "@polybase/client": "^0.6.5",
     "@polybase/react": "^0.6.5",
+    "@psychedelic/plug-connect": "^0.2.0",
     "@pushprotocol/restapi": "^1.4.17",
     "@rainbow-me/rainbowkit": "^1.0.4",
     "@stripe/stripe-js": "^2.1.2",

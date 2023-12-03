@@ -20,8 +20,8 @@ const MentorById = () => {
     }, [])
 
     return (
-        <div id={getData?._id} className="gap-[15px] bg-white bg-opacity-20 rounded-[15px] border border-zinc-300 backdrop-blur-sm flex flex-col shadow-sm  px-[15px] py-[15px]">
-            <div className='relative'>
+        <div id={getData?._id} className="gap-[15px] bg-white bg-opacity-20 rounded-[15px] border border-zinc-300 backdrop-blur-sm flex flex-col shadow-sm  px-[110px] py-[15px]">
+            <div >
                 <img className="w-full rounded-tl-[15px] rounded-tr-[15px]" src={getData?.isrc} />
 
             </div>
