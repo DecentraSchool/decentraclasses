@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 export default function Announcment({text}) {
     const [show, hide] = useState("flex");
     return (
-        <div className="w-full sticky top-0">
+        <div className="w-full sticky top-0 z-[80]">
             <div
                 className={`py-3 px-0 font-medium justify-center items-center cursor-pointer transition-all duration-700 text-white delay-100 ${show} hover:bg-green-400  sm:text-mini text-xs bg-blue-800 pr-10 pl-4`}
             >

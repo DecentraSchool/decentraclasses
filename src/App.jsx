@@ -19,10 +19,12 @@ import CoursePayment from "./components/Courses/CoursePayment";
 import PolybaseHook from "./components/polybase/Polybase";
 import Workplace from "./components/WorkPlace/Workplace";
 import LightHouseUtils from "./utils/LightHouseUtils";
-import Mentorship from "./components/Mentor/Mentorship";
+// import Mentorship from "./components/Mentor/Mentorship";
 import Courseplace from "./components/Courseplace/Courseplace";
 import Announcment from "./components/Announcment";
 import Success from "./components/Stripe/Success";
+import FindMentor from "./components/FindMentor/FindMentor";
+import MentorById from "./components/FindMentor/MentorById";
 
 
 function App() {
@@ -87,7 +89,9 @@ function App() {
         <Route path="/pay" element={<CoursePayment />} />
         {/* <Route path="/workplace" element={<Workplace />} /> */}
         <Route path="/light" element={<LightHouseUtils />} />
-        <Route path="/Mentor" element={<Mentorship />} />
+        {/* <Route path="/Mentor" element={<Mentorship />} /> */}
+        <Route path="/Mentor" element={<FindMentor />} />
+        <Route path="/Mentor/:id" element={<MentorById />} />
         <Route path="/workplace" element={<Courseplace />} />
         <Route path="/stripe/success" element={<Success />} />
       </Routes>
