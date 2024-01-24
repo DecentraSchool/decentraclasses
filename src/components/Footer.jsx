@@ -51,17 +51,20 @@ export default function Footer() {
                 </li>
                 <li className="truncate tracking-wide ">
                   <a href="/Mentor">Mentorship</a>
-                </li>
-                <li className="truncate tracking-wide ">
-                  <a href="/careers">Career</a>
+                  <span className="text-[10px] px-2 py-1 bg-yellow-100 text-yellow-600">
+                    ✨New✨
+                  </span>
                 </li>
                 <li className="truncate tracking-wide " disabled>
                   <a href="#" className="pointer-events-none">
                     Cohorts{" "}
-                    <span className="text-[10px] px-2 py-1 bg-slate-200">
+                    <span className="text-[10px] px-2 py-1 bg-yellow-100 text-yellow-600">
                       Coming soon
                     </span>
                   </a>
+                </li>
+                <li className="truncate tracking-wide ">
+                  <a href="/careers">Career</a>
                 </li>
               </ul>
             </div>

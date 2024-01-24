@@ -8,6 +8,7 @@ import Collab from "./Collab";
 import Supporters from "./Supporters";
 import Truster from "./Truster";
 import { Tweet } from "react-tweet";
+import FAQhome from "./FAQhome";
 export default function Main() {
   return (
     <main className=" w-[99vw] md:w-[99%] overflow-x-hidden">
@@ -18,6 +19,8 @@ export default function Main() {
       <About />
       <Start />
       <Courses />
+      <FAQhome></FAQhome>
+
       {/* <div>
         <Tweet id="1629307668568633344" />
       </div> */}
