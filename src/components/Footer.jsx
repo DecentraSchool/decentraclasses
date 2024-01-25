@@ -64,7 +64,12 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="truncate tracking-wide ">
-                  <a href="/careers">Career</a>
+                  <a href="/careers">
+                    Career
+                    <span className="text-[10px] px-2 py-1 bg-yellow-100 text-yellow-600">
+                      Coming soon
+                    </span>
+                  </a>
                 </li>
               </ul>
             </div>
