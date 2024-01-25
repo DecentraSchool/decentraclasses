@@ -3,15 +3,19 @@ import FAQimg from "../../assets/FAQ_img.png";
 const FAQhome = () => {
   return (
     <div>
-      <div className="text-black mb-10">
+      <div className="text-black mb-10 overflow-y-hidden overflow-x-hidden">
         <h1 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight flex justify-center">
           FAQ
         </h1>
         <div className="lg:flex w-screen justify-around">
           <div className="hidden lg:block lg:w-[30%] ml-20">
-            <img src={FAQimg} alt="FAQ" />
+            <img
+              src={FAQimg}
+              alt="FAQ"
+              className="scale-[1.3] overflow-y-hidden overflow-x-hidden"
+            />
           </div>
-          <div className="w-[80%] mx-auto lg:w-[80%]">
+          <div className="w-[90%] mx-auto lg:w-[90%]">
             <div className="">
               <div className="grid divide-y lg:max-w-3xl mx-auto mt-8 border-2 px-5">
                 <div className="py-5">
@@ -79,7 +83,7 @@ const FAQhome = () => {
                 <div className="py-5">
                   <details className="group">
                     <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                      <span>How do I get started with Decentraschool?</span>
+                      <span>How do I get started with Decentraclasses?</span>
                       <span className="transition group-open:rotate-180">
                         <svg
                           fill="none"
