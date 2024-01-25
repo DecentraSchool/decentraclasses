@@ -25,7 +25,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="text-[#777777]">
-              <p>© 2023 Decentraclasses . All Rights Reserved.</p>
+              <p>© 2024 Decentraclasses . All Rights Reserved.</p>
             </div>
           </div>
           <div className="flex xl:gap-[100px] lg:gap-[50px] gap-[30px] sm:flex-row flex-col lg:w-min w-full  justify-between">
@@ -70,6 +70,9 @@ export default function Footer() {
                       Coming soon
                     </span>
                   </a>
+                </li>
+                <li className="truncate tracking-wide ">
+                  <a href="/FAQhome">FAQ</a>
                 </li>
               </ul>
             </div>
