@@ -17,6 +17,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@huddle01/iframe": "^0.0.12",
+    "@huddle01/react": "^2.0.6",
     "@lighthouse-web3/sdk": "^0.2.5",
     "@polybase/client": "^0.6.5",
     "@polybase/react": "^0.6.5",

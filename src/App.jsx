@@ -24,6 +24,8 @@ import Courseplace from "./components/Courseplace/Courseplace";
 import Announcment from "./components/Announcment";
 import Success from "./components/Stripe/Success";
 import FAQhome from "./components/Home/FAQhome";
+import CreateMeetings from "./components/HuddleSpaces/CreateMeetings";
+import Meetups from "./components/HuddleSpaces/Meetups";
 
 function App() {
   const chainID = 80001;
@@ -91,6 +93,8 @@ function App() {
         <Route path="/workplace" element={<Courseplace />} />
         <Route path="/stripe/success" element={<Success />} />
         <Route path="/FAQhome" element={<FAQhome />} />
+        <Route path="/generateRoom" element={<CreateMeetings />} />
+        <Route path="/joinRoom/:id" element={<Meetups />} />
       </Routes>
       <Footer />
     </>

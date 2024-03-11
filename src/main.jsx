@@ -22,6 +22,7 @@ import { ParentProvider } from "./contexts/ParentContext";
 import { PolybaseProvider } from "@polybase/react";
 import { Polybase } from "@polybase/client";
 import ScrollToTop from "./ScrollToTop";
+import { HuddleProvider, HuddleClient } from '@huddle01/react';
 // import { rainbowWeb3AuthConnector } from "./RainbowWeb3authConnector";
 import { ArcanaRainbowConnector } from "./ArcanaRainbowConnector";
 // import { connectors } from "./RainbowWeb3authConnector";
@@ -49,6 +50,18 @@ export const Mantle = {
     },
   },
 };
+
+const huddleClient = new HuddleClient({
+ 
+  
+  projectId: "nZQLa4vHNKMBb88-8lujwm6oJIh9jmjZ",
+  options: {
+    // `activeSpeakers` will be most active `n` number of peers, by default it's 8
+    activeSpeakers: {
+      size: 12,
+    },
+  },
+});
 
 // const { chains, publicClient, webSocketPublicClient } = configureChains(
 //   [polygon, polygonMumbai, Mantle],
@@ -110,8 +123,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ParentProvider>
         <BrowserRouter>
           <PolybaseProvider polybase={polybase}>
-            <ScrollToTop />
-            <App />
+            <HuddleProvider client={huddleClient}>
+
+              <ScrollToTop />
+              <App />
+            </HuddleProvider>
           </PolybaseProvider>
         </BrowserRouter>
       </ParentProvider>
