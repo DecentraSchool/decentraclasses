@@ -83,10 +83,7 @@ export default function Footer() {
                   <FontAwesomeIcon icon={faEnvelope} className="fa-xs" />
                   <p>decentraclasses@gmail.com</p>
                 </li>
-                <li className="text-[#1d4ed8] hover:text-black cursor-pointer flex gap-1 items-baseline">
-                  <FontAwesomeIcon icon={faPhone} className="fa-xs" />
-                  <p>+91 93156 77209</p>
-                </li>
+
                 <li className="font-semibold text-[16px]">
                   Stay in touch with us
                 </li>

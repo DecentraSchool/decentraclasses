@@ -74,7 +74,7 @@ function App() {
 
   return (
     <>
-      <Announcment text="Phase 1 is now available🔥🎊!!! Check out our platform and the free courses we offer on it🎯 !" />
+      {/* <Announcment text="Phase 1 is now available🔥🎊!!! Check out our platform and the free courses we offer on it🎯 !" /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
