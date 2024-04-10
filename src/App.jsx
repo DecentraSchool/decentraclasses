@@ -40,37 +40,6 @@ function App() {
     setAccount(account);
   };
 
-  // useEffect(() => {
-  //   connectHandler();
-  //   if (window.ethereum.networkVersion !== chainID) {
-  //     try {
-  //       window.ethereum.request({
-  //         method: "wallet_switchEthereumChain",
-  //         params: [{ chainId: ethers.utils.toHex(chainID) }],
-  //       });
-  //     } catch (err) {
-  //       // This error code indicates that the chain has not been added to MetaMask
-  //       if (err.code === 4902) {
-  //         window.ethereum.request({
-  //           method: "wallet_addEthereumChain",
-  //           params: [
-  //             {
-  //               chainName: "Polygon Mumbai",
-  //               chainId: ethers.utils.toHex(chainID),
-  //               nativeCurrency: { name: "MATIC", decimals: 18, symbol: "MATIC" },
-  //               rpcUrls: ["https://endpoints.omniatech.io/v1/matic/mumbai/public/"],
-  //             },
-  //           ],
-  //         });
-  //       }
-  //     }
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   const account1 = getAccount();
-  //   setAccount(account1.address);
-  // }, []);
 
   return (
     <>
