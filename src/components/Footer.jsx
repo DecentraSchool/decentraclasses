@@ -63,6 +63,11 @@ export default function Footer() {
                     </span>
                   </a>
                 </li>
+                <li className="truncate tracking-wide " disabled>
+                  <a href="https://charming-skills-100768.framer.app/" target="_blank" className="pointer-events-none">
+                    Campus Validator
+                  </a>
+                </li>
                 <li className="truncate tracking-wide ">
                   <a href="/careers">
                     Career
