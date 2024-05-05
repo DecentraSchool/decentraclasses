@@ -55,6 +55,14 @@ export default function Footer() {
                     ✨New✨
                   </span>
                 </li>
+                <li className="truncate tracking-wide ">
+                  <a href="https://charming-skills-100768.framer.app/" target="_blank" className="pointer-events-none">
+                    Campus Validator
+                    <span className="text-[10px] px-2 py-1 bg-yellow-100 text-yellow-600">
+                      ✨New✨
+                    </span>
+                  </a>
+                </li>
                 <li className="truncate tracking-wide " disabled>
                   <a href="#" className="pointer-events-none">
                     Cohorts{" "}
@@ -63,11 +71,7 @@ export default function Footer() {
                     </span>
                   </a>
                 </li>
-                <li className="truncate tracking-wide " disabled>
-                  <a href="https://charming-skills-100768.framer.app/" target="_blank" className="pointer-events-none">
-                    Campus Validator
-                  </a>
-                </li>
+
                 <li className="truncate tracking-wide ">
                   <a href="/careers">
                     Career
