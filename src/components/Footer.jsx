@@ -56,7 +56,7 @@ export default function Footer() {
                   </span>
                 </li>
                 <li className="truncate tracking-wide ">
-                  <a href="https://charming-skills-100768.framer.app/" target="_blank" className="pointer-events-none">
+                  <a href="https://charming-skills-100768.framer.app/" target="_blank" >
                     Campus Validator
                     <span className="text-[10px] px-2 py-1 bg-yellow-100 text-yellow-600">
                       ✨New✨
