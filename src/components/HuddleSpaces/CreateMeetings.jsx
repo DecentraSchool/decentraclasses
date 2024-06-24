@@ -57,7 +57,7 @@ const CreateMeetings = () => {
                 return
             }
 
-            const data = await axios.post("https://decentra-1-5-backend.onrender.com/api/events", {
+            const data = await axios.post("http://localhost:8080/api/events", {
                 title: roomData.title,
                 description: roomData.description,
                 hostWalletAddresses: roomData.hostAddress.split(","),

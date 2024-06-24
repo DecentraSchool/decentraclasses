@@ -26,6 +26,7 @@ import Success from "./components/Stripe/Success";
 import FAQhome from "./components/Home/FAQhome";
 import CreateMeetings from "./components/HuddleSpaces/CreateMeetings";
 import Meetups from "./components/HuddleSpaces/Meetups";
+import CotiMeeting from "./components/HuddleSpaces/coti/CotiMeeting";
 
 function App() {
   const chainID = 80001;
@@ -64,6 +65,7 @@ function App() {
         <Route path="/FAQhome" element={<FAQhome />} />
         <Route path="/generateRoom" element={<CreateMeetings />} />
         <Route path="/joinRoom/:id" element={<Meetups />} />
+        <Route path="/coti/joinRoom/:id" element={<CotiMeeting />} />
       </Routes>
       <Footer />
     </>
