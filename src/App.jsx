@@ -65,7 +65,7 @@ function App() {
         <Route path="/FAQhome" element={<FAQhome />} />
         <Route path="/generateRoom" element={<CreateMeetings />} />
         <Route path="/joinRoom/:id" element={<Meetups />} />
-        <Route path="/coti/joinRoom/:id" element={<CotiMeeting />} />
+        <Route path="/coti/joinRoom/qid-hkpt-jgn" element={<CotiMeeting />} />
       </Routes>
       <Footer />
     </>

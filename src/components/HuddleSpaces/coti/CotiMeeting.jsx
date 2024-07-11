@@ -5,15 +5,20 @@ import { iframeApi } from '@huddle01/iframe';
 import axios from "axios";
 import { BiInfoCircle, BiLogoAndroid, BiLogoApple, BiLogoDiscord, BiLogoGithub, BiLogoInternetExplorer, BiLogoLinkedin, BiLogoTelegram, BiLogoTwitter, BiWorld, BiX } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-
+import { useNavigate,  } from "react-router-dom";
 const CotiMeeting = () => {
 
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("https://huddle01.app/room/tjm-iixf-qwu");
+    }
     const { id } = useParams();
     const [roomDetails, setroomDetails] = useState({})
 
     const getRoomDetails = async () => {
         const response = await axios.get(
-            `https://api.huddle01.com/api/v1/room-details/${id}`,
+            `https://api.huddle01.com/api/v1/room-details/cue-btsd-hih`,
             {
                 headers: {
                     'x-api-key': 'WjVq0kKoGaZS1sHmhWTjXSX7suWMKoLB',
@@ -27,8 +32,10 @@ const CotiMeeting = () => {
     console.log(roomDetails);
 
     useEffect(() => {
-        getRoomDetails()
-    }, [id])
+
+        window.location.href = 'https://huddle01.app/room/tjm-iixf-qwu'; // Replace with your external URL
+
+    }, [])
 
     return (
         <div className='flex flex-col w-full items-center my-10 gap-10' >
