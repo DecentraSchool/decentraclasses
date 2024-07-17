@@ -9,13 +9,16 @@ import Supporters from "./Supporters";
 import Truster from "./Truster";
 import { Tweet } from "react-tweet";
 import FAQhome from "./FAQhome";
+import StatsComponent from "./Stats";
+import Recogonised from "./Recogonised";
 export default function Main() {
   return (
     <main className=" w-[99vw] md:w-[99%] overflow-x-hidden">
       <Explore />
       <Why />
-
+      <Recogonised />
       <Truster></Truster>
+      <StatsComponent />
       <About />
       <Start />
       <Courses />
