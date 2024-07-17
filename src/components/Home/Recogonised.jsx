@@ -1,4 +1,5 @@
 import aws from "../../assets/awsStartup.png";
+import innovation from "../../assets/innovation.jpeg";
 import corner from "../../assets/corner.png";
 import up from "../../assets/up.png";
 
@@ -28,7 +29,11 @@ export default function Recogonised() {
                     <img src={corner} className="w-22" alt="" />
                 </div>
                 <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+                    <img src={innovation} className="w-28" alt="" />
+                </div>
+                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
                     <img src={up} className="w-22" alt="" />
+                    <h3>UPID</h3>
                 </div>
 
 
@@ -54,9 +59,12 @@ export default function Recogonised() {
                     <img src={corner} className="w-22" alt="" />
                 </div>
                 <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
-                    <img src={up} className="w-22" alt="" />
+                    <img src={innovation} className="w-28" alt="" />
                 </div>
-
+                <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+                    <img src={up} className="w-22" alt="" />
+                    <h3>UPID</h3>
+                </div>
 
             </div>
         </div>
