@@ -1,5 +1,7 @@
 import huddle01 from "../../assets/huddle01.jpg";
 import lighthouse from "../../assets/lighthouse.jpg";
+import zapit from "../../assets/zapit.png";
+import dia from "../../assets/dia.png";
 
 export default function Truster() {
   return (
@@ -21,10 +23,15 @@ export default function Truster() {
           <img src={huddle01} className="w-12" alt="" />
           <h3>Huddle 01</h3>
         </div>
+        <div className="flex items-center gap-4 w-[200px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={zapit} className="w-full" alt="" />
+        </div>
+        <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={dia} className="w-full" alt="" />
+        </div>
         <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
           <img src="https://dashboard.arcana.network/assets/arcana-logo.4b479298.svg" className="w-18" alt="" />
         </div>
-
 
         <div className="flex items-center gap-4 w-[200px]  rounded-md backdrop-blur-sm  ">
           <img className="w-full h-full" src="https://shardeum-university-storage.blr1.cdn.digitaloceanspaces.com/f293c5f2cbe3cdd177fc7dbd69d82cda.png" />
@@ -41,12 +48,15 @@ export default function Truster() {
           <img src={huddle01} className="w-12" alt="" />
           <h3>Huddle 01</h3>
         </div>
+        <div className="flex items-center gap-4 w-[200px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={zapit} className="w-full" alt="" />
+        </div>
+        <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={dia} className="w-full" alt="" />
+        </div>
         <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
           <img src="https://dashboard.arcana.network/assets/arcana-logo.4b479298.svg" className="w-18" alt="" />
         </div>
-
-
-
         <div className="flex items-center gap-4 w-[200px]  rounded-md backdrop-blur-sm  ">
           <img className="w-full h-full" src="https://shardeum-university-storage.blr1.cdn.digitaloceanspaces.com/f293c5f2cbe3cdd177fc7dbd69d82cda.png" />
         </div>
@@ -61,6 +71,12 @@ export default function Truster() {
         <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
           <img src={huddle01} className="w-12" alt="" />
           <h3>Huddle 01</h3>
+        </div>
+        <div className="flex items-center gap-4 w-[200px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={zapit} className="w-full" alt="" />
+        </div>
+        <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
+          <img src={dia} className="w-full" alt="" />
         </div>
         <div className="flex items-center gap-4 w-[180px] px-4 py-3 rounded-md backdrop-blur-sm  ">
           <img src="https://dashboard.arcana.network/assets/arcana-logo.4b479298.svg" className="w-18" alt="" />
